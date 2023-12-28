@@ -9,6 +9,8 @@ import ProgramObjetives from '../components/ProgramObjetives';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import CardsClaustro from '../components/CardsClaustro';
+import BodyInfo2 from '../components/BodyInfo2';
+import ContactInfo from '../components/Prueba';
 
 const useStyles = makeStyles((theme: Theme) => ({
   header: {
@@ -23,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     columnGap: '7%',
     rowGap: '15px',
-    alignItems: 'center',
+    // alignItems: 'flex-start',
   },
   text: {
     padding: '0 10%',
@@ -48,11 +50,12 @@ const Home: React.FC = () => {
   return (
     <div>
         <Header/>
-        <div className={classes.header}> 
+        {/* <div className={classes.header}> 
           <InfoForm title shadow submit="Enviar" />
-        </div>
+          <ContactInfo />
+        </div> */}
         <BodyInfo />
-        <br />
+        <BodyInfo2 />
         <IconsInfo />
         <ProgramObjetives />
         <CardsClaustro type={'certifications'} />

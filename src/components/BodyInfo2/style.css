@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+    .header-container {
+        height: 100%;
+        /* Ocupar toda la altura de la pantalla */
+        margin-top: 0;
+        /* Eliminar margen superior */
+        margin-bottom: 0;
+        /* Eliminar margen inferior */
+    }
+}

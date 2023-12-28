@@ -185,7 +185,7 @@ const CardsClaustro = ({ type }: { type: string }) => {
     return (
         <div style={{ padding: '65px 0' }}>
             <Container fixed>
-                <h1 className={classes.title}>Descubre a parte del claustro</h1>
+                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%'}} alt="Icono" /> Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>

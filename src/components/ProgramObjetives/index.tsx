@@ -68,7 +68,9 @@ const ProgramObjetives = () => {
   return (
     <div className={classes.container}>
       <div className={classes.subcontainer}>
-        <h1 className={classes.title}>Objetivos principales del programa</h1>
+        <h1 className={classes.title}>
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%'}} alt="Icono" /> Objetivos principales del programa
+        </h1>
         <div className="wrapper option-1 option-1-1">
           <ol className={classes.objetives}>
             <li className="c-stepper__item">
