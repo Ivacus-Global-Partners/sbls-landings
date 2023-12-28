@@ -1,0 +1,29 @@
+.swiper-button-prev,
+.swiper-button-next {
+    width: 3.5%;
+    box-sizing: border-box;
+    color: white;
+    background: #0000008a;
+    --swiper-navigation-size: 1.9em;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+}
+
+.swiper-button-prev {
+    left: 0
+}
+
+.swiper-button-next {
+    right: 0
+}
+
+@media (max-width :960px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}

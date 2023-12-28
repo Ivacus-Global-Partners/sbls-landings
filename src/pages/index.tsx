@@ -8,6 +8,7 @@ import { Theme } from '@mui/material';
 import ProgramObjetives from '../components/ProgramObjetives';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import CardsClaustro from '../components/CardsClaustro';
 
 const useStyles = makeStyles((theme: Theme) => ({
   header: {
@@ -54,6 +55,7 @@ const Home: React.FC = () => {
         <br />
         <IconsInfo />
         <ProgramObjetives />
+        <CardsClaustro type={'certifications'} />
         <Footer />
     </div>
   )
