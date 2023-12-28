@@ -5,7 +5,7 @@ import './Header.css';
 const Header: React.FC = () => {
   return (
     <div className="header-container">
-      <img src="https://i.ibb.co/XZgNgHF/Header.png" alt="Logo" className="header-image" />
+      <img className='header-image' src="https://i.ibb.co/w7Ht6Sk/Header.png" alt="Header" />
     </div>
   );
 };
