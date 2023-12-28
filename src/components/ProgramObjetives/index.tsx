@@ -74,10 +74,10 @@ const ProgramObjetives = () => {
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Objetivos principales del programa
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '3%' }} alt="Icono" /> Objetivos principales del programa
         </h1>
         <div className="wrapper  ">
-          <img className={classes.image} src="https://i.ibb.co/jy1nCvz/Sin-t-tulo-4.png" alt="Objetives" />
+          <img className={classes.image} src="https://i.ibb.co/DGMkBDq/Sin-t-tulo-4.png" alt="Objetives" />
         </div>
       </div>
     </div>

@@ -7,8 +7,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   footer: {
     backgroundColor: '#F7F7F7',
     padding: '40px 0',
-    color: '#8a8a94',
-    marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       padding: '20px 0',
     }
@@ -35,7 +33,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '18px',
   },
   iconsItem: {
-    padding: '15px 0',
+    textAlign: 'right', 
+    marginRight: '-150px', 
     [theme.breakpoints.down('sm')]: {
       padding: '7px 0',
     },

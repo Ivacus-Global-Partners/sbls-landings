@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           <InfoForm title shadow submit="Enviar" />
           <ContactInfo />
         </div> */}
-        {/* <BodyInfo /> */}
+        <BodyInfo />
         <BodyInfo2 />
         <IconsInfo />
         <ProgramObjetives />
