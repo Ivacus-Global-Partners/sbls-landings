@@ -7,6 +7,7 @@ import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
 import ProgramObjetives from '../components/ProgramObjetives';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const useStyles = makeStyles((theme: Theme) => ({
   header: {
@@ -45,7 +46,7 @@ const Home: React.FC = () => {
   const classes = useStyles();
   return (
     <div>
-        <Title text='Esto es una prueba' />
+        <Header/>
         <div className={classes.header}> 
           <InfoForm title shadow submit="Enviar" />
         </div>

@@ -1,0 +1,15 @@
+/* Header.css */
+/* Header.css */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Ajusta según tu diseño */
+    background-color: #f0f0f0; /* Ajusta según tu diseño */
+  }
+  
+  .header-image {
+    max-width: 100%; /* Ajusta según tu diseño */
+    max-height: 100%; /* Ajusta según tu diseño */
+  }
+  
