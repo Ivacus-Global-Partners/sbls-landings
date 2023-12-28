@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   iconsTd: {
+    padding: '15px 10px',
     width: '100px',
     fontSize: '0px',
     direction: 'ltr',
-    padding: '0px 0',
     paddingTop: '0px',
     textAlign: 'center',
     fontFamily: 'Ubuntu, Helvetica, Arial, sans-serif',
@@ -36,11 +36,12 @@ const IconsInfo = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const tableWidth = isMobile ? '100%' : '900px';
 
   return (
     <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%' }} className={classes.container}>
-      <div style={{ margin: '0px auto', maxWidth: '600px', padding: '15px 0' }}>
-        <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: '100%', maxWidth: '600px' }}>
+      <div style={{ margin: '0px auto', maxWidth: '900px', padding: '15px 0' }}>
+        <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: tableWidth, maxWidth: '900px' }}>
           <tbody>
 
             {isMobile ? (
