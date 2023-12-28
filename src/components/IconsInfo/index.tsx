@@ -55,7 +55,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Ffechas.png?alt=media&token=b1e83cdc-91b5-49fa-9a96-e6c7a11e7099"
+                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png" 
                                 alt='fechas'
                               />
                             </td>
@@ -79,7 +79,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fhorario.png?alt=media&token=6263b84f-2f70-4bd5-998e-27fcc05142a2"
+                                src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
                                 alt='horario'
                               />
                             </td>
@@ -103,7 +103,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fidioma.png?alt=media&token=fe753c11-c2b7-4f50-aeca-a9a291654b54"
+                                src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
                                 alt='Idioma'
                               />
                             </td>
@@ -128,7 +128,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Flugar.png?alt=media&token=1edbe7c7-b5f3-4d17-91d1-a1f5e77de632"
+                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Lugar'
                               />
                             </td>
@@ -152,7 +152,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fformato.png?alt=media&token=8833641f-be1f-4e1c-8fec-b3b17180c91c"
+                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Formato'
                               />
                             </td>
@@ -181,7 +181,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Ffechas.png?alt=media&token=b1e83cdc-91b5-49fa-9a96-e6c7a11e7099"
+                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png"
                                 alt='fechas'
                                 style={{ width: '50%' }}
                               />
@@ -206,7 +206,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fhorario.png?alt=media&token=6263b84f-2f70-4bd5-998e-27fcc05142a2"
+                                src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
                                 alt='Duración'
                                 style={{ width: '50%' }}
                               />
@@ -231,7 +231,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fidioma.png?alt=media&token=fe753c11-c2b7-4f50-aeca-a9a291654b54"
+                                src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
                                 alt='Idioma'
                                 style={{ width: '50%' }}
                               />
@@ -255,7 +255,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Flugar.png?alt=media&token=1edbe7c7-b5f3-4d17-91d1-a1f5e77de632"
+                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Lugar'
                                 style={{ width: '50%' }}
                               />
@@ -280,7 +280,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMail%20indemnizacion%2Fformato.png?alt=media&token=8833641f-be1f-4e1c-8fec-b3b17180c91c"
+                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Formato'
                                 style={{ width: '50%' }}
                               />

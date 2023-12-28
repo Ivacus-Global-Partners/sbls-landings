@@ -142,7 +142,7 @@ const Footer = () => {
 
           <Grid className={classes.menuContainer}>
             <Box>
-              <img src="https://i.ibb.co/5c000HW/logotipo02.png" className={classes.mainLogo} alt="Sagardoy Business School" />
+              <img src="https://i.ibb.co/L9kpfz4/Grupo-9-2x.png" className={classes.mainLogo} alt="Sagardoy Business School" />
             </Box>
           </Grid>
 
