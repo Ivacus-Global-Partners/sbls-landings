@@ -125,7 +125,17 @@ const useStyles = makeStyles((theme: Theme) => ({
         top: '16px',
         height: '20vw',
         transition: 'right 0.2s ease, opacity 0.6s, left 0.2s ease',
-    }
+    },
+    title: {
+        fontFamily: 'times',
+        fontStyle: 'italic',
+        fontSize: '3em',
+        margin: 0,
+        marginBottom: '10px',
+        fontWeight: '500',
+        color: '#AA1936',
+    },
+    
 }));
 
 const CardsClaustro = ({ type }: { type: string }) => {
@@ -174,10 +184,11 @@ const CardsClaustro = ({ type }: { type: string }) => {
 
     return (
         <div style={{ padding: '65px 0' }}>
-            <Container>
+            <Container fixed>
+                <h1 className={classes.title}>Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
-                    onMouseLeave={() => setNavigation(false)} >
-                    <Swiper {...mySwiperProps} className={classes.swiper} style={{ width: '100%', height: '100%' }}>
+                    onMouseLeave={() => setNavigation(false)}>
+                    <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>
                         {
                             programs
                                 .filter((slide: { type: string; }) => slide.type === type || type === 'all')
