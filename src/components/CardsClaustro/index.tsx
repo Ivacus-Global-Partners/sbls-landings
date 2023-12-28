@@ -57,8 +57,10 @@ const useStyles = makeStyles((theme: Theme) => ({
             transform: 'scale(1.05)'
         },
 
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             objectPosition: 'center',
+            width: '200px',
+            height: '300px',
         },
     },
     divclosed: {
@@ -134,6 +136,9 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginBottom: '10px',
         fontWeight: '500',
         color: '#AA1936',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '6vw',
+        },
     },
     
 }));

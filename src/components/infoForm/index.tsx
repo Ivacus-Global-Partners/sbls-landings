@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        // width: '300px', //Posiblemente cambiar esto
+        // width: '300px', 
         position: 'relative',
     },
     h3: {
@@ -214,6 +214,7 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
             style={{
                 boxShadow: `${shadow ? '0px 4px 8px #7e7777' : undefined}`,
                 background: `${drawer ? 'none' : undefined}`,
+                // width: '300px'
             }}>
             {title && (
                 <h3 className={classes.h3}>Solicita información</h3>

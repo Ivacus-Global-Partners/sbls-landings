@@ -15,11 +15,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   mainLogo: {
     maxWidth: '80%',
+    marginLeft: '-50%',
     height: 'auto',
-    marginBottom: '60px',
     [theme.breakpoints.down('sm')]: {
       maxWidth: '140%',
       marginBottom: '20px',
+      marginLeft: '-20%',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '90%',
+      marginTop: '10px',
       marginLeft: '-20%',
     }
   },
@@ -127,7 +132,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: '#980628',
     padding: '8px 25px',
     color: 'white',
-    cursor: 'pointer'
+    margin: '25px',
+    cursor: 'pointer',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '90%',
+      marginTop: '10px',
+      marginLeft: '-20%',
+    }
   }
 }));
 

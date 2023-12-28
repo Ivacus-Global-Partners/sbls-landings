@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontStyle: 'italic',
     fontSize: '3em',
     margin: 0,
-    marginBottom: '10px',
+    textAlign: 'center',
     fontWeight: '500',
     color: '#AA1936',
   },
@@ -58,7 +58,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center'
-  }
+  },
+  image: {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'contain',
+  },
 }));
 
 const ProgramObjetives = () => {
@@ -69,23 +74,10 @@ const ProgramObjetives = () => {
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%'}} alt="Icono" /> Objetivos principales del programa
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Objetivos principales del programa
         </h1>
-        <div className="wrapper option-1 option-1-1">
-          <ol className={classes.objetives}>
-            <li className="c-stepper__item">
-              <h3 className="c-stepper__title">Step 1</h3>
-              <p className="c-stepper__desc">Some desc text</p>
-            </li>
-            <li className="c-stepper__item">
-              <h3 className="c-stepper__title">Step 2</h3>
-              <p className="c-stepper__desc">Some desc text</p>
-            </li>
-            <li className="c-stepper__item">
-              <h3 className="c-stepper__title">Step 3</h3>
-              <p className="c-stepper__desc">Some desc text</p>
-            </li>
-          </ol>
+        <div className="wrapper  ">
+          <img className={classes.image} src="https://i.ibb.co/jy1nCvz/Sin-t-tulo-4.png" alt="Objetives" />
         </div>
       </div>
     </div>

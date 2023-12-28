@@ -22,8 +22,8 @@ const BodyInfo2 = () => {
   const classes = useStyles();
 
   return (
-    <div className="header-container">
-      <img className='header-image' src="https://i.ibb.co/X4B76Gr/Body2.png" alt="Body2" />
+    <div className={classes.container}>
+      <img className={classes.image} src="https://i.ibb.co/X4B76Gr/Body2.png" alt="Body2" />
     </div>
   )
 }

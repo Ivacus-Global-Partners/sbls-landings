@@ -35,7 +35,7 @@ const IconsInfo = () => {
 
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const tableWidth = isMobile ? '100%' : '900px';
 
   return (
@@ -55,6 +55,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
+                                width={'55%'}
                                 src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png" 
                                 alt='fechas'
                               />
@@ -79,6 +80,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
+                                width={'55%'}
                                 src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
                                 alt='horario'
                               />
@@ -103,6 +105,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
+                                width={'55%'}
                                 src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
                                 alt='Idioma'
                               />
@@ -128,6 +131,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
+                                width={'35%'}
                                 src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Lugar'
                               />
@@ -152,6 +156,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
+                                width={'35%'}
                                 src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Formato'
                               />
