@@ -5,6 +5,8 @@ import IconsInfo from '../components/IconsInfo';
 import InfoForm from '../components/infoForm';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
+import ProgramObjetives from '../components/ProgramObjetives';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles((theme: Theme) => ({
   header: {
@@ -44,12 +46,14 @@ const Home: React.FC = () => {
   return (
     <div>
         <Title text='Esto es una prueba' />
-        <BodyInfo />
-        <br />
-        <IconsInfo />
         <div className={classes.header}> 
           <InfoForm title shadow submit="Enviar" />
         </div>
+        <BodyInfo />
+        <br />
+        <IconsInfo />
+        <ProgramObjetives />
+        <Footer />
     </div>
   )
 }
