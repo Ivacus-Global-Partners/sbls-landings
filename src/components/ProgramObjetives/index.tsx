@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'center',
     fontWeight: '500',
     color: '#AA1936',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '6vw',
+    },
   },
   text: {
     fontSize: '0.9em',
@@ -63,6 +66,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     height: 'auto',
     objectFit: 'contain',
+    [theme.breakpoints.down('sm')]: {
+      width: '600px',
+    },
   },
 }));
 
