@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       padding: 0,
       paddingTop: '5%',
     }
-  }
+  },
 }));
 
 const Home: React.FC = () => {
@@ -50,10 +50,10 @@ const Home: React.FC = () => {
   return (
     <div>
         <Header/>
-        {/* <div className={classes.header}> 
+        <div className={classes.header}> 
           <InfoForm title shadow submit="Enviar" />
           <ContactInfo />
-        </div> */}
+        </div>
         <BodyInfo />
         <BodyInfo2 />
         <IconsInfo />
