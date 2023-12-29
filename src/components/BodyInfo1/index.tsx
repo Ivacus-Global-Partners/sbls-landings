@@ -4,27 +4,29 @@ import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
-    display: 'flex',
-    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: '25px 0 25px 25px',
     alignItems: 'center',
-    height: '100%',
-    position: 'relative',
-    backgroundColor: '#ffffff',
-    paddingLeft: '20px',  // Ajusta según sea necesario
-    paddingRight: '20px', // Ajusta según sea necesario
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      paddingLeft: 0,
+    }
   },
 
   paragraphContainer: {
-    textAlign: 'left',
-    marginTop: '2px', // Ajusta el margen superior del párrafo
-    marginBottom: '15px',
-    width: '100%', // Ocupa todo el ancho disponible
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '15px',
   },
 
   titleContainer: {
     textAlign: 'left',
-    marginLeft: '-10px', // Ajusta el margen izquierdo del título
-    marginTop: '20px', // Ajusta el margen superior del título
+    marginLeft: '-10px',
+    marginTop: '20px',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '0px',
+      marginTop: '0px',
+    },
   },
 
   title: {
@@ -32,23 +34,27 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontStyle: 'italic',
     fontSize: '2.5em',
     margin: 0,
-    marginLeft: '-400px',
     textAlign: 'left',
     fontWeight: '300',
     color: '#AA1936',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'left',
+      fontWeight: '200',
+      fontSize: '1.7em',
+    },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '0', // Ajuste para pantallas pequeñas
-      fontSize: '6vw',
+      fontWeight: '200',
+      textAlign: 'left',
     },
   },
 
   paragraph: {
     textAlign: 'left',
     width: '100%', // Ocupa todo el ancho disponible
-    marginLeft: '170px',
+
     fontFamily: 'nunito',
     fontStyle: 'regular',
-    fontSize:'18px',
+    fontSize: '18px',
   },
 }));
 
@@ -64,7 +70,7 @@ const BodyInfo: React.FC = () => {
       </div>
       <div className={classes.paragraphContainer}>
         <p className={classes.paragraph}>
-          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las <br />organizaciones? 
+          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las <br />organizaciones?
           ¿Deseas fortalecer tus conocimientos y competencias de comunicación <br />interna estratégica?<br /><br />
           Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura<br /> corporativa y los resultados del negocio.</strong>
           Y consigue que las Políticas de Recursos Humanos<br />sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la <br />organización.
