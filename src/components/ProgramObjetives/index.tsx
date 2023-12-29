@@ -47,6 +47,18 @@ const useStyles = makeStyles((theme: Theme) => ({
       fontSize: '6vw',
     },
   },
+  subTitle: {
+    fontFamily: 'times',
+    fontStyle: 'italic',
+    fontSize: '3em',
+    margin: 0,
+    textAlign: 'center',
+    fontWeight: '300',
+    color: '#AA1936',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '6vw',
+    },
+  },
   text: {
     fontSize: '0.9em',
     margin: 0,
@@ -80,10 +92,35 @@ const ProgramObjetives = () => {
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '3%' }} alt="Icono" /> Objetivos principales del programa
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Objetivos principales del programa
         </h1>
-        <div className="wrapper  ">
-          <img className={classes.image} src="https://i.ibb.co/DGMkBDq/Sin-t-tulo-4.png" alt="Objetives" />
+        <div className="wrapper option-1 option-1-1">
+          <ol className={classes.objetives}>
+            
+            <li className="c-stepper__item image1" >
+              <h3 className="c-stepper__title title">Fortalecer</h3>
+              <p className="c-stepper__desc">
+                los conocimientos y competencia de los profesionales
+                de RR.HH. en comunicación interna estratégica, incrementando
+                con ello su impacto en todos los niveles de organización
+              </p>
+            </li>
+            <li className="c-stepper__item image2">
+              <h3 className="c-stepper__title title">Guíar</h3>
+              <p className="c-stepper__desc">
+                a los profesionales de RR.HH. en la aplicación de herramientas de 
+                de comunicación necesarias para lograr una mayor aportación al negocio
+                y a la gestión de la cultura corporativa.
+              </p>
+            </li>
+            <li className="c-stepper__item image3">
+              <h3 className="c-stepper__title title">Desarrollar</h3>
+              <p className="c-stepper__desc">
+                casos prácticos en colaboración con profesionales de destacadas
+                organizaciones para encontrar soluciones desde distintas perspectivas.
+              </p>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
