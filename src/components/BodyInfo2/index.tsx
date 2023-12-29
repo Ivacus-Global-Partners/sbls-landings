@@ -3,7 +3,8 @@ import { makeStyles } from '@mui/styles';
 import './style.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
@@ -48,7 +49,7 @@ const BodyInfo2 = () => {
     
         />
         <p>
-        <FontAwesomeIcon icon="fa-solid fa-quote-left" size="2xs" style={{color: "#ffffff",}} />¡Aquí va tu párrafo! Puedes agregar el contenido que desees aquí.</p>
+        <FontAwesomeIcon icon={faQuoteLeft} size="2xs" style={{color: "#ffffff",}} />¡Aquí va tu párrafo! Puedes agregar el contenido que desees aquí.</p>
       </div>
     </div>
   );

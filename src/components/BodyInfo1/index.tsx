@@ -5,11 +5,11 @@ import React from 'react';
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
     justifyContent: 'center',
-    padding: '25px 0 25px 25px',
+    padding: '25px 0 25px 5%',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      paddingLeft: 0,
+      paddingLeft: '2',
     }
   },
 
