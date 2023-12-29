@@ -1,45 +1,55 @@
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import './style.css';
-
-import React from 'react'
-import InfoForm from '../infoForm';
+import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
     position: 'relative',
-    backgroundColor: '#f0f0f0'
+    backgroundColor: '#ffffff',
+    paddingLeft: '20px',  // Ajusta según sea necesario
+    paddingRight: '20px', // Ajusta según sea necesario
   },
-  image: {
-    width: '100%', 
-    height: 'auto', 
-    objectFit: 'contain', 
+
+  paragraphContainer: {
+    textAlign: 'left',
+    marginTop: '2px', // Ajusta el margen superior del párrafo
+    marginBottom: '15px',
+    width: '100%', // Ocupa todo el ancho disponible
   },
-  header: {
-    marginTop: '-4%',
-    display: 'grid',
-    padding: '0 12% 0 8%',
-    // padding: '0 18% 0 70%', //Aqui para mover el form
-    gridTemplateColumns: '1fr 2.5fr',
-    [theme.breakpoints.down('lg')]: {
-      gridTemplateColumns: '100%',
-      marginTop: '4%',
+
+  titleContainer: {
+    textAlign: 'left',
+    marginLeft: '-10px', // Ajusta el margen izquierdo del título
+    marginTop: '20px', // Ajusta el margen superior del título
+  },
+
+  title: {
+    fontFamily: 'times',
+    fontStyle: 'italic',
+    fontSize: '2.5em',
+    margin: 0,
+    marginLeft: '-400px',
+    textAlign: 'left',
+    fontWeight: '300',
+    color: '#AA1936',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '0', // Ajuste para pantallas pequeñas
+      fontSize: '6vw',
     },
-    columnGap: '7%',
-    rowGap: '15px',
-    // alignItems: 'flex-start',
   },
-  superposed: {
-    position: 'absolute',
-    top: '50%',
-    left: '85%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 2
-  }
+
+  paragraph: {
+    textAlign: 'left',
+    width: '100%', // Ocupa todo el ancho disponible
+    marginLeft: '170px',
+    fontFamily: 'nunito',
+    fontStyle: 'regular',
+    fontSize:'18px',
+  },
 }));
 
 const BodyInfo: React.FC = () => {
@@ -47,14 +57,21 @@ const BodyInfo: React.FC = () => {
 
   return (
     <div className={classes.container}>
-      <img className={classes.image} src="https://i.ibb.co/5MKJb8z/Body1.png" alt="Body1" />
-      <div className={classes.superposed}>
-        <div className={classes.header}>
-          <InfoForm title shadow submit="Enviar"/>
-        </div>
+      <div className={classes.titleContainer}>
+        <h1 className={classes.title}>
+          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" style={{ width: '3%' }} alt="Icono" /> Hacia una comunicación interna efectiva
+        </h1>
+      </div>
+      <div className={classes.paragraphContainer}>
+        <p className={classes.paragraph}>
+          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las <br />organizaciones? 
+          ¿Deseas fortalecer tus conocimientos y competencias de comunicación <br />interna estratégica?<br /><br />
+          Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura<br /> corporativa y los resultados del negocio.</strong>
+          Y consigue que las Políticas de Recursos Humanos<br />sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la <br />organización.
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default BodyInfo;
