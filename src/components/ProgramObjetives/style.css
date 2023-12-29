@@ -9,15 +9,15 @@
 
 .image1:before {
     background-image: url('https://i.ibb.co/YkwkWmt/1.png');
-  }
-  
-  .image2:before {
+}
+
+.image2:before {
     background-image: url('https://i.ibb.co/9tST1pb/2.png');
-  }
-  
-  .image3:before {
+}
+
+.image3:before {
     background-image: url('https://i.ibb.co/YWgdPjk/3.png');
-  }
+}
 
 .c-stepper__item {
     display: flex;
