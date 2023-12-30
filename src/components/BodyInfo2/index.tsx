@@ -1,15 +1,13 @@
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import './style.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
     display: 'flex',
-    justifyContent: 'flex-start', // Alinea el contenido a la izquierda
+    justifyContent: 'flex-start',
     alignItems: 'center',
     height: '40vh',
     backgroundColor: '#980628',
@@ -18,25 +16,54 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   content: {
     display: 'flex',
-    alignItems: 'center',
+    flexDirection: 'column',
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: 'row', // Cambiado a fila para dispositivos más grandes
+      alignItems: 'center',
+    },
   },
   image: {
     objectFit: 'contain',
-    width: '110px', // Ajusta el tamaño del avatar según tus necesidades
+    width: '110px',
     height: '110px',
-    marginRight: theme.spacing(2),
+    marginLeft: '50px',
+    marginBottom: '120px',
+  },
+  textContainer: {
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: '15px', // Espacio entre la imagen y el texto en dispositivos más grandes
+    },
+  },
+  p: {
+    fontFamily: 'Playfair Display',
+    fontStyle: 'italic',
+    color: '#ffffff',
+    fontSize: '18px',
+    marginBottom: '50px',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: '80px',
+      textAlign: 'left',
+    },
+  },
+  icon: {
+    color: '#ffffff',
+    fontSize: '22px',
+    marginRight: '5px',
+    marginBottom: '1px',
+  },
+  name: {
+    fontFamily: 'Playfair Display',
+    fontStyle: 'italic',
+    color: '#ffffff',
+    marginLeft: '80px',
+    marginBottom: '20px',
     
-    marginLeft:'130px',
-    marginBottom:'100px',
-   
   },
 }));
 
 const BodyInfo2 = () => {
   const classes = useStyles();
   const [avatarSize, setAvatarSize] = useState({ width: 80, height: 80 });
-
-
 
   return (
     <div className={classes.container}>
@@ -46,13 +73,20 @@ const BodyInfo2 = () => {
           alt="Imagen-2x"
           className={classes.image}
           style={{ width: avatarSize.width, height: avatarSize.height }}
-    
         />
-        <p>
-        <FontAwesomeIcon icon={faQuoteLeft} size="2xs" style={{color: "#ffffff",}} />¡Aquí va tu párrafo! Puedes agregar el contenido que desees aquí.</p>
+        <div className={classes.textContainer}>
+          <p className={classes.p}>
+            <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
+            En estos tiempos en los que se extienden fenómenos como el de<br />la “renuncia silenciosa” (“quiet quitting”), una certeza se<br />consolida: para ser diferencialmente competitivas, las<br />organizaciones precisan de profesionales comprometidos. Y el<br />compromiso se construye, entre otros pilares, sobre una<br />comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+          </p>
+          <p className={classes.name}>Pablo Gonzalo Molina</p>
+          {/* ... (añade más contenido según sea necesario) */}
+        </div>
       </div>
     </div>
   );
 };
 
 export default BodyInfo2;
+
+
