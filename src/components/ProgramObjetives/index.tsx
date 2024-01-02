@@ -45,9 +45,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   title: {
+    marginBottom: '20px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    columnGap: '15px',
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '3em',
+    fontSize: '2.5em',
     margin: 0,
     textAlign: 'center',
     fontWeight: '500',
@@ -101,11 +106,12 @@ const ProgramObjetives = () => {
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Objetivos principales del programa
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '0.7em' }} alt="Icono" />
+          Objetivos principales del programa
         </h1>
         <div className="wrapper option-1 option-1-1">
           <Grid className={classes.objetives} container>
-            <Grid  xs={12} sm={12} md={4}>
+            <Grid xs={12} sm={12} md={4}>
               <li className="c-stepper__item image1" >
                 <h3 className="c-stepper__title title">Fortalecer</h3>
                 <p className="c-stepper__desc">

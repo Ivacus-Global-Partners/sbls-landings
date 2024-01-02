@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    height: '40vh',
     backgroundColor: '#980628',
     padding: theme.spacing(2),
     boxSizing: 'border-box',
+    marginBottom: '20px',
   },
   content: {
     display: 'flex',
@@ -24,10 +24,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   image: {
     objectFit: 'contain',
-    width: '110px',
-    height: '110px',
+    width: '80px',
+    height: '80px',
     marginLeft: '50px',
     marginBottom: '120px',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 0,
+      width: '100px',
+      height: '100px',
+    },
   },
   textContainer: {
     [theme.breakpoints.up('sm')]: {
@@ -57,13 +62,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: '#ffffff',
     marginLeft: '80px',
     marginBottom: '20px',
-    
+
   },
 }));
 
 const BodyInfo2 = () => {
   const classes = useStyles();
-  const [avatarSize, setAvatarSize] = useState({ width: 80, height: 80 });
 
   return (
     <div className={classes.container}>
@@ -72,7 +76,6 @@ const BodyInfo2 = () => {
           src="https://i.ibb.co/yhD5JRd/Imagen-2x.png"
           alt="Imagen-2x"
           className={classes.image}
-          style={{ width: avatarSize.width, height: avatarSize.height }}
         />
         <div className={classes.textContainer}>
           <p className={classes.p}>

@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     },
     slideimg: {
-        width: '100%',
         height: '100%',
 
         transition: 'transform 0.3s ease-in-out',
@@ -131,7 +130,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     title: {
         fontFamily: 'times',
         fontStyle: 'italic',
-        fontSize: '3em',
+        fontSize: '2.5em',
         margin: 0,
         marginBottom: '10px',
         fontWeight: '500',
@@ -140,7 +139,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             fontSize: '6vw',
         },
     },
-    
+
 }));
 
 const CardsClaustro = ({ type }: { type: string }) => {
@@ -190,7 +189,7 @@ const CardsClaustro = ({ type }: { type: string }) => {
     return (
         <div style={{ padding: '65px 0' }}>
             <Container fixed>
-                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%'}} alt="Icono" /> Descubre a parte del claustro</h1>
+                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Container, Grid, Box, Theme } from '@mui/material';
 import './style.css'
+import DownloadIcon from '@mui/icons-material/Download';
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
@@ -12,18 +13,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   mainLogo: {
-    maxWidth: '80%',
-    marginLeft: '-50%',
+    maxWidth: '200px',
     height: 'auto',
+    marginLeft: '3vw',
+  },
+  imageContainer: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-      maxWidth: '140%',
-      marginBottom: '20px',
-      marginLeft: '-20%',
-    },
-    [theme.breakpoints.down('md')]: {
-      maxWidth: '90%',
-      marginTop: '10px',
-      marginLeft: '-20%',
+      justifyContent: 'center',
     }
   },
   secondaryText: {
@@ -124,6 +123,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   downLoadBtn: {
+    display: 'flex',
+    alignItems: 'center',
+    columnGap: '5px',
     border: 'none',
     borderRadius: '20px',
     background: '#980628',
@@ -133,8 +135,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     cursor: 'pointer',
     [theme.breakpoints.down('md')]: {
       maxWidth: '90%',
-      marginTop: '10px',
-      marginLeft: '-20%',
     }
   }
 }));
@@ -144,34 +144,33 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg">
-        <Grid className={classes.itemsContainer}>
-
-
-          <Grid className={classes.menuContainer}>
+      <Grid container>
+        <Grid item xs={12} sm={4}>
+          <Box className={classes.imageContainer}>
+            <img src="https://i.ibb.co/L9kpfz4/Grupo-9-2x.png" className={classes.mainLogo} alt="Sagardoy Business School" />
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <button className={classes.downLoadBtn}>
+            <DownloadIcon sx={{ fontSize: '1.3em' }} />
+            Descargar folleto
+          </button>
+        </Grid>
+        <Grid item xs={12} sm={4} sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <Grid className={classes.logos}>
             <Box>
-              <img src="https://i.ibb.co/L9kpfz4/Grupo-9-2x.png" className={classes.mainLogo} alt="Sagardoy Business School" />
+              <address className={classes.iconsItem}>
+                <h3>C/Velázquez 86D. 28006 Madrid</h3>
+                <label>info@sagardoyschool.com</label>
+              </address>
             </Box>
           </Grid>
-
-
-          <Grid>
-            <button className={classes.downLoadBtn}>Descargar folleto</button>
-          </Grid>
-
-
-          <Grid className={classes.logosArea}>
-            <Grid className={classes.logos}>
-              <Box>
-                <address className={classes.iconsItem}>
-                  <h3>C/Velázquez 86D. 28006 Madrid</h3>
-                  <label>info@sagardoyschool.com</label>
-                </address>
-              </Box>
-            </Grid>
-          </Grid>
         </Grid>
-      </Container>
+      </Grid>
     </footer >
   );
 };

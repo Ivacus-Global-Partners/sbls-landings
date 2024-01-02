@@ -5,12 +5,16 @@ import React from 'react';
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
     justifyContent: 'center',
-    padding: '25px 0 25px 5%',
+    padding: '25px 35vw 25px 5%',
     alignItems: 'center',
+    [theme.breakpoints.down(760)]: {
+      paddingRight: '5%',
+    },
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       paddingLeft: '2',
-    }
+      paddingRight: '2',
+    },
   },
 
   paragraphContainer: {
@@ -70,10 +74,10 @@ const BodyInfo: React.FC = () => {
       </div>
       <div className={classes.paragraphContainer}>
         <p className={classes.paragraph}>
-          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las <br />organizaciones?
-          ¿Deseas fortalecer tus conocimientos y competencias de comunicación <br />interna estratégica?<br /><br />
-          Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura<br /> corporativa y los resultados del negocio.</strong>
-          Y consigue que las Políticas de Recursos Humanos<br />sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la <br />organización.
+          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las organizaciones?
+          ¿Deseas fortalecer tus conocimientos y competencias de comunicación interna estratégica?<br /><br />
+          Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong>
+          Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
         </p>
       </div>
     </div>

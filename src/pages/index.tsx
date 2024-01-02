@@ -11,6 +11,7 @@ import Header from '../components/Header';
 import CardsClaustro from '../components/CardsClaustro';
 import BodyInfo2 from '../components/BodyInfo2';
 import ContactInfo from '../components/Prueba';
+import DownloadIcon from '@mui/icons-material/Download';
 
 const useStyles = makeStyles((theme: Theme) => ({
   header: {
@@ -49,17 +50,19 @@ const Home: React.FC = () => {
   const classes = useStyles();
   return (
     <div>
-        <Header/>
-        <div className={classes.header}> 
-          <ContactInfo />
-          <InfoForm title shadow submit="Enviar" />
-        </div>
-        <BodyInfo />
-        <BodyInfo2 />
-        <IconsInfo />
-        <ProgramObjetives />
-        <CardsClaustro type={'certifications'} />
-        <Footer />
+      <Header />
+      <InfoForm title shadow submit={
+        <>
+          <DownloadIcon sx={{ fontSize: '1.2em' }} />
+          Descargar folleto
+        </>
+      } />
+      <BodyInfo />
+      <BodyInfo2 />
+      <IconsInfo />
+      <ProgramObjetives />
+      <CardsClaustro type={'certifications'} />
+      <Footer />
     </div>
   )
 }

@@ -16,9 +16,27 @@ const useStyles = makeStyles((theme: Theme) => ({
         height: 'fit-content',
         display: 'flex',
         flexDirection: 'column',
-        width: '100%',
-        // width: '300px', 
-        position: 'relative',
+        width: '30vw',
+        position: 'absolute',
+        right: '2em',
+        top: '50%',
+        [theme.breakpoints.down(1100)]: {
+            top: '35vh'
+        },
+        [theme.breakpoints.down(1000)]: {
+            top: '32vh'
+        },
+        [theme.breakpoints.down('md')]: {
+            top: '17vh'
+        },
+        [theme.breakpoints.down(760)]: {
+            position: 'relative',
+            width: '70%',
+            margin: '0 auto',
+            top: 0,
+            right: 0,
+            marginTop: '15px'
+        },
     },
     h3: {
         fontStyle: 'italic',
@@ -34,13 +52,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         display: 'flex',
         alignItems: 'center',
         columnGap: '5px',
-        [theme.breakpoints.down(1280)]: {
-            textAlign: 'center',
-            fontSize: '4vw',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.4em',
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '6vw',
-        }
+            textAlign: 'center',
+            fontSize: '0.8em',
+        },
     },
     p: {
         margin: 0,
@@ -60,13 +78,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
     },
     input: {
-        '& .MuiFilledInput-root': {
-            background: 'white',
-        },
-        '& .MuiInputLabel-root': {
-            fontFamily: 'Arial, sans-serif', // Change font family for label
-            color: 'black', // Change color for label
-        },
         outline: 'none',
         display: 'block',
         boxSizing: 'border-box',
@@ -77,14 +88,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: 'black',
         width: '100%',
         margin: '10px 0',
-        [theme.breakpoints.down(1280)]: {
-            fontSize: '2.5vw',
-        },
         [theme.breakpoints.down('md')]: {
-            fontSize: '3vw',
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '4vw',
+            fontSize: '1em',
         },
         '-webkit-appearance': 'none',
         '-moz-appearance': 'none',
@@ -100,37 +105,36 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     checkbox: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         columnGap: '15px',
         fontFamily: 'times',
         fontStyle: 'italic',
         fontSize: '1vw',
-        margin: '25px 0 20px 5px',
+        margin: '10px 0 20px 5px',
         width: '100%',
         textAlign: 'start',
         justifyContent: 'start',
         [theme.breakpoints.up('md')]: {
             maxWidth: '30vw',
         },
-        [theme.breakpoints.down(1280)]: {
-            justifyContent: 'center',
-            fontSize: '1.5vw',
-        },
         [theme.breakpoints.down('md')]: {
             justifyContent: 'center',
             maxWidth: '60vw',
-            fontSize: '2.5vw',
+            fontSize: '0.7em',
         },
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
             maxWidth: '100vw',
-            fontSize: '3.3vw',
         },
     },
     a: {
         color: 'black',
     },
     button: {
+        display: 'flex',
+        columnGap: '5px',
+        alignItens: 'center',
+        justifyContent: 'center',
         borderRadius: '10px',
         border: 'none',
         color: 'white',
@@ -138,16 +142,12 @@ const useStyles = makeStyles((theme: Theme) => ({
         margin: '0 auto',
         boxShadow: '0px 4px 8px #7e7777',
         cursor: 'pointer',
-        fontSize: '1vw',
-        [theme.breakpoints.down(1280)]: {
-            fontSize: '1.5vw',
-        },
+        fontSize: '1em',
         [theme.breakpoints.down('md')]: {
-            fontSize: '2.5vw',
+            fontSize: '1em',
         },
         [theme.breakpoints.down('sm')]: {
             padding: '2.5vh',
-            fontSize: '3.3vw',
         },
     },
     img: {
@@ -216,7 +216,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer = false, title = false }:
-    { icon?: boolean, phone?: boolean, shadow?: boolean, submit: string, drawer?: boolean, title?: boolean }) => {
+    { icon?: boolean, phone?: boolean, shadow?: boolean, submit: any, drawer?: boolean, title?: boolean }) => {
     const classes = useStyles();
     const theme = useTheme();
     const isMedium = useMediaQuery(theme.breakpoints.down('md'));
@@ -243,12 +243,6 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
                 <p className={classes.p}>Puedes llamarnos al +34 91 454 00 71</p>
             )}
             <div>
-                <TextField
-                    label="Nombre"
-                    variant="filled"
-                    className={classes.input}
-                    fullWidth
-                />
                 <input required className={classes.input} placeholder='Nombre' style={{
                     display: `${drawer ? 'inline' : undefined}`,
                     width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
@@ -284,7 +278,7 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
                         </select>
                     </>
                 )}
-                <input className={classes.input} type="number" placeholder={drawer ? "Número de teléfono" : "Teléfono"}
+                <input className={classes.input} type="number" placeholder={drawer ? "Número de teléfono" : "Número de teléfono"}
                     required={!drawer}
                     style={{
                         display: `${drawer ? 'inline' : 'block'}`,
@@ -298,7 +292,7 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
             <label className={classes.checkbox}>
                 <input type="checkbox" onClick={() => setEnabledSubmit((old) => !old)} />
                 <div className={classes.checkboxText}>
-                    Consiento el tratamiento de mis datos por IE y fundación IE (incluso cuando el mismo se realice fuera del EEE), para el envío de información.
+                    Consiento el tratamiento de mis datos por Sagardoy Business & Law School, para el envío de información comercial personalizada y/o sobre actividades, mediante la elaboración de perfiles basados en la información obtenida, incluso de terceros, de conformidad con lo dispuesto en la <a className={classes.a} href="https://www.sagardoyschool.com/politica-de-privacidad/" target="_blank" rel="noreferrer">Política de Privacidad</a>.
                 </div>
             </label>
             <button type="submit" className={classes.button} style={{
