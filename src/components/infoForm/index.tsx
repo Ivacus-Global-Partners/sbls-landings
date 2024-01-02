@@ -60,17 +60,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
     },
     input: {
-        background: 'white',
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                border: 'none', // Remove the border
-            },
-            '&:hover fieldset': {
-                border: 'none', // Remove border on hover
-            },
-            '&.Mui-focused fieldset': {
-                border: 'none', // Remove border on focus
-            },
+        '& .MuiFilledInput-root': {
+            background: 'white',
         },
         '& .MuiInputLabel-root': {
             fontFamily: 'Arial, sans-serif', // Change font family for label
@@ -254,10 +245,9 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
             <div>
                 <TextField
                     label="Nombre"
-                    variant="outlined"
+                    variant="filled"
                     className={classes.input}
                     fullWidth
-                    margin="normal"
                 />
                 <input required className={classes.input} placeholder='Nombre' style={{
                     display: `${drawer ? 'inline' : undefined}`,
