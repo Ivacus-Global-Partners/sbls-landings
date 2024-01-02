@@ -1,6 +1,6 @@
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,14 +18,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.up('sm')]: {
-      flexDirection: 'row', // Cambiado a fila para dispositivos más grandes
+      flexDirection: 'row',
       alignItems: 'center',
     },
   },
   image: {
     objectFit: 'contain',
-    width: '80px',
-    height: '80px',
+    width: '120px',
+    height: '120px',
     marginLeft: '50px',
     marginBottom: '120px',
     [theme.breakpoints.down('sm')]: {
@@ -33,20 +33,24 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: '100px',
       height: '100px',
     },
+    [theme.breakpoints.only('md')]: {
+      width: '120px',
+      height: '120px',
+    },
   },
   textContainer: {
     [theme.breakpoints.up('sm')]: {
-      marginLeft: '15px', // Espacio entre la imagen y el texto en dispositivos más grandes
+      marginLeft: '15px',
     },
   },
   p: {
     fontFamily: 'Playfair Display',
     fontStyle: 'italic',
     color: '#ffffff',
-    fontSize: '18px',
+    fontSize: '28px',
     marginBottom: '50px',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: '80px',
+      marginLeft: '50px',
       textAlign: 'left',
     },
   },
@@ -59,10 +63,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   name: {
     fontFamily: 'Playfair Display',
     fontStyle: 'italic',
+    fontSize:'18px',
     color: '#ffffff',
     marginLeft: '80px',
     marginBottom: '20px',
-
   },
 }));
 
@@ -91,5 +95,3 @@ const BodyInfo2 = () => {
 };
 
 export default BodyInfo2;
-
-

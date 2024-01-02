@@ -132,7 +132,7 @@ const IconsInfo = () => {
                             <td>
                               <img
                                 width={'35%'}
-                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
+                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Lugar'
                               />
                             </td>
@@ -157,7 +157,7 @@ const IconsInfo = () => {
                             <td>
                               <img
                                 width={'35%'}
-                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
+                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Formato'
                               />
                             </td>
@@ -260,7 +260,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
+                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Lugar'
                                 style={{ width: '50%' }}
                               />
@@ -285,7 +285,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
+                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Formato'
                                 style={{ width: '50%' }}
                               />
