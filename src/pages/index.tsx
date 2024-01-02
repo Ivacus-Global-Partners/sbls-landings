@@ -16,9 +16,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   header: {
     marginTop: '-4%',
     display: 'grid',
-    padding: '0 12% 0 8%',
+    padding: '0 8%',
     // padding: '0 18% 0 70%', //Aqui para mover el form
-    gridTemplateColumns: '1fr 2.5fr',
+    gridTemplateColumns: '2.5fr 1.2fr',
     [theme.breakpoints.down('lg')]: {
       gridTemplateColumns: '100%',
       marginTop: '4%',
@@ -51,8 +51,8 @@ const Home: React.FC = () => {
     <div>
         <Header/>
         <div className={classes.header}> 
-          <InfoForm title shadow submit="Enviar" />
           <ContactInfo />
+          <InfoForm title shadow submit="Enviar" />
         </div>
         <BodyInfo />
         <BodyInfo2 />

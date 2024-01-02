@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { Theme, useMediaQuery, useTheme } from '@mui/material';
+import { TextField, Theme, useMediaQuery, useTheme } from '@mui/material';
 import countries from '../../resources/data/countries';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import './style.css'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -25,11 +26,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         padding: 0,
         fontFamily: 'times',
         color: '#AA1936',
-        fontSize: '2vw',
+        fontSize: '1.8em',
         letterSpacing: '-0.8px',
         fontWeight: '100',
         textAlign: 'start',
         marginBottom: '10px',
+        display: 'flex',
+        alignItems: 'center',
+        columnGap: '5px',
         [theme.breakpoints.down(1280)]: {
             textAlign: 'center',
             fontSize: '4vw',
@@ -56,15 +60,20 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
     },
     input: {
+        '& .MuiFilledInput-root': {
+            background: 'white',
+        },
+        '& .MuiInputLabel-root': {
+            fontFamily: 'Arial, sans-serif', // Change font family for label
+            color: 'black', // Change color for label
+        },
         outline: 'none',
         display: 'block',
         boxSizing: 'border-box',
         border: 'none',
         borderRadius: '10px',
         padding: '10px',
-        fontFamily: 'times',
-        fontSize: '1.5vw',
-        fontStyle: 'italic',
+        fontSize: '1.1em',
         color: 'black',
         width: '100%',
         margin: '10px 0',
@@ -77,9 +86,17 @@ const useStyles = makeStyles((theme: Theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: '4vw',
         },
+        '-webkit-appearance': 'none',
+        '-moz-appearance': 'none',
+        appearance: 'none',
         '&::placeholder': {
-            color: 'black'
+            color: 'black',
         },
+        '&:focus': {
+            borderBottomRightRadius: 0,
+            borderBottomLeftRadius: 0,
+            borderBottom: '2px solid lightblue',
+        }
     },
     checkbox: {
         display: 'flex',
@@ -217,23 +234,59 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
                 // width: '300px'
             }}>
             {title && (
-                <h3 className={classes.h3}>Solicita información</h3>
+                <h3 className={classes.h3}>
+                    <InfoOutlinedIcon />
+                    Solicita información
+                </h3>
             )}
             {phone && (
                 <p className={classes.p}>Puedes llamarnos al +34 91 454 00 71</p>
             )}
             <div>
-                <div>
-                    <input required className={classes.input} placeholder='Nombre' style={{
-                        display: `${drawer ? 'inline' : undefined}`,
-                        width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
-                        marginRight: `${drawer && !isMedium ? '30px' : '0'}`,
-                        paddingLeft: `${drawer ? '0' : '10px'}`,
-                        borderRadius: `${drawer ? '0' : '10px'}`,
-                        borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
-                        fontSize: `${drawer ? '1.4em' : undefined}`,
-                    }} />
-                    <input required className={classes.input} placeholder='Apellidos' style={{
+                <TextField
+                    label="Nombre"
+                    variant="filled"
+                    className={classes.input}
+                    fullWidth
+                />
+                <input required className={classes.input} placeholder='Nombre' style={{
+                    display: `${drawer ? 'inline' : undefined}`,
+                    width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
+                    marginRight: `${drawer && !isMedium ? '30px' : '0'}`,
+                    paddingLeft: `${drawer ? '0' : '10px'}`,
+                    borderRadius: `${drawer ? '0' : '10px'}`,
+                    borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
+                    fontSize: `${drawer ? '1.4em' : undefined}`,
+                }} />
+                <input required className={classes.input} placeholder='Apellidos' style={{
+                    display: `${drawer ? 'inline' : 'block'}`,
+                    width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
+                    paddingLeft: `${drawer ? '0' : '10px'}`,
+                    borderRadius: `${drawer ? '0' : '10px'}`,
+                    borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
+                    fontSize: `${drawer ? '1.4em' : undefined}`,
+                }} />
+                <input type="email" required className={classes.input} placeholder='email*' style={{
+                    display: `${drawer ? 'inline' : 'block'}`,
+                    width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
+                    paddingLeft: `${drawer ? '0' : '10px'}`,
+                    borderRadius: `${drawer ? '0' : '10px'}`,
+                    borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
+                    fontSize: `${drawer ? '1.4em' : undefined}`,
+                }} />
+                {!drawer && (
+                    <>
+                        <select defaultValue="ES" className={classes.input}>
+                            <option hidden className={classes.option}>País de residencia</option>
+                            {countries.map((country: any, index: any) => (
+                                <option className={classes.option} value={country.code}>{country.name} ({country.code})</option>
+                            ))}
+                        </select>
+                    </>
+                )}
+                <input className={classes.input} type="number" placeholder={drawer ? "Número de teléfono" : "Teléfono"}
+                    required={!drawer}
+                    style={{
                         display: `${drawer ? 'inline' : 'block'}`,
                         width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
                         paddingLeft: `${drawer ? '0' : '10px'}`,
@@ -241,55 +294,6 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
                         borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
                         fontSize: `${drawer ? '1.4em' : undefined}`,
                     }} />
-                </div>
-                <div>
-                    {drawer && (
-                        <input type="email" required className={classes.input} placeholder='Email*' style={{
-                            display: 'inline',
-                            width: `${isMedium ? '100%' : 'fit-content'}`,
-                            marginRight: `${isMedium ? '0' : '30px'}`,
-                            paddingLeft: '0',
-                            borderRadius: '0',
-                            borderBottom: '2px solid #E6E6E6',
-                            fontSize: '1.4em',
-                        }} />
-                    )}
-                    <input className={classes.input} type="number" placeholder={drawer ? "Número de teléfono" : "Teléfono"}
-                        required={!drawer}
-                        style={{
-                            display: `${drawer ? 'inline' : 'block'}`,
-                            width: `${drawer && !isMedium ? 'fit-content' : '100%'}`,
-                            paddingLeft: `${drawer ? '0' : '10px'}`,
-                            borderRadius: `${drawer ? '0' : '10px'}`,
-                            borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
-                            fontSize: `${drawer ? '1.4em' : undefined}`,
-                        }} />
-                </div>
-                {!drawer && (
-                    <input className={classes.input} type='email' placeholder='Email' style={{
-                        paddingLeft: `${drawer ? '0' : '10px'}`,
-                        borderRadius: `${drawer ? '0' : '10px'}`,
-                        borderBottom: `${drawer ? '2px solid #E6E6E6' : 'none'}`,
-                        fontSize: `${drawer ? '1.4em' : undefined}`,
-                    }} />
-                )}
-                {!drawer && (
-                    <>
-                        <select defaultValue="ES" className={classes.input} style={{
-                            paddingLeft: '0',
-                            borderRadius: '0',
-                            fontSize: '1.4em',
-                            background: 'none',
-                            border: 'none',
-                            borderBottom: '2px solid #E6E6E6',
-                        }}>
-                            <option hidden className={classes.option}>País de residencia</option>
-                            {countries.map((country: any, index: any) => (
-                                <option className={classes.option} value={country.code}>{country.name} ({country.code})</option>
-                            ))}
-                        </select>           
-                    </>
-                )}
             </div>
             <label className={classes.checkbox}>
                 <input type="checkbox" onClick={() => setEnabledSubmit((old) => !old)} />
@@ -301,7 +305,7 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
                 background: `${enabledSubmit ? '#AA1935' : '#B3B3B3'}`,
                 borderRadius: `${drawer ? '30px' : undefined}`,
                 boxShadow: `${drawer ? 'unset' : undefined}`
-            }} disabled = {!enabledSubmit}>{submit}</button>
+            }} disabled={!enabledSubmit}>{submit}</button>
             {icon && (
                 <div className={classes.imgContainer}>
                     <div className={classes.imgSubContainer}>
