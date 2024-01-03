@@ -38,13 +38,13 @@ const IndemnizacionDespido = () => {
                 </>
             } />
             <BodyInfo title={
-                <p style={{ color: 'black', margin: 0, fontSize: '3.1vw' }}>
+                <p style={{ color: 'black', margin: 0 }}>
                     Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
                 </p>
 
             }
                 body={
-                    <>
+                    <div style={{ textAlign: 'justify'}}>
                         <p>
                             ¿Eres profesional del derecho, profesional de RR.HH. o empleador? ¿Sabías que un conocimiento profundo de la figura del despido en el ordenamiento jurídico promueve un entorno laboral justo, equitativo y legalmente sólido?
                         </p>
@@ -52,7 +52,7 @@ const IndemnizacionDespido = () => {
                             Conoce <b>cómo se están aplicando las normativas relacionadas al despido en los diferentes tribunales</b> españoles y europeos. Y profundiza <b>en las nuevas claves de la indemnización por despido</b>, un tema sometido a intenso devate en los últimos tiempos.
 
                         </p>
-                    </>
+                    </div>
                 }
             />
             <PorqueSagardoy />
