@@ -8,6 +8,7 @@ import ProgramObjetives from '../../components/ProgramObjetives';
 import CardsClaustro from '../../components/CardsClaustro';
 import Footer from '../../components/Footer';
 import BodyInfoIndemnizacion from '../../components/IndemnizacionDespido/BodyInfo1';
+import PorqueSagardoy from '../../components/IndemnizacionDespido/PorqueSagardoy';
 
 const IndemnizacionDespido = () => {
 
@@ -23,7 +24,7 @@ const IndemnizacionDespido = () => {
                 </>
             } />
             <BodyInfoIndemnizacion />
-            <BodyInfo2 />
+            <PorqueSagardoy />
             <IconsInfo />
             <ProgramObjetives />
             <CardsClaustro />
