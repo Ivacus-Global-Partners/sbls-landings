@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '2.5vw',
-      left: '32%',
+      left: '40%',
+      bottom: '5%',
       padding: '4px 14px',
       transform: 'translate(-50%, -10%)',
     },
