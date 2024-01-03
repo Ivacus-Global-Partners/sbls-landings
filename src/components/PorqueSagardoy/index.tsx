@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Theme, useMediaQuery, useTheme, Grid } from '@mui/material';
+import { Card, CardContent, CardMedia, Theme, useMediaQuery, useTheme, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 
@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         padding: theme.spacing(2),
         boxSizing: 'border-box',
         marginBottom: '20px',
+        marginTop: '20px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '1px'
+        }
     },
     content: {
         display: 'flex',
@@ -34,26 +38,21 @@ const useStyles = makeStyles((theme: Theme) => ({
     title: {
         fontFamily: 'Nunito',
         fontSize: '24px',
-        // fontStyle: 'italic',
+        fontStyle: 'italic',
         color: '#ffffff',
-        [theme.breakpoints.down('sm')]: {
-            marginLeft: '40px',
-        },
     },
     subtitle: {
         fontFamily: 'Nunito',
         fontSize: '16px',
         color: '#ffffff',
-        [theme.breakpoints.down('sm')]: {
-            marginLeft: '40px',
-        },
     },
     body: {
         fontFamily: 'Nunito',
         color: '#ffffff',
         fontSize: '14px',
         [theme.breakpoints.down('sm')]: {
-            textAlign: 'left',
+            textAlign: 'justify',
+            marginLeft: '10px'
         },
     },
     imageTextContainer: {
@@ -106,14 +105,17 @@ const PorqueSagardoy = () => {
                                 </CardContent>
 
                             </Grid>
-                            <Grid item xs={12} sm={4} md={4}>
-                                <CardMedia
-                                    style={{ width: '100%', maxWidth: '100%', height: '100%' }}
-                                    component="img"
-                                    image="https://i.ibb.co/qRRZZ4w/Porque-Sagardoy.png"
-                                    alt="Live from space album cover"
-                                />
-                            </Grid>
+
+                            { !isMobile  &&(
+                                <Grid item xs={12} sm={4} md={4}>
+                                    <CardMedia
+                                        style={{ width: '100%', maxWidth: '100%', height: '100%' }}
+                                        component="img"
+                                        image="https://i.ibb.co/qRRZZ4w/Porque-Sagardoy.png"
+                                        alt="Live from space album cover"
+                                    />
+                                </Grid>
+                            )}
                         </Grid>
                     </Card>
                 </div>
