@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '120px',
     height: '120px',
     marginLeft: '50px',
-    marginBottom: '120px',
     [theme.breakpoints.down('sm')]: {
       marginBottom: 0,
       width: '100px',
@@ -83,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const BodyInfo2 = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <div className={classes.container}>
@@ -105,7 +104,7 @@ const BodyInfo2 = () => {
             ) : (
               <>
                 <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-                En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+                En estos tiempos en los que se extienden fenómenos como el de la <br /> “renuncia silenciosa” (“quiet quitting”), una certeza se consolida:<br /> para ser diferencialmente competitivas, las organizaciones precisan <br /> de profesionales comprometidos. Y el compromiso  se construye, entre <br /> otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
               </>
             )}
           </p>
