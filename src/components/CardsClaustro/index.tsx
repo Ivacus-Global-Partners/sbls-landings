@@ -191,6 +191,9 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginBottom: '10px',
         fontWeight: '500',
         color: '#AA1936',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2.6em',
+        },
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
             fontSize: '1.9em',

@@ -50,10 +50,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down('md')]: {
       textAlign: 'left',
       fontWeight: '200',
-      fontSize: '1.9em',
+      fontSize: '2.6em',
     },
     [theme.breakpoints.down('sm')]: {
-      fontWeight: '200',
       textAlign: 'center',
       fontSize: '1.9em',
     },
