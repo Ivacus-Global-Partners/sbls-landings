@@ -208,8 +208,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }));
 
-const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer = false, title = false }:
-    { icon?: boolean, phone?: boolean, shadow?: boolean, submit: any, drawer?: boolean, title?: boolean }) => {
+const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer = false, title = false, href, download }:
+    { icon?: boolean, phone?: boolean, shadow?: boolean, submit: any, drawer?: boolean, title?: boolean, href:string, download:string }) => {
     const classes = useStyles();
     const theme = useTheme();
     const isMedium = useMediaQuery(theme.breakpoints.down('md'));
@@ -218,8 +218,8 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const downloadLink = document.createElement('a');
-        downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
-        downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+        downloadLink.href = href;
+        downloadLink.download = download;
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);

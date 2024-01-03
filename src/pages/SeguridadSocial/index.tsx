@@ -10,18 +10,43 @@ import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 
 const SeguridadSocial: React.FC = () => {
+  const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
+  const download = 'actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
   return (
     <div>
-      <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
-      <InfoForm title shadow submit={
+      <Header image={"https://i.ibb.co/ZLGGKk9/header-seguridad-social.png"} href={href} download={download} />
+      <InfoForm href={href} download={download} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
         </>
       } />
-      <BodyInfo />
+      <BodyInfo title={
+        <p style={{ color: 'black', margin: 0 }}>
+          Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
+        </p>
+      } />
       <BodyInfo2 />
-      <IconsInfo />
+      <IconsInfo dates={['15 febrero, 2024', '21 marzo, 2024']} duration={
+        <>
+          6 sesiones 1 sesión por<br />
+          semana de 9:00 a 12:00h
+        </>
+      }
+        language={"Español"}
+        place={
+          <>
+            C\Velázquez 86D<br />
+            28006 | Madrid<br />
+          </>
+        }
+        format={
+          <>
+            Presencial<br />
+            & Virtual<br />
+          </>
+        }
+      />
       <ProgramObjetives />
       <CardsClaustro />
       <Footer />
