@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   name: {
     fontFamily: 'Playfair Display',
-    fontStyle: 'italic',
     fontSize: '18px',
     color: '#ffffff',
     marginLeft: '50px',
@@ -107,7 +106,7 @@ const BodyInfo2 = () => {
               />
             )}
             <p className={classes.name}>
-              <span>Pablo Gonzalo Molina</span>
+              <span><b>Pablo Gonzalo Molina</b></span>
               <br />Socio de Estudio de Comunicación <br /> Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio
             </p>
           </div>
