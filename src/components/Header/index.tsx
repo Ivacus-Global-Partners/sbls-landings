@@ -8,7 +8,8 @@ import { Theme } from '@mui/material';
 const useStyles = makeStyles((theme: Theme) => ({
   downLoadBtn: {
     position: 'absolute',
-    left: '50%',
+    left: '35%',
+    fontSize: '1.2em',
     transform: 'translate(-50%, -50%)',
     zIndex: 1,
     display: 'flex',
@@ -25,8 +26,11 @@ const useStyles = makeStyles((theme: Theme) => ({
       left: '35%',
       fontSize: '0.9em',
     },
+    [theme.breakpoints.down(780)]: {
+      left: '35%',
+      fontSize: '0.9em',
+    },
     [theme.breakpoints.down('sm')]: {
-      bottom: '0%',
       fontSize: '2.5vw',
       left: '32%',
       padding: '4px 14px',

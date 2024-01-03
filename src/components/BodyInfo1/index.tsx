@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     padding: '25px 35vw 25px 5%',
     alignItems: 'center',
-    [theme.breakpoints.down(770)]: {
+    [theme.breakpoints.down(850)]: {
       paddingRight: '5%',
     },
     [theme.breakpoints.down('sm')]: {
