@@ -3,13 +3,55 @@ import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { makeStyles } from '@mui/styles';
-import { Container, Theme } from '@mui/material';
+import { Container, Divider, Theme } from '@mui/material';
 import { Navigation } from 'swiper/modules';
 import './style.css'
 import programs from '../../resources/data/program';
 
+const claustro = [
+    {
+        img: 'https://i.ibb.co/jJb3G1p/Imagen.png',
+        name: 'Pablo Gonzalo',
+        job: 'Socio Estudio de Comunicación'
+    },
+    {
+        img: 'https://i.ibb.co/bgRPkNh/arantxa.png',
+        name: 'Arantxa García',
+        job: 'Global Culture, Engagement & DEI Director Danone'
+    },
+    {
+        img: 'https://i.ibb.co/6JqPBNX/Javier-Chico.png',
+        name: 'Javier Chico',
+        job: 'Director de Strategic Pitching Spain & Continental Europe CBRE'
+    },
+    {
+        img: 'https://i.ibb.co/zXtC2K8/1572520280186.png',
+        name: 'Marta Sempere',
+        job: 'People & Culture Vice President Coca-Cola Europacific Partners'
+    },
+    {
+        img: 'https://i.ibb.co/PW5T4kh/1568624230103.png',
+        name: 'Pedro Soto',
+        job: 'Director de Estudio Comunicación'
+    },
+]
 
 const useStyles = makeStyles((theme: Theme) => ({
+    divider: {
+        border: 'none',
+        borderBottom: '1px solid black !important',
+        width: '90%',
+    },
+    card: {
+        background: '#F0F0F0',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        height: '100%',
+        borderRadius: '10px',
+        padding: '15px 10px',
+        boxSizing: 'border-box',
+    },
     swiper: {
         height: 'auto',
         padding: '0 65px',
@@ -49,8 +91,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     },
     slideimg: {
-        height: '100%',
-
+        width: '50%',
         transition: 'transform 0.3s ease-in-out',
         '&:hover': {
             transform: 'scale(1.05)'
@@ -142,7 +183,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-const CardsClaustro = ({ type }: { type: string }) => {
+const CardsClaustro = () => {
     const classes = useStyles();
     const [navigation, setNavigation] = React.useState(false);
 
@@ -194,20 +235,22 @@ const CardsClaustro = ({ type }: { type: string }) => {
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>
                         {
-                            programs
-                                .filter((slide: { type: string; }) => slide.type === type || type === 'all')
-                                .map((slide: { last: any; href: string | undefined; }, index: number) => (
+                            claustro
+                                .map((member, index) => (
                                     <SwiperSlide className={classes.slide}>
-                                        <>
-                                            {slide.last && (
-                                                <img
-                                                    src="https://i.ibb.co/2gmSSyy/ultimas-plazas.png"
-                                                    alt="Last Icon"
-                                                    className={classes.lastIcon}
-                                                />
-                                            )}
-                                            <img className={classes.slideimg} style={{ borderRadius: '15px' }} src={slide.href} alt="Slkside"></img>
-                                        </>
+                                        <div className={classes.card}>
+                                            <img className={classes.slideimg} src={member.img} alt="Foto" />
+                                            <p style={{
+                                                fontWeight: 'bold',
+                                                margin: '20px 0 8px',
+                                            }}>{member.name}</p>
+                                            <Divider orientation='horizontal' className={classes.divider} />
+                                            <p style={{
+                                                textAlign: 'center',
+                                                fontSize: '0.8em',
+                                                margin: '8px 0 0'
+                                            }}>{member.job}</p>
+                                        </div>
                                     </SwiperSlide>
                                 ))
                         }

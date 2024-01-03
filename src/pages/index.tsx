@@ -61,7 +61,7 @@ const Home: React.FC = () => {
       <BodyInfo2 />
       <IconsInfo />
       <ProgramObjetives />
-      <CardsClaustro type={'certifications'} />
+      <CardsClaustro />
       <Footer />
     </div>
   )

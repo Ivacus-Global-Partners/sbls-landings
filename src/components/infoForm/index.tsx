@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { TextField, Theme, useMediaQuery, useTheme } from '@mui/material';
+import { Theme, useMediaQuery, useTheme } from '@mui/material';
 import countries from '../../resources/data/countries';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import './style.css'
