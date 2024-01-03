@@ -70,7 +70,6 @@ const PorqueSagardoy = () => {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
     return (
 
@@ -79,7 +78,7 @@ const PorqueSagardoy = () => {
                 <div style={{ flex: '100%' }} className={classes.cardContainer}>
                     <Card style={{ backgroundColor: '#980628' }} >
                         <Grid container>
-                            <Grid item xs={12} sm={4} md={8}>
+                            <Grid item xs={12} sm={isMobile ? 12 : 4} md={8}>
                                 <CardContent>
                                     <h1 className={classes.title}>
                                         ¿Por qué elegir Sagardoy School?
@@ -103,10 +102,9 @@ const PorqueSagardoy = () => {
                                         puntos de vista desde distintas perspectivas.
                                     </p>
                                 </CardContent>
-
                             </Grid>
 
-                            { !isMobile  &&(
+                            {!isMobile && (
                                 <Grid item xs={12} sm={4} md={4}>
                                     <CardMedia
                                         style={{ width: '100%', maxWidth: '100%', height: '100%' }}
