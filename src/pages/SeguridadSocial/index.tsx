@@ -6,9 +6,8 @@ import ProgramObjetives from '../../components/ProgramObjetives';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
-import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
-import PorqueSagardoy from '../../components/IndemnizacionDespido/PorqueSagardoy';
+import PorqueSagardoy from '../../components/PorqueSagardoy';
 
 const SeguridadSocial: React.FC = () => {
   const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'

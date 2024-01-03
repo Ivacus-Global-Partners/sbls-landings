@@ -5,11 +5,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles((theme: Theme) => ({
+  imgContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: '50px',
+    rowGap: '20px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '10px',
+    }
+  },
+  logo: {
+    width: '100%',
+  },
   container: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: '#980628',
     padding: theme.spacing(2),
     boxSizing: 'border-box',
     marginBottom: '20px',
@@ -26,12 +39,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     objectFit: 'contain',
     width: '120px',
     height: '120px',
-    marginLeft: '50px',
     [theme.breakpoints.down('sm')]: {
       marginBottom: 0,
       width: '100px',
       height: '100px',
-      marginLeft: '10px',
     },
     [theme.breakpoints.only('md')]: {
       width: '120px',
@@ -79,52 +90,54 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const BodyInfo2 = () => {
+const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { img: string, quote: string, name: string, job: any, filled?: boolean, logo?: string, logoAlt?: string }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} style={{ background: filled ? '#980628' : 'inherit' }}>
       <div className={classes.content}>
         {!isMobile && (
-          <img
-            src="https://i.ibb.co/yhD5JRd/Imagen-2x.png"
-            alt="Imagen-2x"
-            className={classes.image}
-          />
+          <div className={classes.imgContainer}>
+            <img
+              src={img}
+              alt={name}
+              className={classes.image}
+            />
+            {logo && <img
+              src={logo}
+              alt={logoAlt ?? "logo"}
+              className={classes.logo}
+            />}
+          </div>
         )}
         <div className={classes.textContainer}>
-          <p className={classes.p}>
-            {isMobile ? (
-              <>
-                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-                En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
-              </>
-            ) : isLargeScreen ? (
-              <>
-                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-                En estos tiempos en los que se extienden fenómenos como el de <br /> la “renuncia silenciosa” (“quiet quitting”), una certeza se <br /> consolida: para ser diferencialmente competitivas, las <br /> organizaciones precisan de profesionales comprometidos. Y el <br /> compromiso  se construye, entre otros pilares, sobre una <br /> comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
-              </>
-            ) : (
-              <>
-                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-                En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso  se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
-              </>
-            )}
+          <p className={classes.p} style={{ color: filled ? 'white' : 'black', paddingRight: isLargeScreen ? '35vw' : '0' }}>
+            <>
+              <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+              {quote} <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+            </>
           </p>
           <div className={isMobile ? classes.imageTextContainer : ''}>
             {isMobile && (
-              <img
-                src="https://i.ibb.co/yhD5JRd/Imagen-2x.png"
-                alt="Imagen-2x"
-                className={classes.image}
-              />
+              <div className={classes.imgContainer}>
+                <img
+                  src={img}
+                  alt={name}
+                  className={classes.image}
+                />
+                {logo && <img
+                  src={logo}
+                  alt={logoAlt ?? "logo"}
+                  className={classes.logo}
+                />}
+              </div>
             )}
-            <p className={classes.name}>
-              <span><b>Pablo Gonzalo Molina</b></span>
-              <br />Socio de Estudio de Comunicación <br /> Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio
+            <p className={classes.name} style={{ color: filled ? 'white' : 'black' }}>
+              <span><b>{name}</b></span>
+              <br />{job}
             </p>
           </div>
         </div>

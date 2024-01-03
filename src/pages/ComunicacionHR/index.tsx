@@ -59,7 +59,15 @@ const ComunicacionHR: React.FC = () => {
         title={<p style={{ color: '#980628', margin: 0 }}>Hacia una comunicación interna efectiva</p>}
         body={texto}
       />
-      <BodyInfo2 />
+      <BodyInfo2
+        filled
+        img={"https://i.ibb.co/yhD5JRd/Imagen-2x.png"}
+        name={"Pablo Gonzalo Molina"}
+        job={<>
+          Socio de Estudio de Comunicación <br />
+          Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio</>}
+        quote={"En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz."}
+      />
       <IconsInfo dates={['8 abril, 2024', '27 mayo, 2024']} duration={
         <>
           8 semanas 1 sesión por<br />

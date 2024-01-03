@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, job: string }[] }) => {
+const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, job: any }[] }) => {
     const classes = useStyles();
     const [navigation, setNavigation] = React.useState(false);
 
