@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
+import PorqueSagardoy from '../../components/IndemnizacionDespido/PorqueSagardoy';
 
 const SeguridadSocial: React.FC = () => {
   const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
@@ -26,11 +27,11 @@ const SeguridadSocial: React.FC = () => {
     },
   ]
 
-  
-  const textoBody = `Actualmente, muchas empresas enfrentan problemas legales y económicos debido al incumplimiento de las normativas laborales y de cotización a la Seguridad Social.<br /><br />
-  ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).<br /><br />
-  Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la seguridad social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
-`
+
+  const textoBody = <>Actualmente, muchas empresas enfrentan problemas legales y económicos debido al incumplimiento de las normativas laborales y de cotización a la Seguridad Social.<br /><br />
+    ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).<br /><br />
+    Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la seguridad social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
+  </>
 
   return (
     <div>
@@ -46,11 +47,11 @@ const SeguridadSocial: React.FC = () => {
           Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
         </p>
       }
-        
-      body={textoBody}
+
+        body={textoBody}
 
       />
-      <BodyInfo2 />
+      <PorqueSagardoy />
       <IconsInfo dates={['15 febrero, 2024', '21 marzo, 2024']} duration={
         <>
           6 sesiones 1 sesión por<br />

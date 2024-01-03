@@ -40,13 +40,11 @@ const ComunicacionHR: React.FC = () => {
     },
   ]
 
-  const texto = `
-  Actualmente, muchas empresas enfrentan problemas legales y económicos debido al incumplimiento de las normativas laborales y de cotización a la Seguridad Social.
-
-  ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).
-
-  Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la seguridad social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
-  `;
+  const texto = <>
+    ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las organizaciones? ¿Deseas fortalecer tus conocimientos y competencias de comunicación interna estratégica?
+    <br /><br />
+    Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong> Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
+  </>;
 
   return (
     <div>
@@ -57,7 +55,10 @@ const ComunicacionHR: React.FC = () => {
           Descargar folleto
         </>
       } />
-      <BodyInfo title={<p style={{ color: '#980628', margin: 0 }}>Hacia una comunicación interna efectiva</p>} body={texto} />
+      <BodyInfo
+        title={<p style={{ color: '#980628', margin: 0 }}>Hacia una comunicación interna efectiva</p>}
+        body={texto}
+      />
       <BodyInfo2 />
       <IconsInfo dates={['8 abril, 2024', '27 mayo, 2024']} duration={
         <>
