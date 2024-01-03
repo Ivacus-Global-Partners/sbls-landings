@@ -1,10 +1,7 @@
 import React from 'react'
-import Title from '../../components/Title'
 import BodyInfo from '../../components/BodyInfo1';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
-import { makeStyles } from '@mui/styles';
-import { Theme } from '@mui/material';
 import ProgramObjetives from '../../components/ProgramObjetives';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -12,44 +9,10 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 
-const useStyles = makeStyles((theme: Theme) => ({
-  header: {
-    marginTop: '-4%',
-    display: 'grid',
-    padding: '0 8%',
-    // padding: '0 18% 0 70%', //Aqui para mover el form
-    gridTemplateColumns: '2.5fr 1.2fr',
-    [theme.breakpoints.down('lg')]: {
-      gridTemplateColumns: '100%',
-      marginTop: '4%',
-    },
-    columnGap: '7%',
-    rowGap: '15px',
-    // alignItems: 'flex-start',
-  },
-  text: {
-    padding: '0 10%',
-    fontSize: '20px',
-  },
-  img: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '5% 15%',
-    [theme.breakpoints.down('md')]: {
-      padding: '5%',
-    },
-    [theme.breakpoints.down('sm')]: {
-      padding: 0,
-      paddingTop: '5%',
-    }
-  },
-}));
-
 const SeguridadSocial: React.FC = () => {
-  const classes = useStyles();
   return (
     <div>
-      <Header />
+      <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
       <InfoForm title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />

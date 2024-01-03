@@ -40,13 +40,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Header: React.FC = () => {
+const Header = ({ image, href, download }: { image: string, href: string, download: string }) => {
   const classes = useStyles();
 
   const handleDownload = () => {
     const downloadLink = document.createElement('a');
-    downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
-    downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+    downloadLink.href = href;
+    downloadLink.download = download;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="header-container" style={{ position: 'relative' }}>
-      <img className='header-image' src="https://i.ibb.co/w7Ht6Sk/Header.png" alt="Header" />
+      <img className='header-image' src={image} alt="Header" />
       <button className={classes.downLoadBtn} onClick={handleDownload}>
         <DownloadIcon sx={{ fontSize: '1.3em' }} />
         Descargar folleto
