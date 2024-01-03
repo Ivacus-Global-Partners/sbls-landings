@@ -40,6 +40,14 @@ const ComunicacionHR: React.FC = () => {
     },
   ]
 
+  const texto = `
+  Actualmente, muchas empresas enfrentan problemas legales y económicos debido al incumplimiento de las normativas laborales y de cotización a la Seguridad Social.
+
+  ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).
+
+  Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la seguridad social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
+  `;
+
   return (
     <div>
       <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={href} download={download} />
@@ -49,7 +57,7 @@ const ComunicacionHR: React.FC = () => {
           Descargar folleto
         </>
       } />
-      <BodyInfo title={<p style={{ color: '#980628', margin: 0 }}>Hacia una comunicación interna efectiva</p>} />
+      <BodyInfo title={<p style={{ color: '#980628', margin: 0 }}>Hacia una comunicación interna efectiva</p>} body={texto} />
       <BodyInfo2 />
       <IconsInfo dates={['8 abril, 2024', '27 mayo, 2024']} duration={
         <>
