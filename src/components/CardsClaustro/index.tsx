@@ -242,7 +242,7 @@ const CardsClaustro = () => {
             },
             1024: {
                 slidesPerView: 4.15,
-                spaceBetween: 65,
+                spaceBetween: 30,
             }
         }
     } as any;

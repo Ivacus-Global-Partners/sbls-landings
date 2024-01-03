@@ -92,8 +92,14 @@ body {
     box-sizing: border-box;
 }
 
+@media (max-width: 1024px) {
+    :root {
+        --circle-size: clamp(4rem, 5vw, 3rem);
+        --spacing: clamp(0.25rem, 2vw, 1.5rem);
+    }
+}
 @media (max-width: 960px) {
     :root {
-        --circle-size: clamp(2.5rem, 5vw, 3rem);
+        --circle-size: clamp(3rem, 5vw, 3rem);
     }
 }

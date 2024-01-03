@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   iconsItem: {
     [theme.breakpoints.down('sm')]: {
       padding: '7px 0',
+      textAlign: 'center',
     },
     '& h3, & a': {
       marginTop: '5px',

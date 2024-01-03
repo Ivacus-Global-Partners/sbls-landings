@@ -2,14 +2,37 @@ import { Theme, useMediaQuery, useTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
+  tableContainer: {
+    margin: '0',
+    padding: '15px 0',
+    width: '70%',
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+    }
+  },
+  icon: {
+    width: '5vw',
+    [theme.breakpoints.down(1100)]: {
+      width: '8vw',
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '10vw',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '17vw',
+    },
+    [theme.breakpoints.down(550)]: {
+      width: '14vw',
+    }
+  },
   container: {
     display: 'flex',
     paddingBottom: '0px',
     alignItems: 'start',
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft: '30px',
-      paddingRight: '30px',
-    }
+    justifyContent: 'center',
   },
   iconsTd: {
     padding: '15px 10px',
@@ -35,13 +58,13 @@ const IconsInfo = () => {
 
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const tableWidth = isMobile ? '100%' : '900px';
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const tableWidth = '100%';
 
   return (
     <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%' }} className={classes.container}>
-      <div style={{ margin: '0px auto', maxWidth: '900px', padding: '15px 0' }}>
-        <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: tableWidth, maxWidth: '900px' }}>
+      <div className={classes.tableContainer}>
+        <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: tableWidth }}>
           <tbody>
 
             {isMobile ? (
@@ -55,8 +78,8 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                width={'80%'}
-                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png" 
+                                className={classes.icon}
+                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png"
                                 alt='fechas'
                               />
                             </td>
@@ -80,7 +103,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                width={'80%'}
+                                className={classes.icon}
                                 src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
                                 alt='horario'
                               />
@@ -105,7 +128,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                width={'80%'}
+                                className={classes.icon}
                                 src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
                                 alt='Idioma'
                               />
@@ -131,7 +154,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                width={'50%'}
+                                className={classes.icon}
                                 src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Lugar'
                               />
@@ -156,7 +179,7 @@ const IconsInfo = () => {
                           <tr>
                             <td>
                               <img
-                                width={'50%'}
+                                className={classes.icon}
                                 src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Formato'
                               />
@@ -188,7 +211,7 @@ const IconsInfo = () => {
                               <img
                                 src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png"
                                 alt='fechas'
-                                style={{ width: '50%' }}
+                                className={classes.icon}
                               />
                             </td>
                           </tr>
@@ -213,7 +236,7 @@ const IconsInfo = () => {
                               <img
                                 src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
                                 alt='Duración'
-                                style={{ width: '50%' }}
+                                className={classes.icon}
                               />
                             </td>
                           </tr>
@@ -238,7 +261,7 @@ const IconsInfo = () => {
                               <img
                                 src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
                                 alt='Idioma'
-                                style={{ width: '50%' }}
+                                className={classes.icon}
                               />
                             </td>
                           </tr>
@@ -262,7 +285,7 @@ const IconsInfo = () => {
                               <img
                                 src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
                                 alt='Lugar'
-                                style={{ width: '50%' }}
+                                className={classes.icon}
                               />
                             </td>
                           </tr>
@@ -287,7 +310,7 @@ const IconsInfo = () => {
                               <img
                                 src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
                                 alt='Formato'
-                                style={{ width: '50%' }}
+                                className={classes.icon}
                               />
                             </td>
                           </tr>
