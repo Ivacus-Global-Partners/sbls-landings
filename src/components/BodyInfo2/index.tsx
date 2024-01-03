@@ -83,6 +83,7 @@ const BodyInfo2 = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <div className={classes.container}>
@@ -100,6 +101,11 @@ const BodyInfo2 = () => {
               <>
                 <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
                 En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+              </>
+            ) : isLargeScreen ? (
+              <>
+                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
+                En estos tiempos en los que se extienden fenómenos como el de <br /> la “renuncia silenciosa” (“quiet quitting”), una certeza se <br /> consolida: para ser diferencialmente competitivas, las <br /> organizaciones precisan de profesionales comprometidos. Y el <br /> compromiso  se construye, entre otros pilares, sobre una <br /> comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
               </>
             ) : (
               <>
