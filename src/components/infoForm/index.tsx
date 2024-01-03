@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             top: '32vh'
         },
         [theme.breakpoints.down('md')]: {
-            top: '21vw'
+            top: '17vw'
         },
         [theme.breakpoints.down(850)]: {
             position: 'relative',
@@ -118,9 +118,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             maxWidth: '95%',
             fontSize: '1em',
         },
-        [theme.breakpoints.down('sm')]: {
-            justifyContent: 'center',
-            maxWidth: '100vw',
+        [theme.breakpoints.down(950)]: {
             fontSize: '0.8em',
         },
     },
