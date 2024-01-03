@@ -64,6 +64,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontFamily: "'Nunito', sans- serif",
     fontStyle: 'regular',
     fontSize: '18px',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    }
   },
 }));
 

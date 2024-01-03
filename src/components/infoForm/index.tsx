@@ -115,12 +115,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
         [theme.breakpoints.down('md')]: {
             justifyContent: 'center',
-            maxWidth: '60vw',
-            fontSize: '0.7em',
+            maxWidth: '95%',
+            fontSize: '1em',
         },
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
             maxWidth: '100vw',
+            fontSize: '0.8em',
         },
     },
     a: {

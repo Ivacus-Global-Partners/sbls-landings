@@ -104,7 +104,7 @@ const BodyInfo2 = () => {
             ) : (
               <>
                 <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-                En estos tiempos en los que se extienden fenómenos como el de la <br /> “renuncia silenciosa” (“quiet quitting”), una certeza se consolida:<br /> para ser diferencialmente competitivas, las organizaciones precisan <br /> de profesionales comprometidos. Y el compromiso  se construye, entre <br /> otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+                En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso  se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
               </>
             )}
           </p>
