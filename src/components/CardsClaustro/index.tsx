@@ -6,7 +6,6 @@ import { makeStyles } from '@mui/styles';
 import { Container, Divider, Theme } from '@mui/material';
 import { Navigation } from 'swiper/modules';
 import './style.css'
-import programs from '../../resources/data/program';
 
 const claustro = [
     {
@@ -113,6 +112,9 @@ const useStyles = makeStyles((theme: Theme) => ({
         transition: 'transform 0.3s ease-in-out',
         '&:hover': {
             transform: 'scale(1.05)'
+        },
+        [theme.breakpoints.down('lg')]: {
+            height: '10vh',
         },
         [theme.breakpoints.down('md')]: {
             height: '15vh',
