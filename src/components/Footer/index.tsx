@@ -142,6 +142,15 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Footer = () => {
   const classes = useStyles();
 
+  const handleDownload = () => {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
+    downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <footer className={classes.footer}>
       <Grid container>
@@ -151,7 +160,7 @@ const Footer = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <button className={classes.downLoadBtn}>
+          <button className={classes.downLoadBtn} onClick={handleDownload}>
             <DownloadIcon sx={{ fontSize: '1.3em' }} />
             Descargar folleto
           </button>

@@ -41,10 +41,20 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const Header: React.FC = () => {
   const classes = useStyles();
+
+  const handleDownload = () => {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
+    downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <div className="header-container" style={{ position: 'relative' }}>
       <img className='header-image' src="https://i.ibb.co/w7Ht6Sk/Header.png" alt="Header" />
-      <button className={classes.downLoadBtn}>
+      <button className={classes.downLoadBtn} onClick={handleDownload}>
         <DownloadIcon sx={{ fontSize: '1.3em' }} />
         Descargar folleto
       </button>
