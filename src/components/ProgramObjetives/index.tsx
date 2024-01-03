@@ -115,9 +115,9 @@ const ProgramObjetives = () => {
               <li className="c-stepper__item image1" >
                 <h3 className="c-stepper__title title">Fortalecer</h3>
                 <p className="c-stepper__desc">
-                  los conocimientos y competencia de los profesionales
-                  de RR.HH. en comunicación interna estratégica, incrementando
-                  con ello su impacto en todos los niveles de organización
+                  los conocimientos y competencia <br />de los profesionales
+                  de RR.HH. <br />en comunicación interna <br /> estratégica, incrementando
+                  con <br /> ello su impacto en todos los <br /> niveles de organización
                 </p>
               </li>
             </Grid>
@@ -125,9 +125,9 @@ const ProgramObjetives = () => {
               <li className="c-stepper__item image2">
                 <h3 className="c-stepper__title title">Guíar</h3>
                 <p className="c-stepper__desc">
-                  a los profesionales de RR.HH. en la aplicación de herramientas de
-                  de comunicación necesarias para lograr una mayor aportación al negocio
-                  y a la gestión de la cultura corporativa.
+                  a los profesionales de RR.HH. en <br /> la aplicación de herramientas
+                  de <br />comunicación necesarias para <br /> lograr una mayor aportación al<br /> negocio
+                  y a la gestión de la <br />cultura corporativa.
                 </p>
               </li>
             </Grid>
@@ -135,8 +135,8 @@ const ProgramObjetives = () => {
               <li className="c-stepper__item image3">
                 <h3 className="c-stepper__title title">Desarrollar</h3>
                 <p className="c-stepper__desc">
-                  casos prácticos en colaboración con profesionales de destacadas
-                  organizaciones para encontrar soluciones desde distintas perspectivas.
+                  casos prácticos en colaboración<br /> con profesionales de<br /> destacadas
+                  organizaciones para<br /> encontrar soluciones desde <br />distintas perspectivas.
                 </p>
               </li>
             </Grid>

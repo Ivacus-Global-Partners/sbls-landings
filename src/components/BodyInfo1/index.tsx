@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 
   title: {
-    fontFamily: 'times',
-    fontStyle: 'italic',
+    fontFamily: 'nunito',
+    fontStyle: 'regular',
     fontSize: '2.5em',
     margin: 0,
     textAlign: 'left',
