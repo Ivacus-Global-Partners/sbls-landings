@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         [theme.breakpoints.down('md')]: {
             top: '17vh'
         },
-        [theme.breakpoints.down(760)]: {
+        [theme.breakpoints.down(770)]: {
             position: 'relative',
             width: '70%',
             margin: '0 auto',
@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center',
-            fontSize: '0.8em',
         },
     },
     p: {
