@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const Home: React.FC = () => {
+const ComunicacionHR: React.FC = () => {
   const classes = useStyles();
   return (
     <div>
@@ -66,4 +66,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home;
+export default ComunicacionHR;
