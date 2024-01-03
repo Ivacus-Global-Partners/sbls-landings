@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     padding: '25px 35vw 25px 5%',
     alignItems: 'center',
-    [theme.breakpoints.down(760)]: {
+    [theme.breakpoints.down(850)]: {
       paddingRight: '5%',
     },
     [theme.breakpoints.down('sm')]: {
@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 
   title: {
-    fontFamily: 'nunito',
-    fontStyle: 'regular',
+    fontFamily: 'times',
+    fontStyle: 'italic',
     fontSize: '2.5em',
     margin: 0,
     textAlign: 'left',
@@ -54,9 +54,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   paragraph: {
     textAlign: 'left',
-    width: '100%', // Ocupa todo el ancho disponible
-
-    fontFamily: 'nunito',
+    width: '100%',
+    fontFamily: "'Nunito', sans- serif",
     fontStyle: 'regular',
     fontSize: '18px',
   },

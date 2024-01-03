@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         background: '#F2F2F2',
         borderRadius: '20px',
         boxSizing: 'border-box',
-        padding: '3vh 2vw',
+        padding: '2.5vw 2vw',
         margin: '10px 0',
         textAlign: 'center',
         height: 'fit-content',
@@ -19,19 +19,19 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '30vw',
         position: 'absolute',
         right: '2em',
-        top: '50%',
+        top: '20vw',
         [theme.breakpoints.down(1100)]: {
-            top: '35vh'
+            top: '21vw'
         },
         [theme.breakpoints.down(1000)]: {
             top: '32vh'
         },
         [theme.breakpoints.down('md')]: {
-            top: '17vh'
+            top: '15vw'
         },
-        [theme.breakpoints.down(760)]: {
+        [theme.breakpoints.down(850)]: {
             position: 'relative',
-            width: '70%',
+            width: '85%',
             margin: '0 auto',
             top: 0,
             right: 0,
@@ -53,11 +53,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         alignItems: 'center',
         columnGap: '5px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '1.4em',
-        },
-        [theme.breakpoints.down('sm')]: {
-            textAlign: 'center',
-            fontSize: '0.8em',
+            fontSize: '1.7em',
         },
     },
     p: {
@@ -138,16 +134,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderRadius: '10px',
         border: 'none',
         color: 'white',
-        padding: '2.5vh',
+        padding: '15.5px',
         margin: '0 auto',
         boxShadow: '0px 4px 8px #7e7777',
         cursor: 'pointer',
         fontSize: '1em',
         [theme.breakpoints.down('md')]: {
-            fontSize: '1em',
-        },
-        [theme.breakpoints.down('sm')]: {
-            padding: '2.5vh',
+            fontSize: '0.8em',
         },
     },
     img: {
