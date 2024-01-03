@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '30vw',
         position: 'absolute',
         right: '2em',
-        top: '15vw',
+        top: '20vw',
         [theme.breakpoints.down(1100)]: {
             top: '21vw'
         },

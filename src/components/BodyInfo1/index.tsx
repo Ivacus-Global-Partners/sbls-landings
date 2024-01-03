@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 
   title: {
-    fontFamily: 'nunito',
-    fontStyle: 'regular',
+    fontFamily: 'times',
+    fontStyle: 'italic',
     fontSize: '2.5em',
     margin: 0,
     textAlign: 'left',
@@ -54,9 +54,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   paragraph: {
     textAlign: 'left',
-    width: '100%', // Ocupa todo el ancho disponible
-
-    fontFamily: 'nunito',
+    width: '100%',
+    fontFamily: "'Nunito', sans- serif",
     fontStyle: 'regular',
     fontSize: '18px',
   },
