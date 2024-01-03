@@ -2,13 +2,11 @@ import React from 'react'
 import Header from '../../components/Header'
 import InfoForm from '../../components/infoForm'
 import DownloadIcon from '@mui/icons-material/Download';
-import BodyInfo2 from '../../components/BodyInfo2';
 import IconsInfo from '../../components/IconsInfo';
 import ProgramObjetives from '../../components/ProgramObjetives';
 import CardsClaustro from '../../components/CardsClaustro';
 import Footer from '../../components/Footer';
-import BodyInfoIndemnizacion from '../../components/IndemnizacionDespido/BodyInfo1';
-import PorqueSagardoy from '../../components/IndemnizacionDespido/PorqueSagardoy';
+import PorqueSagardoy from '../../components/PorqueSagardoy';
 import BodyInfo from '../../components/BodyInfo1';
 
 const IndemnizacionDespido = () => {
@@ -40,7 +38,7 @@ const IndemnizacionDespido = () => {
                 </>
             } />
             <BodyInfo title={
-                <p style={{ color: 'black', margin: 0 }}>
+                <p style={{ color: 'black', margin: 0, fontSize: '3.1vw' }}>
                     Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
                 </p>
 
