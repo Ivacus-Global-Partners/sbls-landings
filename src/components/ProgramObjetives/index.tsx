@@ -126,7 +126,7 @@ const ProgramObjetives = () => {
         </h1>
         <div className="wrapper option-1 option-1-1">
           <Grid className={classes.objetives} container>
-            <Grid xs={12} sm={12} md={4}>
+            <Grid xs={12} sm={6} md={4}>
               <li className="c-stepper__item image1" >
                 <h3 className="c-stepper__title title">Fortalecer</h3>
                 <p className="c-stepper__desc">
@@ -136,7 +136,7 @@ const ProgramObjetives = () => {
                 </p>
               </li>
             </Grid>
-            <Grid xs={12} sm={12} md={4}>
+            <Grid xs={12} sm={6} md={4}>
               <li className="c-stepper__item image2">
                 <h3 className="c-stepper__title title">Guíar</h3>
                 <p className="c-stepper__desc">
