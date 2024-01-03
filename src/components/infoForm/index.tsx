@@ -218,6 +218,12 @@ const InfoForm = ({ icon = false, phone = false, shadow = false, submit, drawer 
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const downloadLink = document.createElement('a');
+        downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
+        downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
     }
 
     return (
