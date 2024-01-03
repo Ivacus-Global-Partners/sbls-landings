@@ -43,3 +43,13 @@
     left: 0;
   }
 }
+
+@media (min-width: 540px) {
+  .header-image {
+    width: 100%;
+    /* Usa 'width' en lugar de 'max-width' */
+    height: auto;
+    /* Usa 'height: auto' para mantener la proporción */
+    object-fit: contain;
+  }
+}

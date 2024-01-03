@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { Container, Grid, Box, Theme } from '@mui/material';
+import { Grid, Box, Theme } from '@mui/material';
 import './style.css'
 import DownloadIcon from '@mui/icons-material/Download';
 
@@ -140,13 +140,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Footer = () => {
+const Footer = ({ href, download }: { href: string, download: string }) => {
   const classes = useStyles();
 
   const handleDownload = () => {
     const downloadLink = document.createElement('a');
-    downloadLink.href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
-    downloadLink.download = 'hr-comunicacion-interna-sagardoy.pdf';
+    downloadLink.href = href;
+    downloadLink.download = download;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);

@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const IconsInfo = () => {
+const IconsInfo = ({ dates, duration, language, place, format }: { dates: string[], duration: any, language: string, place: any, format: any }) => {
 
   const classes = useStyles();
   const theme = useTheme();
@@ -87,8 +87,11 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Fechas</strong><br />
-                              8 abril, 2024<br />
-                              27 mayo, 2024<br />
+                              {dates.map((d) => (
+                                <>
+                                  {d} < br />
+                                </>
+                              ))}
                             </td>
                           </tr>
                         </tbody>
@@ -112,8 +115,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Duración</strong><br />
-                              8 semanas 1 sesión por<br />
-                              semana 17:00h a 20:00h<br />
+                              {duration}
                             </td>
                           </tr>
                         </tbody>
@@ -137,7 +139,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Idioma</strong><br />
-                              Español<br />
+                              {language}<br />
                             </td>
                           </tr>
                         </tbody>
@@ -163,8 +165,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Lugar</strong><br />
-                              C\Velázquez 86D<br />
-                              28006 | Madrid<br />
+                              {place}
                             </td>
                           </tr>
                         </tbody>
@@ -188,8 +189,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Formato</strong><br />
-                              Presencial<br />
-                              & Remoto<br />
+                              {format}
                             </td>
                           </tr>
                         </tbody>
@@ -218,8 +218,11 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Fechas</strong><br />
-                              8 abril, 2024<br />
-                              27 mayo, 2024<br />
+                              {dates.map((d) => (
+                                <>
+                                  {d} < br />
+                                </>
+                              ))}
                             </td>
                           </tr>
                         </tbody>
@@ -243,8 +246,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Duración</strong><br />
-                              8 semanas 1 sesión por<br />
-                              semana 17:00h a 20:00h<br />
+                              {duration}
                             </td>
                           </tr>
                         </tbody>
@@ -268,7 +270,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Idioma</strong><br />
-                              Español<br />
+                              {language}<br />
                             </td>
                           </tr>
                         </tbody>
@@ -292,8 +294,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Lugar</strong><br />
-                              C\Velázquez 86D<br />
-                              28006 | Madrid<br />
+                              {place}
                             </td>
                           </tr>
                         </tbody>
@@ -317,8 +318,7 @@ const IconsInfo = () => {
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Formato</strong><br />
-                              Presencial<br />
-                              & Remoto<br />
+                              {format}
                             </td>
                           </tr>
                         </tbody>

@@ -7,34 +7,6 @@ import { Container, Divider, Theme } from '@mui/material';
 import { Navigation } from 'swiper/modules';
 import './style.css'
 
-const claustro = [
-    {
-        img: 'https://i.ibb.co/jJb3G1p/Imagen.png',
-        name: 'Pablo Gonzalo',
-        job: 'Socio Estudio de Comunicación'
-    },
-    {
-        img: 'https://i.ibb.co/bgRPkNh/arantxa.png',
-        name: 'Arantxa García',
-        job: 'Global Culture, Engagement & DEI Director Danone'
-    },
-    {
-        img: 'https://i.ibb.co/6JqPBNX/Javier-Chico.png',
-        name: 'Javier Chico',
-        job: 'Director de Strategic Pitching Spain & Continental Europe CBRE'
-    },
-    {
-        img: 'https://i.ibb.co/zXtC2K8/1572520280186.png',
-        name: 'Marta Sempere',
-        job: 'People & Culture Vice President Coca-Cola Europacific Partners'
-    },
-    {
-        img: 'https://i.ibb.co/PW5T4kh/1568624230103.png',
-        name: 'Pedro Soto',
-        job: 'Director de Estudio Comunicación'
-    },
-]
-
 const useStyles = makeStyles((theme: Theme) => ({
     icono: {
         width: '4%',
@@ -204,7 +176,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-const CardsClaustro = () => {
+const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, job: string }[] }) => {
     const classes = useStyles();
     const [navigation, setNavigation] = React.useState(false);
 

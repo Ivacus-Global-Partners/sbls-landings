@@ -4,9 +4,19 @@ import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
   icono: {
+    marginTop: '2%',
+    marginRight: '1%',
     width: '3%',
+    [theme.breakpoints.down('md')]: {
+      width: '3.5%',
+    },
     [theme.breakpoints.down('sm')]: {
-      width: '6%',
+      width: '5%',
+      marginRight: 0,
+    },
+    [theme.breakpoints.up(539)]: {
+      width: '4%',
+      marginTop: '1%',
     }
   },
   container: {
@@ -40,6 +50,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 
   title: {
+    display: 'flex',
+    alignItems: 'start',
     fontFamily: 'times',
     fontStyle: 'italic',
     fontSize: '3.4vw',
@@ -70,22 +82,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const BodyInfo: React.FC = () => {
+const BodyInfo = ({ title }: { title: any }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
       <div className={classes.titleContainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" className={classes.icono} alt="Icono" /> Hacia una comunicación interna efectiva
+          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" className={classes.icono} alt="Icono" />
+          {title}
         </h1>
       </div>
       <div className={classes.paragraphContainer}>
         <p className={classes.paragraph}>
-          ¿Sabías que la comunicación eficaz promueve el compromiso con los equipos y las organizaciones?
-          ¿Deseas fortalecer tus conocimientos y competencias de comunicación interna estratégica?<br /><br />
-          Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong>
-          Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
+          Actualmente, muchas empresas enfrentan problemas legales y económicos debido al incumplimiento de las normativas laborales y de cotización a la Seguridad Social.<br /><br />
+          ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).<br /><br />
+          Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la seguridad social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
         </p>
       </div>
     </div>
