@@ -1,15 +1,15 @@
 import React from 'react'
-import Title from '../components/Title'
-import BodyInfo from '../components/BodyInfo1';
-import IconsInfo from '../components/IconsInfo';
-import InfoForm from '../components/infoForm';
+import Title from '../../components/Title'
+import BodyInfo from '../../components/BodyInfo1';
+import IconsInfo from '../../components/IconsInfo';
+import InfoForm from '../../components/infoForm';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import ProgramObjetives from '../components/ProgramObjetives';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import CardsClaustro from '../components/CardsClaustro';
-import BodyInfo2 from '../components/BodyInfo2';
+import ProgramObjetives from '../../components/ProgramObjetives';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import CardsClaustro from '../../components/CardsClaustro';
+import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 
 const useStyles = makeStyles((theme: Theme) => ({
