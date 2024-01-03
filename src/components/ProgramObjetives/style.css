@@ -63,7 +63,7 @@
 
 .c-stepper__title {
     font-weight: bold;
-    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-size: clamp(1.8rem, 4vw, 1.25rem);
     margin-bottom: 0.5rem;
 }
 

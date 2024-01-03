@@ -52,13 +52,20 @@ const useStyles = makeStyles((theme: Theme) => ({
     columnGap: '15px',
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '2.5em',
+    fontSize: '3.3em',
     margin: 0,
     textAlign: 'center',
     fontWeight: '500',
     color: '#AA1936',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.6em',
+    },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '6vw',
+      fontSize: '2em',
+    },
+    [theme.breakpoints.down(495)]: {
+      fontSize: '1.5em',
+      display: 'block',
     },
   },
   subTitle: {
@@ -96,6 +103,12 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: '600px',
     },
   },
+  icono: {
+    width: '0.7em',
+    [theme.breakpoints.down(315)]: {
+      width: '0.5em',
+    },
+  }
 }));
 
 const ProgramObjetives = () => {
@@ -106,7 +119,7 @@ const ProgramObjetives = () => {
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '0.7em' }} alt="Icono" />
+          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" className={classes.icono} alt="Icono" />
           Objetivos principales del programa
         </h1>
         <div className="wrapper option-1 option-1-1">
