@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import CardsClaustro from '../components/CardsClaustro';
 import BodyInfo2 from '../components/BodyInfo2';
-import ContactInfo from '../components/Prueba';
 import DownloadIcon from '@mui/icons-material/Download';
 
 const useStyles = makeStyles((theme: Theme) => ({

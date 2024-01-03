@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         right: '2em',
         top: '20vw',
         [theme.breakpoints.down(1100)]: {
-            top: '21vw'
+            top: '16vw'
         },
         [theme.breakpoints.down(1000)]: {
             top: '32vh'
         },
         [theme.breakpoints.down('md')]: {
-            top: '15vw'
+            top: '21vw'
         },
         [theme.breakpoints.down(850)]: {
             position: 'relative',

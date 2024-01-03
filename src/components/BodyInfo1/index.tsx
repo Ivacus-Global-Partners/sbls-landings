@@ -3,6 +3,12 @@ import { makeStyles } from '@mui/styles';
 import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
+  icono: {
+    width: '3%',
+    [theme.breakpoints.down('sm')]: {
+      width: '6%',
+    }
+  },
   container: {
     justifyContent: 'center',
     padding: '25px 35vw 25px 5%',
@@ -36,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   title: {
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '2.5em',
+    fontSize: '3.4vw',
     margin: 0,
     textAlign: 'left',
     fontWeight: '300',
@@ -44,11 +50,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down('md')]: {
       textAlign: 'left',
       fontWeight: '200',
-      fontSize: '1.7em',
+      fontSize: '2.6em',
     },
     [theme.breakpoints.down('sm')]: {
-      fontWeight: '200',
-      textAlign: 'left',
+      textAlign: 'center',
+      fontSize: '1.9em',
     },
   },
 
@@ -68,7 +74,7 @@ const BodyInfo: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.titleContainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" style={{ width: '3%' }} alt="Icono" /> Hacia una comunicación interna efectiva
+          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" className={classes.icono} alt="Icono" /> Hacia una comunicación interna efectiva
         </h1>
       </div>
       <div className={classes.paragraphContainer}>

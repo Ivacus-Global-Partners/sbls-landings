@@ -37,6 +37,12 @@ const claustro = [
 ]
 
 const useStyles = makeStyles((theme: Theme) => ({
+    icono: {
+        width: '4%',
+        [theme.breakpoints.down('sm')]: {
+            width: '6%',
+        }
+    },
     cardContainer: {
         padding: '65px 0',
         [theme.breakpoints.down('sm')]: {
@@ -180,13 +186,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     title: {
         fontFamily: 'times',
         fontStyle: 'italic',
-        fontSize: '2.5em',
+        fontSize: '3.4vw',
         margin: 0,
         marginBottom: '10px',
         fontWeight: '500',
         color: '#AA1936',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2.6em',
+        },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '6vw',
+            textAlign: 'center',
+            fontSize: '1.9em',
         },
     },
 
@@ -239,7 +249,7 @@ const CardsClaustro = () => {
     return (
         <div className={classes.cardContainer}>
             <Container>
-                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Descubre a parte del claustro</h1>
+                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" className={classes.icono} alt="Icono" /> Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>

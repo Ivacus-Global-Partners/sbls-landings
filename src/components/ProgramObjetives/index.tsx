@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     columnGap: '15px',
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '3.3em',
+    fontSize: '3.4vw',
     margin: 0,
     textAlign: 'center',
     fontWeight: '500',
@@ -61,10 +61,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       fontSize: '2.6em',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2em',
+      fontSize: '1.9em',
     },
     [theme.breakpoints.down(495)]: {
-      fontSize: '1.5em',
       display: 'block',
     },
   },
@@ -108,6 +107,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down(315)]: {
       width: '0.5em',
     },
+    [theme.breakpoints.down(495)]: {
+      marginRight: '5px',
+    }
   }
 }));
 
