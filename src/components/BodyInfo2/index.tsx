@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       marginLeft: '50px',
       textAlign: 'left',
     },
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'justify',
+    },
   },
   icon: {
     color: '#ffffff',
@@ -73,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   imageTextContainer: {
     display: 'flex',
-    alignItems: 'center',  
+    alignItems: 'center',
   },
 }));
 
@@ -94,8 +97,17 @@ const BodyInfo2 = () => {
         )}
         <div className={classes.textContainer}>
           <p className={classes.p}>
-            <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
-            En estos tiempos en los que se extienden fenómenos como el de<br />la “renuncia silenciosa” (“quiet quitting”), una certeza se<br />consolida: para ser diferencialmente competitivas, las<br />organizaciones precisan de profesionales comprometidos. Y el<br />compromiso se construye, entre otros pilares, sobre una<br />comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+            {isMobile ? (
+              <>
+                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
+                En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+              </>
+            ) : (
+              <>
+                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} />
+                En estos tiempos en los que se extienden fenómenos como el de<br />la “renuncia silenciosa” (“quiet quitting”), una certeza se<br />consolida: para ser diferencialmente competitivas, las<br />organizaciones precisan de profesionales comprometidos. Y el<br />compromiso se construye, entre otros pilares, sobre una<br />comunicación eficaz. <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} />
+              </>
+            )}
           </p>
           <div className={isMobile ? classes.imageTextContainer : ''}>
             {isMobile && (
