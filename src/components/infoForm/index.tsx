@@ -178,6 +178,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     checkboxText: {
         display: 'inline',
+        lineHeight: '1.3em',
     },
     imgContainer: {
         position: 'absolute',

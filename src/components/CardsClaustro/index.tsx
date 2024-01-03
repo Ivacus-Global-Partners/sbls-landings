@@ -37,6 +37,27 @@ const claustro = [
 ]
 
 const useStyles = makeStyles((theme: Theme) => ({
+    cardContainer: {
+        padding: '65px 0',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: '25px',
+        }
+    },
+    name: {
+        fontWeight: 'bold',
+        margin: '20px 0 8px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.2em',
+        }
+    },
+    job: {
+        textAlign: 'center',
+        fontSize: '0.8em',
+        margin: '8px 0 25px 0',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1em',
+        }
+    },
     divider: {
         border: 'none',
         borderBottom: '1px solid black !important',
@@ -58,17 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     slide: {
         cursor: 'pointer',
-        height: '20vw',
-
-        [theme.breakpoints.down('md')]: {
-            height: '40vw',
-        },
-        [theme.breakpoints.down('sm')]: {
-            height: '50vw',
-        },
-        [theme.breakpoints.between('xs', 'sm')]: {
-            height: '60vw',
-        }
+        height: 'auto',
     },
     slidetext: {
         zIndex: 1,
@@ -91,17 +102,15 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     },
     slideimg: {
-        width: '50%',
+        width: 'auto',
+        height: '25vh',
         transition: 'transform 0.3s ease-in-out',
         '&:hover': {
             transform: 'scale(1.05)'
         },
-
-        [theme.breakpoints.down('sm')]: {
-            objectPosition: 'center',
-            width: '200px',
-            height: '300px',
-        },
+        [theme.breakpoints.down('md')]: {
+            height: '15vh',
+        }
     },
     divclosed: {
         width: '100%',
@@ -213,7 +222,7 @@ const CardsClaustro = () => {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 60,
+                spaceBetween: 20,
             },
             960: {
                 slidesPerView: 4.2,
@@ -228,8 +237,8 @@ const CardsClaustro = () => {
 
 
     return (
-        <div style={{ padding: '65px 0' }}>
-            <Container fixed>
+        <div className={classes.cardContainer}>
+            <Container>
                 <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" style={{ width: '4%' }} alt="Icono" /> Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
@@ -240,16 +249,9 @@ const CardsClaustro = () => {
                                     <SwiperSlide className={classes.slide}>
                                         <div className={classes.card}>
                                             <img className={classes.slideimg} src={member.img} alt="Foto" />
-                                            <p style={{
-                                                fontWeight: 'bold',
-                                                margin: '20px 0 8px',
-                                            }}>{member.name}</p>
+                                            <p className={classes.name}>{member.name}</p>
                                             <Divider orientation='horizontal' className={classes.divider} />
-                                            <p style={{
-                                                textAlign: 'center',
-                                                fontSize: '0.8em',
-                                                margin: '8px 0 0'
-                                            }}>{member.job}</p>
+                                            <p className={classes.job}>{member.job}</p>
                                         </div>
                                     </SwiperSlide>
                                 ))
