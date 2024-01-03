@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '18px',
   },
   iconsItem: {
+    textAlign: 'right',
     [theme.breakpoints.down('sm')]: {
       padding: '7px 0',
       textAlign: 'center',
