@@ -8,8 +8,24 @@ import CardsClaustro from '../../components/CardsClaustro';
 import Footer from '../../components/Footer';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
 import BodyInfo from '../../components/BodyInfo1';
+import { makeStyles } from "@mui/styles";
+import { Theme } from "@mui/material";
+
+const useStyles = makeStyles((theme: Theme) => ({
+    body: {
+        textAlign: 'justify',
+        [theme.breakpoints.up(1100)]: {
+            marginBottom: '70px'
+        },
+        [theme.breakpoints.up(1200)]: {
+            marginBottom: '80px'
+        }
+    },
+}));
 
 const IndemnizacionDespido = () => {
+
+    const classes = useStyles();
 
     const headerIndemnizacionDespido = 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20indemnizaci%C3%B3nPorDespido.png?alt=media&token=f5672768-f9b6-4225-af2c-3c054932ad3e'
     const href = 'https://sagardoyschool.com/archivos/actualizacion-juridica-la-indemnizacion-por-despido.pdf'
@@ -44,13 +60,12 @@ const IndemnizacionDespido = () => {
 
             }
                 body={
-                    <div style={{ textAlign: 'justify'}}>
+                    <div className={classes.body}>
                         <p>
                             ¿Eres profesional del derecho, profesional de RR.HH. o empleador? ¿Sabías que un conocimiento profundo de la figura del despido en el ordenamiento jurídico promueve un entorno laboral justo, equitativo y legalmente sólido?
                         </p>
                         <p>
                             Conoce <b>cómo se están aplicando las normativas relacionadas al despido en los diferentes tribunales</b> españoles y europeos. Y profundiza <b>en las nuevas claves de la indemnización por despido</b>, un tema sometido a intenso devate en los últimos tiempos.
-
                         </p>
                     </div>
                 }
