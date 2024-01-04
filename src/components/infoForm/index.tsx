@@ -318,7 +318,7 @@ const InfoForm = ({
             País
           </MenuItem>
           {countries.map((country, index) => (
-            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px' }}>
+            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px', fontFamily:'Nunito' }}>
               {country.name} ({country.code} {country.prefix} {hasFlag(country.code) ? <img
                 height="10"
                 alt={country.name}
