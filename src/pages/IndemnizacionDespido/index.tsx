@@ -83,7 +83,7 @@ const IndemnizacionDespido = () => {
                 "Estudiar": "la tendendencia jurisprudencial en materia indemnizatoria por daños y perjuicios y daños morales en los supuestos de vulneración de derechos fundamentales",
                 "Análizar": "la doctrina jurisprudencial y la aplicabilidad de las normas sobre el despido en los diferentes tribunales españoles y europeos"
             }} />
-            <CardsClaustro claustro={claustro} />
+            <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
             <Footer href={href} download={download} />
         </div>
     )

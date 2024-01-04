@@ -154,13 +154,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     navigation: {
         top: '16px',
-        height: '23vw',
+        height: '100%',
         transition: 'right 0.2s ease, opacity 0.6s, left 0.2s ease',
     },
     title: {
         fontFamily: 'times',
         fontStyle: 'italic',
-        fontSize: '3.4vw',
+        fontSize: '3.2vw',
         margin: 0,
         marginBottom: '10px',
         fontWeight: '500',
@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, job: any }[] }) => {
+const CardsClaustro = ({ claustro, title }: { claustro: { name: string, img: string, job: any }[], title: string }) => {
     const classes = useStyles();
     const [navigation, setNavigation] = React.useState(false);
 
@@ -224,9 +224,9 @@ const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, jo
         <div className={classes.cardContainer}>
             <Container>
                 <h1 className={classes.title}>
-                    <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fschool_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=d2edfee9-3ab6-4924-9450-feb9a18f7812" 
-                    className={classes.icono} 
-                    alt="Icono" /> Descubre a parte del claustro</h1>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fschool_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=d2edfee9-3ab6-4924-9450-feb9a18f7812"
+                        className={classes.icono}
+                        alt="Icono" /> {title}</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>

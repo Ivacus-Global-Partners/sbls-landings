@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'start',
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '3.4vw',
+    fontSize: '3.2vw',
     margin: 0,
     textAlign: 'left',
     fontWeight: '300',

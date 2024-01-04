@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     columnGap: '15px',
     fontFamily: 'times',
     fontStyle: 'italic',
-    fontSize: '3.4vw',
+    fontSize: '3.2vw',
     margin: 0,
     textAlign: 'center',
     fontWeight: '500',

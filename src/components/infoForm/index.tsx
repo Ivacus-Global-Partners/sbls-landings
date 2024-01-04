@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { MenuItem, TextField, Theme } from "@mui/material";
 import countries from "../../resources/data/countries";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import { hasFlag } from 'country-flag-icons'
 import "./style.css";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& .MuiFilledInput-root': {
       borderRadius: "10px",
       backgroundColor: 'white',
+      textAlign: 'left',
       '&:before': {
         borderBottom: 'none', // Elimina la línea antes del input
         content: 'unset',
@@ -74,6 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       '& input::placeholder': {
         color: 'black',
         opacity: 1,
+        textAlign: 'left',
       },
     },
     '& .MuiFilledInput-input': {
@@ -176,7 +179,7 @@ const InfoForm = ({
     lastName: '',
     email: '',
     phone: '',
-    prefix: '+34',
+    prefix: '0',
   })
   const [errors, setErrors] = React.useState({
     name: '',
@@ -306,14 +309,21 @@ const InfoForm = ({
           sx={{ width: "95%" }}
           name="prefix"
           value={values.prefix}
-          placeholder="País de residencia"
+          placeholder="País"
           select
           style={{ marginTop: '3px' }}
           onChange={handleChange}
         >
+          <MenuItem value="0" sx={{ display: 'none' }}>
+            País
+          </MenuItem>
           {countries.map((country, index) => (
-            <MenuItem key={index} value={country.prefix}>
-              {country.name} ({country.code} {country.prefix} {country.flag}
+            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px' }}>
+              {country.name} ({country.code} {country.prefix} {hasFlag(country.code) ? <img
+                height="10"
+                alt={country.name}
+                src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${country.code}.svg`}
+              /> : country.flag}
               )
             </MenuItem>
           ))}

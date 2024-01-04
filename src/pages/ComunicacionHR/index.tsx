@@ -93,7 +93,7 @@ const ComunicacionHR: React.FC = () => {
         "Guiar": "a los profesionales de RR.HH. en la aplicación de herramientas de comunicación necesarias para lograr una mayor aportación al negocio y a la gestión de la cultura corporativa.",
         "Desarrollar": "casos prácticos en colaboración con profesionales de destacadas organizaciones para encontrar soluciones desde distintas perspectivas."
       }} />
-      <CardsClaustro claustro={claustro} />
+      <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
       <Footer href={href} download={download} />
     </div>
   )

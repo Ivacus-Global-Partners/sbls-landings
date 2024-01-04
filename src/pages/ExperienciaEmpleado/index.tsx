@@ -95,7 +95,7 @@ const ExperienciaEmpleado: React.FC = () => {
         "Capacitar": "a los profesionales del área de RR.HH. para que puedan asentar las bases del diseño y desarrollo de un modelo de gestión centrado en la experiencia de los empleados.",
         "Adquirir": "los conocimientos de un modelo que impacta, directamente, sobre la experiencia de cliente y los resultados de las organizaciones."
       }} />
-      <CardsClaustro claustro={claustro} />
+      <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
       <BigQuote />
       <Footer href={href} download={download} />
     </div>
