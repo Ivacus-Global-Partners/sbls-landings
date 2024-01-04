@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme: Theme) => ({
       top: "15vw",
     },
     [theme.breakpoints.down(1000)]: {
-      top: "32vh",
+      top: "25vh",
     },
     [theme.breakpoints.down("md")]: {
-      top: "12vw",
+      top: "10vw",
     },
     [theme.breakpoints.down(850)]: {
       position: "relative",
