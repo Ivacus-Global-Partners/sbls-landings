@@ -15,12 +15,12 @@ const SeguridadSocial: React.FC = () => {
 
   const claustro = [
     {
-      img: 'https://i.ibb.co/9GGkHhh/maria-foret-pastor.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fmaria-foret-pastor.png?alt=media&token=a0c549bc-e2d8-408a-a199-abc6876da9de',
       name: 'Maria Foret Pastor',
       job: 'Inspectora de Trabajo y Seguridad Social'
     },
     {
-      img: 'https://i.ibb.co/2dgtvCG/jorge-travesedo.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fjorge-travesedo.png?alt=media&token=624e17fa-81be-44a2-a5db-20d926690463',
       name: 'Jorge Travesedo Dasí',
       job: 'Socia en Sagardoy Abogados. Miembro del Cuerpo Superior de Inspectores de Trabajo y Seguridad Social.'
     },

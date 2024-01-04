@@ -14,27 +14,27 @@ const ComunicacionHR: React.FC = () => {
   const download = 'hr-comunicacion-interna-sagardoy.pdf';
   const claustro = [
     {
-      img: 'https://i.ibb.co/jJb3G1p/Imagen.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FPablo%20Gonzalo.png?alt=media&token=63fd84d8-e349-41e4-b117-310ac961df63',
       name: 'Pablo Gonzalo',
       job: 'Socio Estudio de Comunicación'
     },
     {
-      img: 'https://i.ibb.co/bgRPkNh/arantxa.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Farantxa.png?alt=media&token=c6663cc3-aeb3-4827-ac0a-26d5ac95c48d',
       name: 'Arantxa García',
       job: 'Global Culture, Engagement & DEI Director Danone'
     },
     {
-      img: 'https://i.ibb.co/6JqPBNX/Javier-Chico.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FJavier_Chico.png?alt=media&token=9c913250-134c-42ab-ae9c-b76685cdfd74',
       name: 'Javier Chico',
       job: 'Director de Strategic Pitching Spain & Continental Europe CBRE'
     },
     {
-      img: 'https://i.ibb.co/zXtC2K8/1572520280186.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FMarta%20Sempere.png?alt=media&token=4e580348-0558-44d2-b27f-cfba7feec43a',
       name: 'Marta Sempere',
       job: 'People & Culture Vice President Coca-Cola Europacific Partners'
     },
     {
-      img: 'https://i.ibb.co/PW5T4kh/1568624230103.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FPedro%20Soto.png?alt=media&token=c7da0259-6bce-440c-a654-718653b4f44c',
       name: 'Pedro Soto',
       job: 'Director de Estudio Comunicación'
     },
@@ -49,7 +49,7 @@ const ComunicacionHR: React.FC = () => {
   return (
     <div>
       <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={href} download={download} />
-      <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto

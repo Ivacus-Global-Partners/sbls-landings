@@ -89,7 +89,9 @@ const BodyInfo = ({ title, body }: { title: any, body: any },) => {
     <div className={classes.container}>
       <div className={classes.titleContainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/G2nV6hf/rocket-launch-FILL0-wght400-GRAD0-opsz24-2x.png" className={classes.icono} alt="Icono" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Frocket_launch_FILL0_wght400_GRAD0_opsz24.svg?alt=media&token=159632c3-2c82-4a71-b3ca-87591fb8f925"
+            className={classes.icono}
+            alt="Icono" />
           {title}
         </h1>
       </div>

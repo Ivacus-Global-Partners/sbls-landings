@@ -121,7 +121,9 @@ const ProgramObjetives = ({ objetives }: { objetives: Record<string, string> }) 
     <div className={classes.container}>
       <div className={classes.subcontainer}>
         <h1 className={classes.title}>
-          <img src="https://i.ibb.co/8r1dDzr/ads-click-FILL0-wght400-GRAD0-opsz48-2x.png" className={classes.icono} alt="Icono" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fads_click_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=7e186a13-2517-4685-a65f-6379d43854e9" 
+            className={classes.icono} 
+            alt="Icono" />
           Objetivos principales del programa
         </h1>
         <div className="wrapper option-1 option-1-1">

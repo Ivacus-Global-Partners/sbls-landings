@@ -223,7 +223,10 @@ const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, jo
     return (
         <div className={classes.cardContainer}>
             <Container>
-                <h1 className={classes.title}><img src="https://i.ibb.co/k58Z8Jr/school-FILL0-wght400-GRAD0-opsz48-2x.png" className={classes.icono} alt="Icono" /> Descubre a parte del claustro</h1>
+                <h1 className={classes.title}>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fschool_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=d2edfee9-3ab6-4924-9450-feb9a18f7812" 
+                    className={classes.icono} 
+                    alt="Icono" /> Descubre a parte del claustro</h1>
                 <div onMouseEnter={() => setNavigation(true)}
                     onMouseLeave={() => setNavigation(false)}>
                     <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>

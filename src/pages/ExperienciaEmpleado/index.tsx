@@ -15,27 +15,27 @@ const ExperienciaEmpleado: React.FC = () => {
   const download = 'certificación-experto-experiencia-de-empleado.pdf';
   const claustro = [
     {
-      img: 'https://i.ibb.co/ydpzjwr/IGNACIO-CEA-FORNIES.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FIGNACIO-CEA-FORNIES.png?alt=media&token=e9cd0a8e-4abf-4300-a2d8-877ece277af6',
       name: 'Ignacio Cea Fornies',
       job: <>Director Global de Nuevos Modelos de Negocio de <strong>Prosegur</strong> Cash Miembro del Consejo Asesor de <strong>Cionet</strong></>
     },
     {
-      img: 'https://i.ibb.co/86jWJ2b/LOURDES-CENTENO.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLOURDES-CENTENO.png?alt=media&token=07050ebc-ebd2-41f4-a05b-03bcf1f7c2ba',
       name: 'Lourdes Centeno',
       job: <>Socia responsable de Derecho Societario, Gobierno Corporativo y Mercado de Capitales en <strong>EY Abogados</strong></>
     },
     {
-      img: 'https://i.ibb.co/M6dq2KY/i-NIGO-SAGARODOY.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fi-NIGO-SAGARODOY.png?alt=media&token=3b3ca3c6-d27f-40d9-994e-742b29287f62',
       name: 'Iñigo Sagardoy',
       job: <>Presidente <br /> <strong>Sagardoy Abogados</strong></>
     },
     {
-      img: 'https://i.ibb.co/NS4xW2h/CARMEN-GOMEZ-BARRERA-1.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FCARMEN-GOMEZ-BARRERA-1.png?alt=media&token=a76a75a6-b908-4808-a368-ab4449f745d3',
       name: 'Carmen Gómez de Barreda',
       job: <>Miembro del Consejo de <strong>Red Eléctrica, Mutua Madrileña y Grupo Antolín</strong></>
     },
     {
-      img: 'https://i.ibb.co/Qj0xXPy/1685789467589.png',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FTom%C3%A1s%20Preda.png?alt=media&token=621dc42e-52b5-4476-98cd-639b9d905b80',
       name: 'Tomás Pereda',
       job: 'HR Senior Advisor | Subdirector General en Fundación máshumano | LinkedIn Top Voices 2020 | Content Creator | Conferenciante'
     },
@@ -62,7 +62,7 @@ const ExperienciaEmpleado: React.FC = () => {
       <BodyInfo2
         logoAlt="Lukkap"
         logo="https://i.ibb.co/PT7cqGn/Imagen-5.png"
-        img={"https://i.ibb.co/FKmwR9g/1582485296575.png"}
+        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FJose%20Luis%20Pascual.png?alt=media&token=118eae81-1787-4b69-8bb1-7be813834960"}
         name={"José Luis Pascual "}
         job={<>
           Director de la Certificación Experto en Experiencia de Empleado <br />

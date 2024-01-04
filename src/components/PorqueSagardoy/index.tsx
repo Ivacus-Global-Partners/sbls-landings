@@ -109,7 +109,7 @@ const PorqueSagardoy = () => {
                                     <CardMedia
                                         style={{ width: '100%', maxWidth: '100%', height: '100%' }}
                                         component="img"
-                                        image="https://i.ibb.co/qRRZZ4w/Porque-Sagardoy.png"
+                                        image="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPorqueSagardoy.png?alt=media&token=d0318e49-e62f-4ede-97fd-7af0abedf94a"
                                         alt="Live from space album cover"
                                     />
                                 </Grid>

@@ -17,12 +17,12 @@ const IndemnizacionDespido = () => {
 
     const claustro = [
         {
-            img: 'https://i.ibb.co/cNb3vTz/maria-rosa.png',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fmaria-rosa.png?alt=media&token=00c935b1-a806-4537-9d76-d2ee824220f4',
             name: 'Rosa María Virolés Piñol',
             job: `Directora del Programa. Ex-Presidententa de la Sala Cuarta del Tribunal Supremo`
         },
         {
-            img: 'https://i.ibb.co/7vtQnFX/ramon-llanos.png',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Framon-llanos.png?alt=media&token=0dbabf60-d797-49c7-b6c7-fee9f05abf6c',
             name: 'Ramón Gallo Llanos',
             job: 'Magistrado de la Sala de lo Social de la Audiencia Nacional'
         },

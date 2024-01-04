@@ -158,7 +158,7 @@ const Footer = ({ href, download }: { href: string, download: string }) => {
       <Grid container>
         <Grid item xs={12} sm={4}>
           <Box className={classes.imageContainer}>
-            <img src="https://i.ibb.co/L9kpfz4/Grupo-9-2x.png" className={classes.mainLogo} alt="Sagardoy Business School" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fsagardoy-logo-landings.png?alt=media&token=4e91e995-da8d-4ce2-9706-e9337820009a" className={classes.mainLogo} alt="Sagardoy Business School" />
           </Box>
         </Grid>
         <Grid item xs={12} sm={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
