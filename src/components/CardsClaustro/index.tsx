@@ -233,7 +233,7 @@ const CardsClaustro = ({ claustro }: { claustro: { name: string, img: string, jo
                         {
                             claustro
                                 .map((member, index) => (
-                                    <SwiperSlide className={classes.slide}>
+                                    <SwiperSlide className={classes.slide} key={index}>
                                         <div className={classes.card}>
                                             <img className={classes.slideimg} src={member.img} alt="Foto" />
                                             <p className={classes.name}>{member.name}</p>

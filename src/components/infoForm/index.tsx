@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { Theme, useMediaQuery, useTheme } from "@mui/material";
+import { MenuItem, TextField, Theme } from "@mui/material";
 import countries from "../../resources/data/countries";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import "./style.css";
@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     right: "2em",
     top: "20vw",
     [theme.breakpoints.down(1100)]: {
-      top: "16vw",
+      top: "15vw",
     },
     [theme.breakpoints.down(1000)]: {
       top: "32vh",
     },
     [theme.breakpoints.down("md")]: {
-      top: "17vw",
+      top: "12vw",
     },
     [theme.breakpoints.down(850)]: {
       position: "relative",
@@ -56,47 +56,39 @@ const useStyles = makeStyles((theme: Theme) => ({
       fontSize: "1.7em",
     },
   },
-  p: {
-    margin: 0,
-    fontSize: "1vw",
-    marginBottom: "20px",
-    textAlign: "start",
-    [theme.breakpoints.down(1280)]: {
-      textAlign: "center",
-      fontSize: "1.6vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-      fontSize: "2vw",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "3vw",
-    },
-  },
   input: {
-    outline: "none",
-    display: "block",
-    boxSizing: "border-box",
-    border: "none",
-    borderRadius: "10px",
-    padding: "10px",
-    fontSize: "1.1em",
-    color: "black",
-    width: "100%",
-    margin: "10px 0",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1em",
+    fontFamily: "Nunito",
+    '& .MuiFilledInput-root': {
+      borderRadius: "10px",
+      backgroundColor: 'white',
+      '&:before': {
+        borderBottom: 'none', // Elimina la línea antes del input
+        content: 'unset',
+      },
+      '&:hover:before': {
+        borderBottom: 'none', // Elimina la línea antes del input en hover
+      },
+      '&:hover fieldset': {
+        borderBottom: 'none', // Elimina la línea después del input en hover
+      },
     },
-    "-webkit-appearance": "none",
-    "-moz-appearance": "none",
-    appearance: "none",
-    "&::placeholder": {
-      color: "black",
+    '& .MuiFilledInput-input': {
+      fontFamily: "Nunito",
+      color: 'black',
     },
-    "&:focus": {
-      borderBottomRightRadius: 0,
-      borderBottomLeftRadius: 0,
-      borderBottom: "2px solid lightblue",
+    '& .MuiInputLabel-root': {
+      fontFamily: "Nunito",
+      color: 'black',
+    },
+    '& .MuiInputBase-input::placeholder': {
+      fontFamily: "Nunito",
+      color: 'black',
+    },
+    '& .MuiFilledInput-underline:after': {
+      borderBottom: 'none', // Elimina la línea después del input
+    },
+    '&:hover .MuiFilledInput-underline:after': {
+      borderBottom: 'none', // Elimina la línea después del input en hover
     },
   },
   checkbox: {
@@ -142,63 +134,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       fontSize: "0.8em",
     },
   },
-  img: {
-    borderRadius: "100%",
-    position: "absolute",
-    width: "5vw",
-    top: "0",
-    right: "0",
-    filter: "brightness(95%) contrast(89%)",
-    [theme.breakpoints.down(1280)]: {
-      width: "10vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "14vw",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "18vw",
-    },
-  },
-  icon: {
-    borderRadius: "100%",
-    position: "absolute",
-    width: "2.5vw",
-    bottom: "-1vh",
-    right: "0",
-    [theme.breakpoints.down(1280)]: {
-      width: "5.5vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "6.5vw",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "8.5vw",
-    },
-  },
   checkboxText: {
     display: "inline",
     lineHeight: "1.3em",
-  },
-  imgContainer: {
-    position: "absolute",
-    top: "-2vw",
-    right: 0,
-    [theme.breakpoints.down("md")]: {
-      top: "-5vw",
-    },
-  },
-  imgSubContainer: {
-    position: "relative",
-    height: "5vw",
-    [theme.breakpoints.down(1280)]: {
-      height: "10vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      height: "14vw",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "18vw",
-    },
   },
   option: {
     color: "gray",
@@ -209,22 +147,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const InfoForm = ({
-  icon = false,
-  phone = false,
   shadow = false,
   submit,
-  drawer = false,
   title = false,
   href,
   download,
   productId,
   formId
 }: {
-  icon?: boolean;
-  phone?: boolean;
   shadow?: boolean;
   submit: any;
-  drawer?: boolean;
   title?: boolean;
   href: string;
   download: string;
@@ -232,9 +164,28 @@ const InfoForm = ({
   formId: string;
 }) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   const [enabledSubmit, setEnabledSubmit] = React.useState(false);
+  const [values, setValues] = React.useState({
+    name: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    prefix: '+34',
+  })
+  const [errors, setErrors] = React.useState({
+    name: '',
+    lastName: '',
+    email: '',
+    phone: '',
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setValues((current) => ({
+      ...current,
+      [name]: value
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -244,10 +195,10 @@ const InfoForm = ({
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
-      name: "name",
-      lastName: "lastName",
-      email: "email",
-      phone: "prefix+phone",
+      name: values.name,
+      lastName: values.lastName,
+      email: values.email,
+      phone: `${values.prefix} ${values.phone}`,
       prefix: "prefix",
       "privacy-police": true,
       productId: productId, // productId
@@ -279,8 +230,6 @@ const InfoForm = ({
       onSubmit={handleSubmit}
       style={{
         boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
-        background: `${drawer ? "none" : undefined}`,
-        // width: '300px'
       }}
     >
       {title && (
@@ -289,83 +238,71 @@ const InfoForm = ({
           Solicita información
         </h3>
       )}
-      {phone && (
-        <p className={classes.p}>Puedes llamarnos al +34 91 454 00 71</p>
-      )}
       <div>
-        <input
+        <TextField
+          className={classes.input}
+          variant="filled"
+          label="Nombre"
+          sx={{ width: "100%" }}
+          name="name"
+          onChange={handleChange}
+          value={values.name}
+          error={!!errors.name}
+          helperText={errors.name}
           required
-          className={classes.input}
-          placeholder="Nombre"
-          style={{
-            display: `${drawer ? "inline" : undefined}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            marginRight: `${drawer && !isMedium ? "30px" : "0"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
-          }}
         />
-        <input
+        <TextField
+          className={classes.input}
+          variant="filled"
+          label="Apellidos"
+          sx={{ width: "100%" }}
+          name="lastName"
+          onChange={handleChange}
+          value={values.lastName}
+          error={!!errors.lastName}
+          helperText={errors.lastName}
           required
-          className={classes.input}
-          placeholder="Apellidos"
-          style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
-          }}
         />
-        <input
-          type="email"
+        <TextField
+          className={classes.input}
+          variant="filled"
+          label="Email"
+          sx={{ width: "100%" }}
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+          error={!!errors.email}
+          helperText={errors.email}
           required
-          className={classes.input}
-          placeholder="email*"
-          style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
-          }}
         />
-        {!drawer && (
-          <>
-            <select defaultValue="ES" className={classes.input}>
-              <option hidden className={classes.option}>
-                País de residencia
-              </option>
-              {countries.map((country: any, index: any) => (
-                <option
-                  key={index}
-                  className={classes.option}
-                  value={country.code}
-                >
-                  {country.name} ({country.code} {country.prefix} {country.flag}
-                  )
-                </option>
-              ))}
-            </select>
-          </>
-        )}
-        <input
+        <TextField
           className={classes.input}
-          type="number"
-          placeholder={drawer ? "Número de teléfono" : "Número de teléfono"}
-          required={!drawer}
-          style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
-          }}
+          variant="filled"
+          sx={{ width: "100%" }}
+          name="prefix"
+          value={values.prefix}
+          label="País de residencia"
+          select
+          onChange={handleChange}
+        >
+          {countries.map((country, index) => (
+            <MenuItem key={index} value={country.prefix}>
+              {country.name} ({country.code} {country.prefix} {country.flag}
+              )
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          className={classes.input}
+          variant="filled"
+          label="Número de teléfono"
+          sx={{ width: "100%" }}
+          name="phone"
+          onChange={handleChange}
+          value={values.phone}
+          error={!!errors.phone}
+          helperText={errors.phone}
+          required
         />
       </div>
       <label className={classes.checkbox}>
@@ -395,29 +332,11 @@ const InfoForm = ({
         className={classes.button}
         style={{
           background: `${enabledSubmit ? "#AA1935" : "#B3B3B3"}`,
-          borderRadius: `${drawer ? "30px" : undefined}`,
-          boxShadow: `${drawer ? "unset" : undefined}`,
         }}
         disabled={!enabledSubmit}
       >
         {submit}
       </button>
-      {icon && (
-        <div className={classes.imgContainer}>
-          <div className={classes.imgSubContainer}>
-            <img
-              className={classes.img}
-              src="https://i.ibb.co/G5TBr1r/juanan.jpg"
-              alt="infoForm"
-            />
-            <img
-              className={classes.icon}
-              src="https://www.vectorico.com/wp-content/uploads/2018/02/Whatsapp-Icon-300x300.png"
-              alt="whatsapp"
-            />
-          </div>
-        </div>
-      )}
     </form>
   );
 };
