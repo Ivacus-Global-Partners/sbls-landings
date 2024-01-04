@@ -302,6 +302,7 @@ const InfoForm = ({
           inputProps={{
             maxLength: 255
           }}
+          type="email"
         />
         <TextField
           className={classes.input}
