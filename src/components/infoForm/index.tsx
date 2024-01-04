@@ -187,6 +187,14 @@ const InfoForm = ({
     }))
   }
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const re = /^[0-9\b]+$/; // Expresión regular para aceptar solo números
+
+    if (e.target.value === '' || re.test(e.target.value)) {
+      handleChange(e);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -250,6 +258,9 @@ const InfoForm = ({
           error={!!errors.name}
           helperText={errors.name}
           required
+          inputProps={{
+            maxLength: 255
+          }}
         />
         <TextField
           className={classes.input}
@@ -262,7 +273,10 @@ const InfoForm = ({
           error={!!errors.lastName}
           helperText={errors.lastName}
           required
-          style={{ marginTop: '3px'}}
+          style={{ marginTop: '3px' }}
+          inputProps={{
+            maxLength: 255
+          }}
         />
         <TextField
           className={classes.input}
@@ -275,7 +289,10 @@ const InfoForm = ({
           error={!!errors.email}
           helperText={errors.email}
           required
-          style={{ marginTop: '3px'}}
+          style={{ marginTop: '3px' }}
+          inputProps={{
+            maxLength: 255
+          }}
         />
         <TextField
           className={classes.input}
@@ -285,7 +302,7 @@ const InfoForm = ({
           value={values.prefix}
           label="País de residencia"
           select
-          style={{ marginTop: '3px'}}
+          style={{ marginTop: '3px' }}
           onChange={handleChange}
         >
           {countries.map((country, index) => (
@@ -301,12 +318,15 @@ const InfoForm = ({
           label="Número de teléfono"
           sx={{ width: "100%" }}
           name="phone"
-          onChange={handleChange}
+          onChange={handleInputChange}
           value={values.phone}
           error={!!errors.phone}
           helperText={errors.phone}
           required
-          style={{ marginTop: '3px'}}
+          inputProps={{
+            inputMode: 'numeric'
+          }}
+          style={{ marginTop: '3px' }}
         />
       </div>
       <label className={classes.checkbox}>
