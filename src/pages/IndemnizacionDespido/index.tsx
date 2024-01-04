@@ -12,8 +12,8 @@ import BodyInfo from '../../components/BodyInfo1';
 const IndemnizacionDespido = () => {
 
     const headerIndemnizacionDespido = 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20indemnizaci%C3%B3nPorDespido.png?alt=media&token=f5672768-f9b6-4225-af2c-3c054932ad3e'
-    const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
-    const download = 'actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
+    const href = 'https://sagardoyschool.com/archivos/actualizacion-juridica-la-indemnizacion-por-despido.pdf'
+    const download = 'actualizacion-juridica-la-indemnizacion-por-despido.pdf'
 
     const claustro = [
         {
@@ -31,7 +31,7 @@ const IndemnizacionDespido = () => {
     return (
         <div>
             <Header image={headerIndemnizacionDespido} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
-            <InfoForm href={href} download={download} title shadow submit={
+            <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={
                 <>
                     <DownloadIcon sx={{ fontSize: '1.2em' }} />
                     Descargar folleto
