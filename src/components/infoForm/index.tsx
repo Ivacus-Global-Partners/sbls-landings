@@ -93,11 +93,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     "&::placeholder": {
       color: "black",
     },
-    "&:focus": {
-      borderBottomRightRadius: 0,
-      borderBottomLeftRadius: 0,
-      borderBottom: "2px solid lightblue",
-    },
   },
   checkbox: {
     display: "flex",
@@ -159,22 +154,6 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: "18vw",
     },
   },
-  icon: {
-    borderRadius: "100%",
-    position: "absolute",
-    width: "2.5vw",
-    bottom: "-1vh",
-    right: "0",
-    [theme.breakpoints.down(1280)]: {
-      width: "5.5vw",
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "6.5vw",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "8.5vw",
-    },
-  },
   checkboxText: {
     display: "inline",
     lineHeight: "1.3em",
@@ -209,20 +188,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const InfoForm = ({
-  icon = false,
-  phone = false,
   shadow = false,
   submit,
-  drawer = false,
   title = false,
   href,
   download,
 }: {
-  icon?: boolean;
-  phone?: boolean;
   shadow?: boolean;
   submit: any;
-  drawer?: boolean;
   title?: boolean;
   href: string;
   download: string;
@@ -274,8 +247,6 @@ const InfoForm = ({
       onSubmit={handleSubmit}
       style={{
         boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
-        background: `${drawer ? "none" : undefined}`,
-        // width: '300px'
       }}
     >
       {title && (
@@ -284,22 +255,17 @@ const InfoForm = ({
           Solicita información
         </h3>
       )}
-      {phone && (
-        <p className={classes.p}>Puedes llamarnos al +34 91 454 00 71</p>
-      )}
       <div>
         <input
           required
           className={classes.input}
           placeholder="Nombre"
           style={{
-            display: `${drawer ? "inline" : undefined}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            marginRight: `${drawer && !isMedium ? "30px" : "0"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
+            width: '100%',
+            marginRight: 0,
+            paddingLeft: '10px',
+            borderRadius: '10px',
+            borderBottom: 'none',
           }}
         />
         <input
@@ -307,12 +273,11 @@ const InfoForm = ({
           className={classes.input}
           placeholder="Apellidos"
           style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
+            display: 'block',
+            width: '100%',
+            paddingLeft: '10px',
+            borderRadius: '10px',
+            borderBottom: 'none',
           }}
         />
         <input
@@ -321,45 +286,39 @@ const InfoForm = ({
           className={classes.input}
           placeholder="email*"
           style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
+            display: 'block',
+            width: '100%',
+            paddingLeft: '10px',
+            borderRadius: '10px',
+            borderBottom: 'none',
           }}
         />
-        {!drawer && (
-          <>
-            <select defaultValue="ES" className={classes.input}>
-              <option hidden className={classes.option}>
-                País de residencia
-              </option>
-              {countries.map((country: any, index: any) => (
-                <option
-                  key={index}
-                  className={classes.option}
-                  value={country.code}
-                >
-                  {country.name} ({country.code} {country.prefix} {country.flag}
-                  )
-                </option>
-              ))}
-            </select>
-          </>
-        )}
+        <select defaultValue="ES" className={classes.input}>
+          <option hidden className={classes.option}>
+            País de residencia
+          </option>
+          {countries.map((country: any, index: any) => (
+            <option
+              key={index}
+              className={classes.option}
+              value={country.code}
+            >
+              {country.name} ({country.code} {country.prefix} {country.flag}
+              )
+            </option>
+          ))}
+        </select>
         <input
           className={classes.input}
           type="number"
-          placeholder={drawer ? "Número de teléfono" : "Número de teléfono"}
-          required={!drawer}
+          placeholder="Número de teléfono"
+          required
           style={{
-            display: `${drawer ? "inline" : "block"}`,
-            width: `${drawer && !isMedium ? "fit-content" : "100%"}`,
-            paddingLeft: `${drawer ? "0" : "10px"}`,
-            borderRadius: `${drawer ? "0" : "10px"}`,
-            borderBottom: `${drawer ? "2px solid #E6E6E6" : "none"}`,
-            fontSize: `${drawer ? "1.4em" : undefined}`,
+            display: 'block',
+            width: '100%',
+            paddingLeft: '10px',
+            borderRadius: '10px',
+            borderBottom: 'none',
           }}
         />
       </div>
@@ -390,29 +349,11 @@ const InfoForm = ({
         className={classes.button}
         style={{
           background: `${enabledSubmit ? "#AA1935" : "#B3B3B3"}`,
-          borderRadius: `${drawer ? "30px" : undefined}`,
-          boxShadow: `${drawer ? "unset" : undefined}`,
         }}
         disabled={!enabledSubmit}
       >
         {submit}
       </button>
-      {icon && (
-        <div className={classes.imgContainer}>
-          <div className={classes.imgSubContainer}>
-            <img
-              className={classes.img}
-              src="https://i.ibb.co/G5TBr1r/juanan.jpg"
-              alt="infoForm"
-            />
-            <img
-              className={classes.icon}
-              src="https://www.vectorico.com/wp-content/uploads/2018/02/Whatsapp-Icon-300x300.png"
-              alt="whatsapp"
-            />
-          </div>
-        </div>
-      )}
     </form>
   );
 };
