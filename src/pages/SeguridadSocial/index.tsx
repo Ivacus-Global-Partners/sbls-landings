@@ -35,7 +35,7 @@ const SeguridadSocial: React.FC = () => {
   return (
     <div>
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20seguridad%20social.png?alt=media&token=4ec2e4ea-95b3-487a-8d14-e9f723f650f6"} href={href} download={download} />
-      <InfoForm href={href} download={download} title shadow submit={
+      <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto

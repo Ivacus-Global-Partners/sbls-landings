@@ -217,6 +217,8 @@ const InfoForm = ({
   title = false,
   href,
   download,
+  productId,
+  formId
 }: {
   icon?: boolean;
   phone?: boolean;
@@ -226,6 +228,8 @@ const InfoForm = ({
   title?: boolean;
   href: string;
   download: string;
+  productId: string;
+  formId: string;
 }) => {
   const classes = useStyles();
   const theme = useTheme();
@@ -246,7 +250,8 @@ const InfoForm = ({
       phone: "prefix+phone",
       prefix: "prefix",
       "privacy-police": true,
-      productId: "0xa7cd6c", // productId
+      productId: productId, // productId
+      formId: formId
     });
 
     var requestOptions = {

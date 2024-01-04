@@ -49,7 +49,7 @@ const ComunicacionHR: React.FC = () => {
   return (
     <div>
       <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={href} download={download} />
-      <InfoForm href={href} download={download} title shadow submit={
+      <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
