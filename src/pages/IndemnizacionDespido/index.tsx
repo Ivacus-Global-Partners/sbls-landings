@@ -11,7 +11,7 @@ import BodyInfo from '../../components/BodyInfo1';
 
 const IndemnizacionDespido = () => {
 
-    const headerIndemnizacionDespido = 'https://i.ibb.co/SQgX3VS/header-indemnizaci-n.png'
+    const headerIndemnizacionDespido = 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20indemnizaci%C3%B3nPorDespido.png?alt=media&token=f5672768-f9b6-4225-af2c-3c054932ad3e'
     const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
     const download = 'actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
 

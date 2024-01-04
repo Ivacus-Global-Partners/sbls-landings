@@ -48,7 +48,7 @@ const ExperienciaEmpleado: React.FC = () => {
 
   return (
     <div>
-      <Header image={"https://i.ibb.co/gWmLHBL/header-certificacion-experto.png"} href={href} download={download} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} href={href} download={download} />
       <InfoForm href={href} download={download} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
