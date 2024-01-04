@@ -114,7 +114,7 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { i
           </div>
         )}
         <div className={classes.textContainer}>
-          <p className={classes.p} style={{ color: filled ? 'white' : 'black', paddingRight: isLargeScreen ? '35vw' : '0' }}>
+          <p className={classes.p} style={{ color: filled ? 'white' : 'black', paddingRight: isLargeScreen ? '33vw' : '0' }}>
             <>
               <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
               {quote} <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />

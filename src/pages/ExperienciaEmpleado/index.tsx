@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
+import BigQuote from '../../components/BigQuote';
 
 const ExperienciaEmpleado: React.FC = () => {
   const href = 'https://sagardoyschool.com/archivos/certificaci%C3%B3n-experto-experiencia-de-empleado.pdf';
@@ -95,6 +96,7 @@ const ExperienciaEmpleado: React.FC = () => {
         "Adquirir": "los conocimientos de un modelo que impacta, directamente, sobre la experiencia de cliente y los resultados de las organizaciones."
       }} />
       <CardsClaustro claustro={claustro} />
+      <BigQuote />
       <Footer href={href} download={download} />
     </div>
   )

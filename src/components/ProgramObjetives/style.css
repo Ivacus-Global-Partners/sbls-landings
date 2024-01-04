@@ -71,6 +71,9 @@
     font-size: clamp(0.85rem, 2vw, 1rem);
     padding-left: var(--spacing);
     padding-right: var(--spacing);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*** Non-demo CSS ***/
