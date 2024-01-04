@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     navigation: {
         top: '16px',
-        height: '20vw',
+        height: '23vw',
         transition: 'right 0.2s ease, opacity 0.6s, left 0.2s ease',
     },
     title: {

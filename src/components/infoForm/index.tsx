@@ -7,7 +7,7 @@ import "./style.css";
 
 const useStyles = makeStyles((theme: Theme) => ({
   form: {
-    background: "#F2F2F2",
+    background: "#E5E5E5",
     borderRadius: "20px",
     boxSizing: "border-box",
     padding: "2.5vw 2vw",
@@ -19,15 +19,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "30vw",
     position: "absolute",
     right: "2em",
-    top: "20vw",
+    top: "22vw",
     [theme.breakpoints.down(1100)]: {
-      top: "15vw",
+      top: "17vw",
     },
     [theme.breakpoints.down(1000)]: {
-      top: "25vh",
+      top: "12vw",
     },
     [theme.breakpoints.down("md")]: {
-      top: "10vw",
+      top: "15vw",
     },
     [theme.breakpoints.down(850)]: {
       position: "relative",
@@ -71,14 +71,20 @@ const useStyles = makeStyles((theme: Theme) => ({
       '&:hover fieldset': {
         borderBottom: 'none', // Elimina la línea después del input en hover
       },
+      '& input::placeholder': {
+        color: 'black',
+        opacity: 1,
+      },
     },
     '& .MuiFilledInput-input': {
       fontFamily: "Nunito",
       color: 'black',
+      paddingTop: '8px !important',
     },
     '& .MuiInputLabel-root': {
       fontFamily: "Nunito",
       color: 'black',
+      display: 'none',
     },
     '& .MuiInputBase-input::placeholder': {
       fontFamily: "Nunito",
@@ -120,12 +126,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   button: {
     display: "flex",
     columnGap: "5px",
-    alignItens: "center",
+    alignItems: "center",
     justifyContent: "center",
-    borderRadius: "10px",
+    borderRadius: "50px",
     border: "none",
     color: "white",
-    padding: "15.5px",
+    padding: "10px 20px",
     margin: "0 auto",
     boxShadow: "0px 4px 8px #7e7777",
     cursor: "pointer",
@@ -246,12 +252,12 @@ const InfoForm = ({
           Solicita información
         </h3>
       )}
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', alignItems: 'center' }}>
         <TextField
           className={classes.input}
           variant="filled"
-          label="Nombre"
-          sx={{ width: "100%" }}
+          placeholder="Nombre"
+          sx={{ width: "95%" }}
           name="name"
           onChange={handleChange}
           value={values.name}
@@ -265,8 +271,8 @@ const InfoForm = ({
         <TextField
           className={classes.input}
           variant="filled"
-          label="Apellidos"
-          sx={{ width: "100%" }}
+          placeholder="Apellidos"
+          sx={{ width: "95%" }}
           name="lastName"
           onChange={handleChange}
           value={values.lastName}
@@ -281,8 +287,8 @@ const InfoForm = ({
         <TextField
           className={classes.input}
           variant="filled"
-          label="Email"
-          sx={{ width: "100%" }}
+          placeholder="Email"
+          sx={{ width: "95%" }}
           name="email"
           onChange={handleChange}
           value={values.email}
@@ -297,10 +303,10 @@ const InfoForm = ({
         <TextField
           className={classes.input}
           variant="filled"
-          sx={{ width: "100%" }}
+          sx={{ width: "95%" }}
           name="prefix"
           value={values.prefix}
-          label="País de residencia"
+          placeholder="País de residencia"
           select
           style={{ marginTop: '3px' }}
           onChange={handleChange}
@@ -315,8 +321,8 @@ const InfoForm = ({
         <TextField
           className={classes.input}
           variant="filled"
-          label="Número de teléfono"
-          sx={{ width: "100%" }}
+          placeholder="Número de teléfono"
+          sx={{ width: "95%" }}
           name="phone"
           onChange={handleInputChange}
           value={values.phone}

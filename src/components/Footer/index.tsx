@@ -7,7 +7,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
     backgroundColor: '#F7F7F7',
-    padding: '40px 0',
+    padding: '40px 3vw',
     [theme.breakpoints.down('sm')]: {
       padding: '20px 0',
     }
@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   mainLogo: {
     maxWidth: '200px',
     height: 'auto',
-    marginLeft: '3vw',
   },
   imageContainer: {
     height: '100%',
@@ -32,17 +31,32 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '18px',
   },
   iconsItem: {
+    fontStyle: 'normal',
     textAlign: 'right',
     [theme.breakpoints.down('sm')]: {
       padding: '7px 0',
       textAlign: 'center',
     },
+    '& h3': {
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '10px',
+    },
+    '& label': {
+      [theme.breakpoints.between('md', 'lg')]: {
+        fontSize: '1.7vw',
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '4vw',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1.7vw',
+      },
+    },
     '& h3, & a': {
-      marginTop: '5px',
-      marginBottom: '5px',
+      margin: 0,
       color: '#000000',
       fontSize: '1.5vw',
-      fontFamily: 'times',
       fontWeight: 'normal',
       textDecoration: 'none',
       transition: 'color 0.3s ease',
@@ -52,8 +66,11 @@ const useStyles = makeStyles((theme: Theme) => ({
       [theme.breakpoints.down('sm')]: {
         fontSize: '5vw',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
+      [theme.breakpoints.between('md', 'lg')]: {
         fontSize: '2vw',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '1.9vw',
       },
     },
   },
@@ -70,25 +87,23 @@ const useStyles = makeStyles((theme: Theme) => ({
       maxWidth: '20%',
       alignItems: 'center',
       justifyContent: 'center',
-      marginLeft: '20px',
     },
   },
   logos: {
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '100px',
     maxWidth: '100%',
+    justifyContent: 'end',
     '& img': {
       maxWidth: '100%',
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '-5%',
       flexDirection: 'row !important',
       alignItems: 'center',
       justifyContent: 'center',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-      marginLeft: '20px',
       flexDirection: 'column !important',
       alignItems: 'center',
       justifyContent: 'center',
@@ -155,7 +170,7 @@ const Footer = ({ href, download }: { href: string, download: string }) => {
 
   return (
     <footer className={classes.footer}>
-      <Grid container>
+      <Grid container sx={{ justifyContent: 'center' }}>
         <Grid item xs={12} sm={4}>
           <Box className={classes.imageContainer}>
             <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fsagardoy-logo-landings.png?alt=media&token=4e91e995-da8d-4ce2-9706-e9337820009a" className={classes.mainLogo} alt="Sagardoy Business School" />
@@ -167,19 +182,18 @@ const Footer = ({ href, download }: { href: string, download: string }) => {
             Descargar folleto
           </button>
         </Grid>
-        <Grid item xs={12} sm={4} sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-          <Grid className={classes.logos}>
-            <Box>
-              <address className={classes.iconsItem}>
-                <h3>C/Velázquez 86D. 28006 Madrid</h3>
-                <label>info@sagardoyschool.com</label>
-              </address>
-            </Box>
-          </Grid>
+        <Grid item xs={12} sm={4} className={classes.logos}>
+          <address className={classes.iconsItem}>
+            <h3>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FGrupo%2010.svg?alt=media&token=b4b96451-548f-41a9-9517-e18d9cd9e119"
+                alt="Location"
+                width="20px"
+              />
+              C/Velázquez 86D. 28006 Madrid
+            </h3>
+            <label>info@sagardoyschool.com</label>
+          </address>
         </Grid>
       </Grid>
     </footer >
