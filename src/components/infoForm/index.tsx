@@ -262,6 +262,7 @@ const InfoForm = ({
           error={!!errors.lastName}
           helperText={errors.lastName}
           required
+          style={{ marginTop: '3px'}}
         />
         <TextField
           className={classes.input}
@@ -274,6 +275,7 @@ const InfoForm = ({
           error={!!errors.email}
           helperText={errors.email}
           required
+          style={{ marginTop: '3px'}}
         />
         <TextField
           className={classes.input}
@@ -283,6 +285,7 @@ const InfoForm = ({
           value={values.prefix}
           label="País de residencia"
           select
+          style={{ marginTop: '3px'}}
           onChange={handleChange}
         >
           {countries.map((country, index) => (
@@ -303,6 +306,7 @@ const InfoForm = ({
           error={!!errors.phone}
           helperText={errors.phone}
           required
+          style={{ marginTop: '3px'}}
         />
       </div>
       <label className={classes.checkbox}>
