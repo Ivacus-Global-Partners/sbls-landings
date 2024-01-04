@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     padding: theme.spacing(2),
     boxSizing: 'border-box',
-    marginBottom: '20px',
   },
   content: {
     display: 'flex',

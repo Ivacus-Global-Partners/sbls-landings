@@ -63,7 +63,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
   const tableWidth = '100%';
 
   return (
-    <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%' }} className={classes.container}>
+    <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%', paddingTop: '20px' }} className={classes.container}>
       <div className={classes.tableContainer}>
         <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: tableWidth }}>
           <tbody>
