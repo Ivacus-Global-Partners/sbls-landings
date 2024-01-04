@@ -10,11 +10,15 @@ const RouterComponent: React.FC = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<ComunicaciónHR />} />
                 <Route path="/comunicacionhr" element={<ComunicaciónHR />} />
                 <Route path="/seguridadsocial" element={<SeguridadSocial />} />
                 <Route path="/indemnizaciondespido" element={<IndemnizacionDespido />} />
                 <Route path="/experienciaempleado" element={<ExperienciaEmpleado />} />
+
+                <Route path="/landings/hr-comunicacion-interna-sagardoy" element={<ComunicaciónHR />} />
+                <Route path="/landings/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social" element={<SeguridadSocial />} />
+                <Route path="/landings/actualizacion-juridica-la-indemnizacion-por-despido" element={<IndemnizacionDespido />} />
+                <Route path="/landings/certificacion-experto-experiencia-de-empleado" element={<ExperienciaEmpleado />} />
             </Routes>
         </Router>
     );

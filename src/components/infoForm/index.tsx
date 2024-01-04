@@ -207,7 +207,7 @@ const InfoForm = ({
       lastName: values.lastName,
       email: values.email,
       phone: `${values.prefix} ${values.phone}`,
-      prefix: "prefix",
+      prefix: values.prefix,
       "privacy-police": true,
       productId: productId, // productId
       formId: formId
