@@ -126,7 +126,7 @@ const ProgramObjetives = ({ objetives }: { objetives: Record<string, string> }) 
         </h1>
         <div className="wrapper option-1 option-1-1">
           <Grid className={classes.objetives} container>
-            <Grid xs={12} sm={4} md={4}>
+            <Grid item xs={12} sm={4} md={4}>
               <li className="c-stepper__item image1" >
                 <h3 className="c-stepper__title title">{Object.keys(objetives)[0]}</h3>
                 <p className="c-stepper__desc">
@@ -134,7 +134,7 @@ const ProgramObjetives = ({ objetives }: { objetives: Record<string, string> }) 
                 </p>
               </li>
             </Grid>
-            <Grid xs={12} sm={4} md={4}>
+            <Grid item xs={12} sm={4} md={4}>
               <li className="c-stepper__item image2">
                 <h3 className="c-stepper__title title">{Object.keys(objetives)[1]}</h3>
                 <p className="c-stepper__desc">
@@ -142,7 +142,7 @@ const ProgramObjetives = ({ objetives }: { objetives: Record<string, string> }) 
                 </p>
               </li>
             </Grid>
-            <Grid xs={12} sm={4} md={4}>
+            <Grid item xs={12} sm={4} md={4}>
               <li className="c-stepper__item image3">
                 <h3 className="c-stepper__title title">{Object.keys(objetives)[2]}</h3>
                 <p className="c-stepper__desc">

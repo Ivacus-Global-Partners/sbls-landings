@@ -1,5 +1,6 @@
 import { Theme, useMediaQuery, useTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
   tableContainer: {
@@ -87,10 +88,10 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Fechas</strong><br />
-                              {dates.map((d) => (
-                                <>
+                              {dates.map((d, i) => (
+                                <React.Fragment key={i}>
                                   {d} < br />
-                                </>
+                                </React.Fragment>
                               ))}
                             </td>
                           </tr>
@@ -218,10 +219,10 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr style={{ fontSize: '14px' }}>
                             <td style={{ paddingTop: '10px' }}>
                               <strong>Fechas</strong><br />
-                              {dates.map((d) => (
-                                <>
+                              {dates.map((d, i) => (
+                                <React.Fragment key={i}>
                                   {d} < br />
-                                </>
+                                </React.Fragment>
                               ))}
                             </td>
                           </tr>
