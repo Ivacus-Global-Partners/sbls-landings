@@ -103,7 +103,8 @@ const BigQuote = () => {
             <div className={classes.author}>
                 <img
                     className={classes.img}
-                    src={!isMobile || isXS ? "https://i.ibb.co/mJrG67B/Sin-t-tulo-6.png" : "https://i.ibb.co/GFwr8kN/Iberdrola-short.png"}
+                    src={!isMobile || isXS ? "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ffooter-experiencia-empleado.png?alt=media&token=8fcc51f0-3e9d-4561-b26e-a6a1a99ba06e"
+                        : "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ffooter-experiencia-empleado-movil.png?alt=media&token=41caf933-9910-438e-9a24-27efdd5fcaea"}
                     alt="Irene Vivas"
                 />
                 <div className={classes.authorInfo}>
