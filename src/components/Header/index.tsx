@@ -44,12 +44,11 @@ const Header = ({ image, href, download }: { image: string, href: string, downlo
   const classes = useStyles();
 
   const handleDownload = () => {
-    const downloadLink = document.createElement('a');
-    downloadLink.href = href;
-    downloadLink.download = download;
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+    const link = document.getElementById('download-pdf');
+    if (link) {
+      link.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    }
   };
 
   return (

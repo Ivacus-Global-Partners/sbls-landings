@@ -258,6 +258,7 @@ const InfoForm = ({
 
   return (
     <form
+      id="download-pdf"
       className={classes.form}
       onSubmit={handleSubmit}
       style={{
@@ -383,7 +384,8 @@ const InfoForm = ({
           .
         </div>
       </label>
-      <button
+      <button 
+       
         type="submit"
         className={classes.button}
         style={{
@@ -392,6 +394,7 @@ const InfoForm = ({
         disabled={!enabledSubmit}
       >
         {submit}
+
       </button>
     </form>
   );

@@ -80,7 +80,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                             <td>
                               <img
                                 className={classes.icon}
-                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
                                 alt='fechas'
                               />
                             </td>
@@ -108,8 +108,8 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                             <td>
                               <img
                                 className={classes.icon}
-                                src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
-                                alt='horario'
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
+                                alt='Duración'
                               />
                             </td>
                           </tr>
@@ -132,7 +132,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                             <td>
                               <img
                                 className={classes.icon}
-                                src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
                                 alt='Idioma'
                               />
                             </td>
@@ -158,7 +158,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                             <td>
                               <img
                                 className={classes.icon}
-                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
                                 alt='Lugar'
                               />
                             </td>
@@ -182,7 +182,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                             <td>
                               <img
                                 className={classes.icon}
-                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
                                 alt='Formato'
                               />
                             </td>
@@ -210,7 +210,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/6XqB0sc/Grupo-3-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
                                 alt='fechas'
                                 className={classes.icon}
                               />
@@ -238,7 +238,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/8jw8Mqz/Grupo-8-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
                                 alt='Duración'
                                 className={classes.icon}
                               />
@@ -262,7 +262,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/qmdYbJZ/Sin-t-tulo-1.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
                                 alt='Idioma'
                                 className={classes.icon}
                               />
@@ -286,7 +286,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/fHjMGgP/Grupo-7-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
                                 alt='Lugar'
                                 className={classes.icon}
                               />
@@ -310,7 +310,7 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                           <tr>
                             <td>
                               <img
-                                src="https://i.ibb.co/2MtRGNv/Grupo-5-2x.png"
+                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
                                 alt='Formato'
                                 className={classes.icon}
                               />

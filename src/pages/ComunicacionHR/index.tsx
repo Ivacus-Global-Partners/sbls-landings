@@ -48,7 +48,7 @@ const ComunicacionHR: React.FC = () => {
 
   return (
     <div>
-      <Header image={"https://i.ibb.co/w7Ht6Sk/Header.png"} href={href} download={download} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} href={href} download={download} />
       <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
@@ -61,7 +61,7 @@ const ComunicacionHR: React.FC = () => {
       />
       <BodyInfo2
         filled
-        img={"https://i.ibb.co/yhD5JRd/Imagen-2x.png"}
+        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FPablo%20Gonzalo.png?alt=media&token=63fd84d8-e349-41e4-b117-310ac961df63"}
         name={"Pablo Gonzalo Molina"}
         job={<>
           Socio de Estudio de Comunicación <br />
