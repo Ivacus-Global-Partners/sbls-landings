@@ -82,6 +82,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: 'auto',
         height: '25vh',
         transition: 'transform 0.3s ease-in-out',
+        maxWidth: "100%",
+        objectFit: "contain",
         '&:hover': {
             transform: 'scale(1.05)'
         },

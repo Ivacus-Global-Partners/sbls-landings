@@ -208,7 +208,7 @@ const InfoForm = ({
     e.preventDefault();
 
     var myHeaders = new Headers();
-    myHeaders.append("fx", "0xba2874"); // formId
+    myHeaders.append("fx", formId); // formId
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
@@ -233,12 +233,27 @@ const InfoForm = ({
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
 
+      setValues({
+        name: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        prefix: '0',
+      })
+      setErrors({
+        name: '',
+        lastName: '',
+        email: '',
+        phone: '',
+      })
+
     const downloadLink = document.createElement("a");
     downloadLink.href = href;
     downloadLink.download = download;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
+
   };
 
   return (
