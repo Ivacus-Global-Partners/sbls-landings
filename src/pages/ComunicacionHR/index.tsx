@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import BodyInfo from '../../components/BodyInfo1';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
@@ -9,7 +9,11 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 
+
+
+
 const ComunicacionHR: React.FC = () => {
+ 
   const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
   const download = 'hr-comunicacion-interna-sagardoy.pdf';
   const claustro = [
