@@ -8,22 +8,14 @@ import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
-import TagManager from 'react-gtm-module';
-import { init } from 'react-gtm-module';
-import { useGTM } from 'react-gtm-module';
+
+
 
 
 
 
 const ComunicacionHR: React.FC = () => {
-  const { dataLayer } = useGTM();
 
-  useEffect(() => {
-    // Enviar un evento personalizado a GTM para LandingPage1
-    dataLayer.push({
-      event: 'pageview',
-    });
-  }, []);
 
  
   const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';

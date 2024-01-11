@@ -3,22 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { init } from 'react-gtm-module';
 
-const tagManagerArgs = {
-  gtmId: 'GTM-M56RR2R', // Reemplaza con tu identificador de contenedor
-};
 
-init(tagManagerArgs);
-
-const gaMeasurementId = 'G-KPZRBCR3GD'; // Reemplaza con tu Measurement ID
-
-// Enviar evento Page View a GTM con el Measurement ID de Google Analytics
-window.dataLayer.push({
-  event: 'PageView',
-  page: 'https://sagardoyschool.com/landings/hr-comunicacion-interna-sagardoy',
-  gaMeasurementId: gaMeasurementId,
-});
 
 ReactDOM.render(
   <React.StrictMode>
