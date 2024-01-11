@@ -9,11 +9,22 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import TagManager from 'react-gtm-module';
+import { init } from 'react-gtm-module';
+import { useGTM } from 'react-gtm-module';
 
 
 
 
 const ComunicacionHR: React.FC = () => {
+  const { dataLayer } = useGTM();
+
+  useEffect(() => {
+    // Enviar un evento personalizado a GTM para LandingPage1
+    dataLayer.push({
+      event: 'pageview',
+    });
+  }, []);
+
  
   const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
   const download = 'hr-comunicacion-interna-sagardoy.pdf';
@@ -50,26 +61,6 @@ const ComunicacionHR: React.FC = () => {
     <br /><br />
     Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong> Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
   </>;
-
-  const tagManagerArgs = {
-  gtmId: 'GTM-M56RR2R'
-};
-
-// Evento de vista de página
-TagManager.dataLayer({
-  dataLayer: {
-      event: 'page_view',
-      page: '/landings/hr-comunicacion-interna-sagardoy'
-  }
-});
-
-// Evento de clic en un botón
-TagManager.dataLayer({
-  dataLayer: {
-      event: 'button_click',
-      button: 'nombre_del_boton'
-  }
-});
 
   return (
     <div>
