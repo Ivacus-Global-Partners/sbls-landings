@@ -11,6 +11,7 @@ import BodyInfo from '../../components/BodyInfo1';
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
 import { Helmet } from 'react-helmet';
+import CardsClaustroHorizontal from '../../components/CardsClaustroHorizontal';
 
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -35,14 +36,19 @@ const IndemnizacionDespido = () => {
 
     const claustro = [
         {
-            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fmaria-rosa.png?alt=media&token=00c935b1-a806-4537-9d76-d2ee824220f4',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Framon%402x.png?alt=media&token=0a3dd60c-ba94-45b4-b311-a8653c1bca69',
             name: 'Rosa María Virolés Piñol',
-            job: `Directora del Programa. Ex-Presidententa de la Sala Cuarta del Tribunal Supremo`
+            job: `Directora del Programa de actualización La indemnización por despido: las nuevas claves`,
+            job1: 'Ex-Presidenta de la Sala Cuarta del Tribunal Supremo',
+            job2: `Licenciada en Derecho y Doctora por la Universidad de Barcelona. Es magistrada especialista del orden jurisdiccional social por oposición desde 1990.
+            Ha sido letrada de la Administración de la Seguridad Social y letrada del Estado. Está en posesión de la Cruz de Honor de la Orden de San Raimundo de Peñafort.`,
         },
         {
-            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Framon-llanos.png?alt=media&token=0dbabf60-d797-49c7-b6c7-fee9f05abf6c',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Frosa_maria_viroles_pinol%402x.png?alt=media&token=f544288d-3f8a-48c6-b822-0482088633cf',
             name: 'Ramón Gallo Llanos',
-            job: 'Magistrado de la Sala de lo Social de la Audiencia Nacional'
+            job: 'Magistrado de la Sala de lo Social de la Audiencia Nacional',
+            job1: '',
+            job2: 'Licenciado en Derecho por la Universidad Complutense de Madrid (UCM). Es magistrado especialista del orden jurisdiccional social por oposición desde 1990. Ha sido ponente en numerosos seminarios, cursos y conferencias, y ha participado en publicaciones destacadas como ‘El procedimiento del art. 138 de la LRJS’.',
         },
     ]
 
@@ -108,7 +114,8 @@ const IndemnizacionDespido = () => {
                 "Estudiar": "la tendendencia jurisprudencial en materia indemnizatoria por daños y perjuicios y daños morales en los supuestos de vulneración de derechos fundamentales",
                 "Analizar": "la doctrina jurisprudencial y la aplicabilidad de las normas sobre el despido en los diferentes tribunales españoles y europeos"
             }} />
-            <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
+            {/* <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" /> */}
+            <CardsClaustroHorizontal claustro={claustro} title="Conoce a nuestro claustro" />
             <Footer href={href} download={download} />
         </div>
     )
