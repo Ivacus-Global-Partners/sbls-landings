@@ -10,6 +10,8 @@ import PorqueSagardoy from '../../components/PorqueSagardoy';
 import BodyInfo from '../../components/BodyInfo1';
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
+import { Helmet } from 'react-helmet';
+
 
 const useStyles = makeStyles((theme: Theme) => ({
     body: {
@@ -46,6 +48,14 @@ const IndemnizacionDespido = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>HR: Comunicación Interna al servicio del Negocio</title>
+                <meta name="title" content="Este es un test" />
+                <meta name="description" content="La mejor tienda de ropa online para comprar moda para mujeres, hombres y niños. Encontrarás
+        una amplia selección de ropa de las mejores marcas a precios competitivos."/>
+                <meta name="robots" content="index, follow" />
+                <meta name="keywords" content="ropa, moda, tienda online, mujeres, hombres, niños, marcas, precios" />
+            </Helmet>
             <Header image={headerIndemnizacionDespido} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
             <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={
                 <>
