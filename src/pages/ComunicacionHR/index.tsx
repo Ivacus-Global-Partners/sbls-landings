@@ -52,13 +52,13 @@ const ComunicacionHR: React.FC = () => {
     <div>
       <Helmet>
         <title>HR: Comunicación Interna al servicio del Negocio</title>
-        <meta name="title" content="Tienda de ropa online:moda para mujeres, hombres y niños"/>
-        <meta name="description" content="La mejor tienda de ropa online para comprar moda para mujeres, hombres y niños. Encontrarás
-        una amplia selección de ropa de las mejores marcas a precios competitivos."/>
+        <meta name="title" content="HR: Comunicación Interna al servicio del Negocio"/>
+        <meta name="description" content="Descubre cómo la comunicación interna puede potenciar tu negocio. En Sagardoy, ofrecemos soluciones de comunicación interna para mejorar la eficiencia y el rendimiento de tu empresa. ¡Conoce nuestras propuestas hoy!"/>
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="ropa, moda, tienda online, mujeres, hombres, niños, marcas, precios" />
+        <meta name="keywords" content="comunicación interna, negocios, eficiencia empresarial, soluciones de comunicación" />
       </Helmet>
-
+  
+    
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} href={href} download={download} />
       <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
