@@ -67,9 +67,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: '#ffffff',
         paddingLeft: '0px',
         margin: 0,
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '7%'
+        },
     },
     listItem: {
-        listsStyle: '3em',
+        fontSize: '25px',
+        height: '60px',
+        position: 'relative',
     },
     body: {
         margin: 0,
@@ -91,7 +96,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         alignItems: 'center',
         width: '90%',
         [theme.breakpoints.up(850)]: {
-            width: '95%',
+            width: '100%',
             marginLeft: '20px',
         },
         [theme.breakpoints.down(850)]: {
@@ -112,16 +117,17 @@ const PorqueSagardoy = () => {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
 
         <div className={classes.container}>
             <div className={classes.content}>
-                <div className={classes.cardContainer} style={{ backgroundColor: '#980628', width: '100%' }}>
+                <div className={classes.cardContainer} style={{ backgroundColor: '#980628' }}>
                     <Card style={{ backgroundColor: '#980628', width: '100%' }} >
                         <Grid container sx={{ alignItems: 'center' }}>
                             <Grid item xs={12} sm={isMobile ? 12 : 4} md={7.5} className={classes.gridItem}>
-                                <CardContent sx={{ height: 'fit-content', paddingBottom: '10px !important' }}>
+                                <CardContent sx={{ height: 'fit-content' }}>
                                     <h1 className={classes.title}>
                                         ¿Por qué elegir Sagardoy School?
                                     </h1>
@@ -132,17 +138,17 @@ const PorqueSagardoy = () => {
                                                 Equipo docente con amplia trayectoria en materia de derecho laboral y empresarial.
                                             </p>
                                         </li>
-                                        <li><h2 className={classes.subtitle}>Enfoque práctico</h2>
+                                        <li className={classes.listItem}><h2 className={classes.subtitle}>Enfoque práctico</h2>
                                             <p className={classes.body}>
                                                 Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de casos reales.
                                             </p>
                                         </li>
-                                        <li><h2 className={classes.subtitle}>Formato flexible</h2>
+                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '12%' } : {}}>Formato flexible</h2>
                                             <p className={classes.body}>
                                                 Sesiones presenciales y virtuales.
                                             </p>
                                         </li>
-                                        <li><h2 className={classes.subtitle}>Networking de alto valor</h2>
+                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '1%' } : {}} >Networking de alto valor</h2>
                                             <p className={classes.body}>
                                                 Networking con profesionales de destacadas organizaciones, quienes aportarán sus 
                                                 puntos de vista desde distintas perspectivas.
