@@ -119,7 +119,7 @@ const PorqueSagardoy = () => {
                                         </li>
                                         <li><h2 className={classes.subtitle}>Enfoque práctico</h2>
                                             <p className={classes.body}>
-                                                Metodología que una la base teórica con la aplicación práctica, gracias al análisis de <br />
+                                                Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de <br />
                                                 casos reales.
                                             </p>
                                         </li>

@@ -75,7 +75,7 @@ const IndemnizacionDespido = () => {
                 dates={['25 enero, 2024', '14 febrero, 2024']}
                 duration={
                     <>
-                        4 jorbadas de <br />
+                        4 jornadas de <br />
                         9:00h a 12:00h
                     </>
                 }
@@ -94,7 +94,7 @@ const IndemnizacionDespido = () => {
                 }
             />
             <ProgramObjetives objetives={{
-                "Profundizar": "sobre los aséctos jurídicos, legales y judiciales del despido y, en particular, de la indemnización sometida a intenso debate en los últimos tiempos.",
+                "Profundizar": "sobre los aspectos jurídicos, legales y judiciales del despido y, en particular, de la indemnización sometida a intenso debate en los últimos tiempos.",
                 "Estudiar": "la tendendencia jurisprudencial en materia indemnizatoria por daños y perjuicios y daños morales en los supuestos de vulneración de derechos fundamentales",
                 "Análizar": "la doctrina jurisprudencial y la aplicabilidad de las normas sobre el despido en los diferentes tribunales españoles y europeos"
             }} />
