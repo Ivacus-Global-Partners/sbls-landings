@@ -2,7 +2,7 @@ import React from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { makeStyles } from '@mui/styles';
-import { Container, Divider, Theme } from '@mui/material';
+import { Container, Divider, Theme, useMediaQuery, useTheme } from '@mui/material';
 import './style.css'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontFamily: 'Nunito',
         margin: '8px 0 25px 0',
         marginBottom: '0px',
-        [theme.breakpoints.down('md')]: {
-            fontSize: '1em',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.9em',
         }
     },
     card: {
@@ -51,15 +51,26 @@ const useStyles = makeStyles((theme: Theme) => ({
         boxSizing: 'border-box',
         marginTop: '5%',
         width: '90%',
-        paddingTop: '0px'
+        paddingTop: '0px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            marginTop: '25%',
+            paddingTop: '10%',
+        }
     },
     cardContent: {
         height: 'auto',
         padding: '0 65px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0',
+        }
     },
     content: {
         height: 'auto',
         padding: '0 10%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0',
+        }
     },
     slideimg: {
         width: 'auto',
@@ -102,6 +113,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string, img: string, job: any, job1: any, job2: any }[], title: string }) => {
     const classes = useStyles();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div className={classes.cardContainer}>
@@ -112,20 +125,38 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                         alt="Icono" /> {title}</h1>
                 <div className={classes.cardContent}>
                     {
-                        claustro
-                            .map((member, index) => (
-                                <div key={index} style={{ position: 'relative' }}>
-                                    <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                                        <div className={classes.card}>
-                                            {/* <img className={classes.slideimg} src={member.img} alt="Foto" /> */}
-                                            <div className={classes.content}>
-                                                <p className={classes.name}>{member.name}</p>
-                                                <p className={classes.job}>{member.job}</p>
-                                                <p className={classes.job}>{member.job1}</p>
-                                                <Divider style={{ backgroundColor: 'white', marginTop: '10px' }} orientation='horizontal' />
-                                                <p className={classes.job}>{member.job2}</p>
-                                            </div>
+                        claustro.map((member, index) => (
+                            <div key={index} style={{ position: 'relative' }}>
+                                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                                    <div className={classes.card}>
+                                        {isMobile && (
+                                            <img
+                                                className={classes.slideimg}
+                                                src={member.img}
+                                                alt="Foto"
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '-0%',
+                                                    left: '50%',
+                                                    transform: 'translateX(-50%)',
+                                                    width: '30%',
+                                                    height: '50%', 
+                                                }}
+                                            />
+                                        )}
+                                        <div className={classes.content}>
+                                            <p className={classes.name}>{member.name}</p>
+                                            <p className={classes.job}>{member.job}</p>
+                                            <p className={classes.job}>{member.job1}</p>
+                                            {!isMobile && (
+                                                <>
+                                                    <Divider style={{ backgroundColor: 'white', marginTop: '10px' }} orientation='horizontal' />
+                                                    <p className={classes.job}>{member.job2}</p>
+                                                </>
+                                            )}
                                         </div>
+                                    </div>
+                                    {!isMobile && (
                                         <img
                                             className={classes.slideimg}
                                             src={member.img}
@@ -135,13 +166,14 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                                                 top: '35%',
                                                 left: '-5%',
                                                 right: '0%',
-                                                width: '20%', // Ajusta el ancho de la imagen según tus necesidades
-                                                height: '50%', // Ajusta la altura de la imagen según tus necesidades
+                                                width: '20%',
+                                                height: '50%',
                                             }}
                                         />
-                                    </div>
+                                    )}
                                 </div>
-                            ))
+                            </div>
+                        ))
                     }
                 </div>
 
