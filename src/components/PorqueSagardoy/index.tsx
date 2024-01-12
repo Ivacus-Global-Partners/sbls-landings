@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontStyle: 'italic',
         color: '#ffffff',
         fontWeight: 'lighter',
+        textAlign: 'center',
     },
     subtitle: {
         fontFamily: 'Nunito',

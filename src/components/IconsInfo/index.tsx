@@ -175,10 +175,10 @@ const IconsInfo = ({ dates, duration, language, place, format }: { dates: string
                   </td>
                   <td colSpan={3} className={classes.iconsTd}>
                     <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
+                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle'}}
                         width="100%">
                         <tbody>
-                          <tr>
+                          <tr >
                             <td>
                               <img
                                 className={classes.icon}
