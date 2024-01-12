@@ -1,5 +1,6 @@
 import { Card, CardContent, CardMedia, Theme, useMediaQuery, useTheme, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import './style.css';
 import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -9,7 +10,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     list: {
         color: 'white',
-        paddingLeft: '20px'
+        paddingLeft: '20px',
+        marginLeft: '85px',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '0px',
+        }
     },
     container: {
         display: 'flex',
@@ -51,19 +56,27 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: '#ffffff',
         fontWeight: 'lighter',
         textAlign: 'center',
+        marginRight: '310px',
+        [theme.breakpoints.down('sm')]: {
+            marginRight: '0px',
+        }
     },
     subtitle: {
         fontFamily: 'Nunito',
         fontSize: '20px',
         color: '#ffffff',
+        paddingLeft: '0px',
         margin: 0,
+    },
+    listItem: {
+        listsStyle: '3em',
     },
     body: {
         margin: 0,
         fontFamily: 'Nunito',
+        paddingLeft: '0px',
         color: '#ffffff',
         fontSize: '16px',
-        marginBottom: '10px',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'left',
         },
@@ -104,7 +117,7 @@ const PorqueSagardoy = () => {
 
         <div className={classes.container}>
             <div className={classes.content}>
-                <div className={classes.cardContainer}>
+                <div className={classes.cardContainer} style={{ backgroundColor: '#980628', width: '100%' }}>
                     <Card style={{ backgroundColor: '#980628', width: '100%' }} >
                         <Grid container sx={{ alignItems: 'center' }}>
                             <Grid item xs={12} sm={isMobile ? 12 : 4} md={7.5} className={classes.gridItem}>
@@ -112,16 +125,16 @@ const PorqueSagardoy = () => {
                                     <h1 className={classes.title}>
                                         ¿Por qué elegir Sagardoy School?
                                     </h1>
-                                    <ul className={classes.list}>
-                                        <li><h2 className={classes.subtitle}>Especialización & Experiencia</h2>
+                                    <ul className={classes.list} >
+                                        <li className={classes.listItem} style={{ lineHeight: '100%'}}>
+                                            <h2 className={classes.subtitle}>Especialización & Experiencia</h2>
                                             <p className={classes.body}>
                                                 Equipo docente con amplia trayectoria en materia de derecho laboral y empresarial.
                                             </p>
                                         </li>
                                         <li><h2 className={classes.subtitle}>Enfoque práctico</h2>
                                             <p className={classes.body}>
-                                                Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de <br />
-                                                casos reales.
+                                                Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de casos reales.
                                             </p>
                                         </li>
                                         <li><h2 className={classes.subtitle}>Formato flexible</h2>
@@ -131,7 +144,7 @@ const PorqueSagardoy = () => {
                                         </li>
                                         <li><h2 className={classes.subtitle}>Networking de alto valor</h2>
                                             <p className={classes.body}>
-                                                Networking con profesionales de destacadas organizaciones, quienes aportarán sus <br />
+                                                Networking con profesionales de destacadas organizaciones, quienes aportarán sus 
                                                 puntos de vista desde distintas perspectivas.
                                             </p>
                                         </li>
@@ -142,7 +155,7 @@ const PorqueSagardoy = () => {
                             {!isMobile && (
                                 <Grid item xs={12} sm={4} md={4.5}>
                                     <CardMedia
-                                        style={{ width: '100%', maxWidth: '100%', height: '100%' }}
+                                        style={{ width: '75%', maxWidth: '100%', height: '100%', marginLeft: '25%' }}
                                         component="img"
                                         image="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fimg01.png?alt=media&token=24f9a7f1-b31d-4647-945f-f9c389f8d19b"
                                         alt="Live from space album cover"
