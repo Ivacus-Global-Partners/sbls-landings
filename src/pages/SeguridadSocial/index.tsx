@@ -37,13 +37,13 @@ const SeguridadSocial: React.FC = () => {
   return (
     <div>
       <Helmet>
-        <title>HR: Comunicación Interna al servicio del Negocio</title>
-        <meta name="title" content="Este es un test" />
-        <meta name="description" content="La mejor tienda de ropa online para comprar moda para mujeres, hombres y niños. Encontrarás
-        una amplia selección de ropa de las mejores marcas a precios competitivos."/>
+        <title>Actualización de la Normativa de Cotización a la Seguridad Social</title>
+        <meta name="title" content="Actualización de la Normativa de Cotización a la Seguridad Social" />
+        <meta name="description" content="Explora la última actualización de la normativa de cotización a la seguridad social. Mantente informado sobre los cambios en las tasas de cotización y otros aspectos relevantes. ¡Comprende las novedades para cumplir con las regulaciones vigentes!" />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="ropa, moda, tienda online, mujeres, hombres, niños, marcas, precios" />
+        <meta name="keywords" content="normativa, cotización, seguridad social, tasas de cotización, actualización legal" />
       </Helmet>
+
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20seguridad%20social.png?alt=media&token=4ec2e4ea-95b3-487a-8d14-e9f723f650f6"} href={href} download={download} />
       <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} title shadow submit={
         <>

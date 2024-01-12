@@ -55,13 +55,12 @@ const IndemnizacionDespido = () => {
     return (
         <div>
             <Helmet>
-                <title>HR: Comunicación Interna al servicio del Negocio</title>
-                <meta name="title" content="Este es un test" />
-                <meta name="description" content="La mejor tienda de ropa online para comprar moda para mujeres, hombres y niños. Encontrarás
-        una amplia selección de ropa de las mejores marcas a precios competitivos."/>
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="ropa, moda, tienda online, mujeres, hombres, niños, marcas, precios" />
-            </Helmet>
+        <title>Actualización Jurídica: La Indemnización por Despido</title>
+        <meta name="title" content="Actualización Jurídica: La Indemnización por Despido" />
+        <meta name="description" content="Explora la actualización jurídica sobre la indemnización por despido. Conoce las últimas novedades y cambios legales relacionados con este tema. ¡Mantente informado para tomar decisiones informadas en el ámbito laboral!" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="actualización jurídica, indemnización por despido, leyes laborales, derechos laborales, novedades legales" />
+      </Helmet>
             <Header image={headerIndemnizacionDespido} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
             <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={
                 <>

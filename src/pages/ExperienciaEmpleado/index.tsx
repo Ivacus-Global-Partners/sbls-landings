@@ -51,13 +51,12 @@ const ExperienciaEmpleado: React.FC = () => {
   return (
     <div>
 
-      <Helmet>
-        <title>HR: Comunicación Interna al servicio del Negocio</title>
-        <meta name="title" content="Este es un test" />
-        <meta name="description" content="La mejor tienda de ropa online para comprar moda para mujeres, hombres y niños. Encontrarás
-        una amplia selección de ropa de las mejores marcas a precios competitivos."/>
+<Helmet>
+        <title>Certificación Experto Experiencia de Empleado</title>
+        <meta name="title" content="Certificación Experto Experiencia de Empleado" />
+        <meta name="description" content="Descubre cómo obtener la certificación de Experto en Experiencia de Empleado. Mejora tus habilidades y conocimientos en la creación de experiencias positivas para empleados. ¡Conviértete en un profesional destacado en el ámbito de la Experiencia de Empleado!" />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="ropa, moda, tienda online, mujeres, hombres, niños, marcas, precios" />
+        <meta name="keywords" content="certificación, experiencia de empleado, habilidades profesionales, desarrollo profesional" />
       </Helmet>
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} href={href} download={download} />
       <InfoForm formId='0xba28a4' productId='0x598f38' href={href} download={download} title shadow submit={
