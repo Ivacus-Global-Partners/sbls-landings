@@ -5,7 +5,6 @@ import React from 'react';
 const useStyles = makeStyles((theme: Theme) => ({
     gridItem: {
         display: 'flex',
-        paddingLeft: '60px',
         height: 'fit-content',
     },
     list: {
@@ -65,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: '16px',
         marginBottom: '10px',
         [theme.breakpoints.down('sm')]: {
-            textAlign: 'center',
+            textAlign: 'left',
         },
     },
     imageTextContainer: {
@@ -82,7 +81,8 @@ const useStyles = makeStyles((theme: Theme) => ({
             marginLeft: '20px',
         },
         [theme.breakpoints.down(850)]: {
-            textAlign: 'center',
+            textAlign: 'left',
+            justifyContent: 'left',
             '& ul': {
                 listStyle: 'none',
                 padding: 0,
