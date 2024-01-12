@@ -40,11 +40,6 @@ const useStyles = makeStyles((theme: Theme) => ({
             fontSize: '1em',
         }
     },
-    divider: {
-        border: 'none',
-        borderBottom: '1px solid black !important',
-        width: '90%',
-    },
     card: {
         background: '#980628',
         display: 'flex',
@@ -54,31 +49,16 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderRadius: '10px',
         padding: '15px 10px',
         boxSizing: 'border-box',
-        marginTop: '5%'
+        marginTop: '5%',
+        width: '90%',
     },
     cardContent: {
         height: 'auto',
         padding: '0 65px',
     },
-    slidetext: {
-        zIndex: 1,
-        position: 'absolute',
-        top: "60px",
-        left: "30px",
-        fontFamily: 'times',
-        fontStyle: 'italic',
-        width: '50%',
-        fontSize: '1.5vw',
-        fontWeight: 'normal',
-
-        [theme.breakpoints.down('md')]: {
-            fontSize: '3vw',
-            width: '45%',
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '4vw',
-            width: '50%',
-        }
+    content:{
+        height: 'auto',
+        padding: '0 30px',
     },
     slideimg: {
         width: 'auto',
@@ -96,70 +76,9 @@ const useStyles = makeStyles((theme: Theme) => ({
             height: '15vh',
         }
     },
-    divclosed: {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        zIndex: 2,
-        backgroundColor: 'rgba(170, 25, 54, 0.8)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        transition: 'opacity 0.2s ease-in-out',
-        fontFamily: 'times',
-        fontStyle: 'italic',
-        fontSize: '1.7vw',
-        color: 'white',
-        opacity: 0,
-        '&:hover': {
-            opacity: 1,
-        },
-
-        [theme.breakpoints.down('md')]: {
-            fontSize: '3vw',
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '4vw',
-        }
-    },
     icon: {
         color: 'white',
         marginRight: '10px',
-    },
-    span: {
-        zIndex: 1,
-        position: 'absolute',
-        display: 'flex',
-        padding: '7px',
-        color: 'white',
-        backgroundColor: '#aa1933',
-        marginTop: '20px',
-        '@media (max-width: 620px)': {
-            padding: '5px',
-            marginTop: '10px'
-        }
-    },
-    label: {
-        margin: 0,
-        marginRight: '10px',
-    },
-    customButton: {
-        color: 'red',
-    },
-    lastIcon: {
-        position: 'absolute',
-        zIndex: 1,
-        bottom: '20px',
-        left: '20px',
-        width: '30%',
-    },
-    navigationDisabled: {
-        opacity: 0,
-    },
-    navigation: {
-        top: '16px',
-        height: '100%',
-        transition: 'right 0.2s ease, opacity 0.6s, left 0.2s ease',
     },
     title: {
         fontFamily: 'times',
@@ -195,14 +114,16 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                         claustro
                             .map((member, index) => (
                                 <div key={index}>
-                                    <div className={classes.card}>
-                                        <img className={classes.slideimg} src={member.img} alt="Foto" />
-                                        <div className={classes.cardContent}>
-                                            <p className={classes.name}>{member.name}</p>
-                                            <p className={classes.job}>{member.job}</p>
-                                            <p className={classes.job}>{member.job1}</p>
-                                            <Divider style={{ backgroundColor: 'white', marginTop: '10px' }} orientation='horizontal' />
-                                            <p className={classes.job}>{member.job2}</p>
+                                    <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                                        <div className={classes.card}>
+                                            <img className={classes.slideimg} src={member.img} alt="Foto" />
+                                            <div className={classes.content}>
+                                                <p className={classes.name}>{member.name}</p>
+                                                <p className={classes.job}>{member.job}</p>
+                                                <p className={classes.job}>{member.job1}</p>
+                                                <Divider style={{ backgroundColor: 'white', marginTop: '10px' }} orientation='horizontal' />
+                                                <p className={classes.job}>{member.job2}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

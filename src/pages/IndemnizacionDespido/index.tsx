@@ -36,7 +36,7 @@ const IndemnizacionDespido = () => {
 
     const claustro = [
         {
-            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Framon%402x.png?alt=media&token=0a3dd60c-ba94-45b4-b311-a8653c1bca69',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Frosa_maria_viroles_pinol%402x.png?alt=media&token=f544288d-3f8a-48c6-b822-0482088633cf',
             name: 'Rosa María Virolés Piñol',
             job: `Directora del Programa de actualización La indemnización por despido: las nuevas claves`,
             job1: 'Ex-Presidenta de la Sala Cuarta del Tribunal Supremo',
@@ -44,7 +44,7 @@ const IndemnizacionDespido = () => {
             Ha sido letrada de la Administración de la Seguridad Social y letrada del Estado. Está en posesión de la Cruz de Honor de la Orden de San Raimundo de Peñafort.`,
         },
         {
-            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Frosa_maria_viroles_pinol%402x.png?alt=media&token=f544288d-3f8a-48c6-b822-0482088633cf',
+            img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Framon%402x.png?alt=media&token=0a3dd60c-ba94-45b4-b311-a8653c1bca69',
             name: 'Ramón Gallo Llanos',
             job: 'Magistrado de la Sala de lo Social de la Audiencia Nacional',
             job1: '',
