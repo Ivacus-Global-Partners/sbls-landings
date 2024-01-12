@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginBottom: '0px',
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.9em',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1em',
         }
     },
     card: {
@@ -56,6 +59,9 @@ const useStyles = makeStyles((theme: Theme) => ({
             width: '100%',
             marginTop: '25%',
             paddingTop: '10%',
+        },
+        [theme.breakpoints.down('md')]: {
+            width: '100%'
         }
     },
     cardContent: {
@@ -81,11 +87,13 @@ const useStyles = makeStyles((theme: Theme) => ({
         '&:hover': {
             transform: 'scale(1.05)'
         },
-        [theme.breakpoints.down('lg')]: {
-            height: '10vh',
-        },
         [theme.breakpoints.down('md')]: {
-            height: '15vh',
+            position: 'absolute',
+            top: '35%',
+            left: '-5%',
+            right: '0%',
+            width: '20%',
+            height: '50%',
         }
     },
     icon: {
@@ -115,6 +123,7 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMediumSize = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <div className={classes.cardContainer}>
@@ -127,7 +136,7 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                     {
                         claustro.map((member, index) => (
                             <div key={index} style={{ position: 'relative' }}>
-                                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', marginTop: '10px' }}>
                                     <div className={classes.card}>
                                         {isMobile && (
                                             <img
@@ -140,7 +149,7 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                                                     left: '50%',
                                                     transform: 'translateX(-50%)',
                                                     width: '30%',
-                                                    height: '50%', 
+                                                    height: '50%',
                                                 }}
                                             />
                                         )}
@@ -156,7 +165,7 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                                             )}
                                         </div>
                                     </div>
-                                    {!isMobile && (
+                                    {!isMobile && !isMediumSize && (
                                         <img
                                             className={classes.slideimg}
                                             src={member.img}
@@ -165,6 +174,21 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                                                 position: 'absolute',
                                                 top: '35%',
                                                 left: '-5%',
+                                                right: '0%',
+                                                width: '20%',
+                                                height: '50%',
+                                            }}
+                                        />
+                                    )}
+                                    { isMediumSize && !isMobile &&(
+                                        <img
+                                            className={classes.slideimg}
+                                            src={member.img}
+                                            alt="Foto"
+                                            style={{
+                                                position: 'absolute',
+                                                top: '35%',
+                                                left: '-11%',
                                                 right: '0%',
                                                 width: '20%',
                                                 height: '50%',
