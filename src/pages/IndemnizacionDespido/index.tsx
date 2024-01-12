@@ -65,7 +65,7 @@ const IndemnizacionDespido = () => {
                             ¿Eres profesional del derecho, profesional de RR.HH. o empleador? ¿Sabías que un conocimiento profundo de la figura del despido en el ordenamiento jurídico promueve un entorno laboral justo, equitativo y legalmente sólido?
                         </p>
                         <p>
-                            Conoce <b>cómo se están aplicando las normativas relacionadas al despido en los diferentes tribunales</b> españoles y europeos. Y profundiza <b>en las nuevas claves de la indemnización por despido</b>, un tema sometido a intenso devate en los últimos tiempos.
+                            Conoce <b>cómo se están aplicando las normativas relacionadas al despido en los diferentes tribunales</b> españoles y europeos. Y profundiza <b>en las nuevas claves de la indemnización por despido</b>, un tema sometido a intenso debate en los últimos tiempos.
                         </p>
                     </div>
                 }
@@ -96,7 +96,7 @@ const IndemnizacionDespido = () => {
             <ProgramObjetives objetives={{
                 "Profundizar": "sobre los aspectos jurídicos, legales y judiciales del despido y, en particular, de la indemnización sometida a intenso debate en los últimos tiempos.",
                 "Estudiar": "la tendendencia jurisprudencial en materia indemnizatoria por daños y perjuicios y daños morales en los supuestos de vulneración de derechos fundamentales",
-                "Análizar": "la doctrina jurisprudencial y la aplicabilidad de las normas sobre el despido en los diferentes tribunales españoles y europeos"
+                "Analizar": "la doctrina jurisprudencial y la aplicabilidad de las normas sobre el despido en los diferentes tribunales españoles y europeos"
             }} />
             <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
             <Footer href={href} download={download} />
