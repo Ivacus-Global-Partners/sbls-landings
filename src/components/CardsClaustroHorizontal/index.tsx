@@ -51,14 +51,15 @@ const useStyles = makeStyles((theme: Theme) => ({
         boxSizing: 'border-box',
         marginTop: '5%',
         width: '90%',
+        paddingTop: '0px'
     },
     cardContent: {
         height: 'auto',
         padding: '0 65px',
     },
-    content:{
+    content: {
         height: 'auto',
-        padding: '0 30px',
+        padding: '0 10%',
     },
     slideimg: {
         width: 'auto',
@@ -109,14 +110,14 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                     <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fschool_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=d2edfee9-3ab6-4924-9450-feb9a18f7812"
                         className={classes.icono}
                         alt="Icono" /> {title}</h1>
-                <div className={classes.cardContent} style={{ marginTop: '3%' }}>
+                <div className={classes.cardContent}>
                     {
                         claustro
                             .map((member, index) => (
-                                <div key={index}>
+                                <div key={index} style={{ position: 'relative' }}>
                                     <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                                         <div className={classes.card}>
-                                            <img className={classes.slideimg} src={member.img} alt="Foto" />
+                                            {/* <img className={classes.slideimg} src={member.img} alt="Foto" /> */}
                                             <div className={classes.content}>
                                                 <p className={classes.name}>{member.name}</p>
                                                 <p className={classes.job}>{member.job}</p>
@@ -125,6 +126,19 @@ const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string
                                                 <p className={classes.job}>{member.job2}</p>
                                             </div>
                                         </div>
+                                        <img
+                                            className={classes.slideimg}
+                                            src={member.img}
+                                            alt="Foto"
+                                            style={{
+                                                position: 'absolute',
+                                                top: '35%',
+                                                left: '-5%',
+                                                right: '0%',
+                                                width: '20%', // Ajusta el ancho de la imagen según tus necesidades
+                                                height: '50%', // Ajusta la altura de la imagen según tus necesidades
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             ))
