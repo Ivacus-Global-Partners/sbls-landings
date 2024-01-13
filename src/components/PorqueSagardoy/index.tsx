@@ -56,9 +56,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: '#ffffff',
         fontWeight: 'lighter',
         textAlign: 'center',
-        marginRight: '310px',
+        marginRight: '45%',
+        [theme.breakpoints.up('sm')]: {
+            marginRight: '10%',
+            textAlign: 'left',
+        },
         [theme.breakpoints.down('sm')]: {
-            marginRight: '0px',
+            marginRight: '0%',
+            fontSize: '35px',
         }
     },
     subtitle: {
@@ -68,13 +73,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         paddingLeft: '0px',
         margin: 0,
         [theme.breakpoints.down('sm')]: {
-            marginTop: '7%'
+            // fontSize: '15px',
         },
+
     },
     listItem: {
         fontSize: '25px',
-        height: '60px',
-        position: 'relative',
+        // height: '60px',
+        // position: 'relative',
     },
     body: {
         margin: 0,
@@ -84,7 +90,12 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: '16px',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'left',
+            marginBottom: '5%',
         },
+        [theme.breakpoints.up('sm')]: {
+            justifyContent: 'left',
+            // marginTop: '1%'
+        }
     },
     imageTextContainer: {
         display: 'flex',
@@ -111,6 +122,18 @@ const useStyles = makeStyles((theme: Theme) => ({
             width: '100%',
         },
     },
+    imageWidth: {
+        width: '70%',
+        maxWidth: '70%', 
+        height: '100%', 
+        marginLeft: '30%',
+        [theme.breakpoints.down('lg')]: {
+            width: '100%',
+            maxWidth: '100%', 
+            height: '100%', 
+            marginLeft: '22%',
+        },
+    }
 }));
 
 const PorqueSagardoy = () => {
@@ -120,11 +143,10 @@ const PorqueSagardoy = () => {
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.cardContainer} style={{ backgroundColor: '#980628' }}>
-                    <Card style={{ backgroundColor: '#980628', width: '100%' }} >
+                    <Card style={isSmall ? {  backgroundColor: '#980628', width: '100%' } : { backgroundColor: '#980628', width: '100%' }} >
                         <Grid container sx={{ alignItems: 'center' }}>
                             <Grid item xs={12} sm={isMobile ? 12 : 4} md={7.5} className={classes.gridItem}>
                                 <CardContent sx={{ height: 'fit-content' }}>
@@ -132,7 +154,7 @@ const PorqueSagardoy = () => {
                                         ¿Por qué elegir Sagardoy School?
                                     </h1>
                                     <ul className={classes.list} >
-                                        <li className={classes.listItem} style={{ lineHeight: '100%'}}>
+                                        <li className={classes.listItem} style={{ lineHeight: '100%' }}>
                                             <h2 className={classes.subtitle}>Especialización & Experiencia</h2>
                                             <p className={classes.body}>
                                                 Equipo docente con amplia trayectoria en materia de derecho laboral y empresarial.
@@ -143,14 +165,14 @@ const PorqueSagardoy = () => {
                                                 Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de casos reales.
                                             </p>
                                         </li>
-                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '12%' } : {}}>Formato flexible</h2>
+                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '0%' } : {}}>Formato flexible</h2>
                                             <p className={classes.body}>
                                                 Sesiones presenciales y virtuales.
                                             </p>
                                         </li>
-                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '1%' } : {}} >Networking de alto valor</h2>
+                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '0%' } : {}} >Networking de alto valor</h2>
                                             <p className={classes.body}>
-                                                Networking con profesionales de destacadas organizaciones, quienes aportarán sus 
+                                                Networking con profesionales de destacadas organizaciones, quienes aportarán sus
                                                 puntos de vista desde distintas perspectivas.
                                             </p>
                                         </li>
@@ -159,9 +181,9 @@ const PorqueSagardoy = () => {
                             </Grid>
 
                             {!isMobile && (
-                                <Grid item xs={12} sm={4} md={4.5}>
+                                <Grid item xs={12} sm={4} md={4.5} >
                                     <CardMedia
-                                        style={{ width: '75%', maxWidth: '100%', height: '100%', marginLeft: '25%' }}
+                                        className={classes.imageWidth}
                                         component="img"
                                         image="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fimg01.png?alt=media&token=24f9a7f1-b31d-4647-945f-f9c389f8d19b"
                                         alt="Live from space album cover"
