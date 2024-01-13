@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       flexDirection: 'column',
       paddingLeft: '2',
       paddingRight: '2',
+      marginBottom: '-20%',
     },
   },
 
