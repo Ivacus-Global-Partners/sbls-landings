@@ -80,6 +80,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: '13%',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
+      marginBottom: '18%',
     }
   },
 }));
