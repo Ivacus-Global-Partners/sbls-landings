@@ -70,7 +70,7 @@ const IndemnizacionDespido = () => {
             } />
             <BodyInfo title={
                 <p style={{ color: 'black', margin: 0 }}>
-                    Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
+                    Actualízate con expertos en <span style={{ color: '#980628' }}>materia laboral</span>
                 </p>
 
             }
