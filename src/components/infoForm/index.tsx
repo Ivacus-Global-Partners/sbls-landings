@@ -30,6 +30,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       top: "15vw",
     },
+    [theme.breakpoints.between(949,960)]: {
+      top: "5vw",
+    },
+    [theme.breakpoints.between(853,915)]: {
+      top: "11vw",
+    },
     [theme.breakpoints.down(850)]: {
       position: "relative",
       width: "85%",

@@ -49,8 +49,7 @@ const ExperienciaEmpleado: React.FC = () => {
   ]
 
   const texto = <>
-    ¿Sabías que el impacto emocional negativo en los trabajadores representa un aumento del 17% más de bajas laborales? trabajar en la <strong>#ExperienciadeEmpleado</strong> es imprescindible para revertir estos datos. Cambia tu modelo de relación con el empleado, por uno basado en la experiencia con nuestra Certificación Experto.
-    <br /><br /><br /><br />
+    ¿Sabías que el impacto emocional negativo en los trabajadores representa un aumento del 17% más de bajas laborales? trabajar en la <strong>#ExperienciadeEmpleado</strong> es imprescindible para revertir estos datos. Cambia tu modelo de relación con el empleado por uno basado en la experiencia con nuestra Certificación Experto en Experiencia de Empleado.
   </>;
 
   return (
@@ -88,10 +87,10 @@ const ExperienciaEmpleado: React.FC = () => {
           quote={"La gestión de personas está evolucionando hacía la gestión de la experiencia. El empleado ha adquirido un papel protagonista en la relación profesional y ahora se empiezan a tener en cuenta sus necesidades para construir soluciones de gestión que tengan más impacto en su compromiso y, con ello, un retorno mayor en su rendimiento."}
         />
       </div>
-      <IconsInfo dates={['21 febrero, 2024', '26 junio, 2024']} duration={
+      <IconsInfo dates={['Del 21 febrero', 'al 26 junio']} duration={
         <>
-          5 meses 2 días al mes<br />
-          Martes de 17:00h-20:00h
+          5 meses<br />
+          Miércoles de 17:00h a 20:00h
         </>
       }
         language={"Español"}
@@ -104,7 +103,7 @@ const ExperienciaEmpleado: React.FC = () => {
         format={
           <>
             Presencial<br />
-            & Remoto<br />
+            & Virtual<br />
           </>
         }
       />
