@@ -63,7 +63,7 @@ const ExperienciaEmpleado: React.FC = () => {
         <meta name="keywords" content="certificación, experiencia de empleado, habilidades profesionales, desarrollo profesional" />
       </Helmet>
       
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} href={href} download={download} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} />
       <InfoForm formId='0xba28a4' productId='0x598f38' href={href} download={download} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />

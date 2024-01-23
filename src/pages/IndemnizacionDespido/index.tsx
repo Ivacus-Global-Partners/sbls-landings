@@ -4,7 +4,6 @@ import InfoForm from '../../components/infoForm'
 import DownloadIcon from '@mui/icons-material/Download';
 import IconsInfo from '../../components/IconsInfo';
 import ProgramObjetives from '../../components/ProgramObjetives';
-import CardsClaustro from '../../components/CardsClaustro';
 import Footer from '../../components/Footer';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
 import BodyInfo from '../../components/BodyInfo1';
@@ -61,7 +60,7 @@ const IndemnizacionDespido = () => {
                 <meta name="robots" content="index, follow" />
                 <meta name="keywords" content="actualización jurídica, indemnización por despido, leyes laborales, derechos laborales, novedades legales" />
             </Helmet>
-            <Header image={headerIndemnizacionDespido} href={'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf'} download={'hr-comunicacion-interna-sagardoy.pdf'} />
+            <Header image={headerIndemnizacionDespido} />
             <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={
                 <>
                     <DownloadIcon sx={{ fontSize: '1.2em' }} />
