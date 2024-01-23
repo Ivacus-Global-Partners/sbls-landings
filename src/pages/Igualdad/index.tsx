@@ -115,7 +115,7 @@ const Igualdad: React.FC = () => {
         "Preparar": "a las organizaciones en el entendimiento del orden jurídico relacionado a la no discriminación y libertad sexual, de manera que puedan implementar y promover medias de prevención en sus organizaciones."
       }} />
       <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

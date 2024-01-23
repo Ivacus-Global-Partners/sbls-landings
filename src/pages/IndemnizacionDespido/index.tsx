@@ -114,7 +114,7 @@ const IndemnizacionDespido = () => {
             }} />
             {/* <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" /> */}
             <CardsClaustroHorizontal claustro={claustro} title="Conoce a nuestro claustro" />
-            <Footer href={href} download={download} />
+            <Footer />
         </div>
     )
 }

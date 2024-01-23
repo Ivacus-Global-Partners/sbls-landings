@@ -87,7 +87,7 @@ const SeguridadSocial: React.FC = () => {
         "Conocer": "las actualizaciones en las facultades de la Inspección de Trabajo y Seguridad Social y detectar y gestionar los riesgos del incumplimiento normativo aplicados a diversos casos prácticos."
       }} />
       <CardsClaustro claustro={claustro} title="Conoce a nuestro claustro" />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

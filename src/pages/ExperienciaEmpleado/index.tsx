@@ -114,7 +114,7 @@ const ExperienciaEmpleado: React.FC = () => {
       }} />
       <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
       <BigQuote />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

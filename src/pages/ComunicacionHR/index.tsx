@@ -105,7 +105,7 @@ const ComunicacionHR: React.FC = () => {
         "Desarrollar": "casos prácticos en colaboración con profesionales de destacadas organizaciones para encontrar soluciones desde distintas perspectivas."
       }} />
       <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

@@ -160,7 +160,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Footer = ({ href, download }: { href: string, download: string }) => {
+const Footer = () => {
   const classes = useStyles();
 
   const handleDownload = () => {
