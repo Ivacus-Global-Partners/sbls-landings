@@ -79,7 +79,7 @@ const ComunicacionHR: React.FC = () => {
           Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio</>}
         quote={"En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz."}
       />
-      <IconsInfo dates={['8 abril, 2024', '27 mayo, 2024']} duration={
+      <IconsInfo dates={['Del 8 abril', ' al 27 mayo']} duration={
         <>
           8 semanas 1 sesión por<br />
           semana 17:00h a 20:00h
