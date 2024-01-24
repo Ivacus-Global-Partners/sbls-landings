@@ -22,29 +22,29 @@ const ExperienciaEmpleado: React.FC = () => {
   const download = 'certificación-experto-experiencia-de-empleado.pdf';
   const claustro = [
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FIGNACIO-CEA-FORNIES.png?alt=media&token=e9cd0a8e-4abf-4300-a2d8-877ece277af6',
-      name: 'Ignacio Cea Fornies',
-      job: <>Director Global de Nuevos Modelos de Negocio de <strong>Prosegur</strong> Cash Miembro del Consejo Asesor de <strong>Cionet</strong></>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FJos%C3%A9%20Luis%20Pascual%20Pedraza.png?alt=media&token=edddd9f2-93a1-4410-90c5-9ecd662e1b91',
+      name: 'José Luis Pascual Pedraza',
+      job: <>Socio director de Experiencia de Empleado en <strong>Lukkap</strong> y Director académico de la Certificación en Experiencia Empleado</>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLOURDES-CENTENO.png?alt=media&token=07050ebc-ebd2-41f4-a05b-03bcf1f7c2ba',
-      name: 'Lourdes Centeno',
-      job: <>Socia responsable de Derecho Societario, Gobierno Corporativo y Mercado de Capitales en <strong>EY Abogados</strong></>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FCarmen%20Arroyal%20Ant%C3%B3n.png?alt=media&token=65c73271-aca4-4cd7-b524-e127f66db790',
+      name: 'Carmen Arroyal Antón',
+      job: <>Head of Employee Experience en <strong>Grupo Santalucía</strong></>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fi-NIGO-SAGARODOY.png?alt=media&token=3b3ca3c6-d27f-40d9-994e-742b29287f62',
-      name: 'Iñigo Sagardoy',
-      job: <>Presidente <br /> <strong>Sagardoy Abogados</strong></>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FDavid%20Hidalgo%20Gim%C3%A9nez%20(2).png?alt=media&token=6d61fed8-16e7-496f-895e-f242868b3cd4',
+      name: 'David Hidalgo Giménez',
+      job: <>Employee Experience & HCM Manager en <strong>COFARES</strong></>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FCARMEN-GOMEZ-BARRERA-1.png?alt=media&token=a76a75a6-b908-4808-a368-ab4449f745d3',
-      name: 'Carmen Gómez de Barreda',
-      job: <>Miembro del Consejo de <strong>Red Eléctrica, Mutua Madrileña y Grupo Antolín</strong></>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FEsther%20Burges%20Plasencia.png?alt=media&token=a5744ff2-dff2-4071-a3bc-82816e473ad7',
+      name: 'Esther Burges Plasencia',
+      job: <>Responsable de Cultura y Experiencia de Empleado en <strong>Ibercaja</strong></>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FTom%C3%A1s%20Preda.png?alt=media&token=621dc42e-52b5-4476-98cd-639b9d905b80',
-      name: 'Tomás Pereda',
-      job: 'HR Senior Advisor | Subdirector General en Fundación máshumano | LinkedIn Top Voices 2020 | Content Creator | Conferenciante'
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FAntonio%20Pajuelo.png?alt=media&token=4dd8cd98-6940-402b-afc0-7ec36566b20d',
+      name: 'Antonio Pajuelo',
+      job: <>Director de Talento y Experiencia de Empleado en <strong>Mahou San Miguel</strong></>
     },
   ]
 
