@@ -86,7 +86,7 @@ const IndemnizacionDespido = () => {
             />
             <PorqueSagardoy />
             <IconsInfo
-                dates={['Del 19 febrero', 'al 28 febrero']}
+                dates={['Del 19 febrero', 'al 01 marzo']}
                 duration={
                     <>
                         4 jornadas de <br />
