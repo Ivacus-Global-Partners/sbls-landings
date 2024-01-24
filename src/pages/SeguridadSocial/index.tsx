@@ -61,7 +61,7 @@ const SeguridadSocial: React.FC = () => {
 
       />
       <PorqueSagardoy />
-      <IconsInfo dates={['15 febrero, 2024', '21 marzo, 2024']} duration={
+      <IconsInfo dates={['Del 15 febrero',' al 21 marzo']} duration={
         <>
           6 sesiones 1 sesión por<br />
           semana de 9:00 a 12:00h
