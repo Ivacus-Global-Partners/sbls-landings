@@ -22,12 +22,12 @@ const ExperienciaEmpleado: React.FC = () => {
   const download = 'certificación-experto-experiencia-de-empleado.pdf';
   const claustro = [
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FJos%C3%A9%20Luis%20Pascual%20Pedraza.png?alt=media&token=edddd9f2-93a1-4410-90c5-9ecd662e1b91',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fjose-luis%402x.png?alt=media&token=437cd7d5-04d5-4b98-ae32-a52608194ce1',
       name: 'José Luis Pascual Pedraza',
       job: <>Socio director de Experiencia de Empleado en <strong>Lukkap</strong> y Director académico de la Certificación en Experiencia Empleado</>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FCarmen%20Arroyal%20Ant%C3%B3n.png?alt=media&token=65c73271-aca4-4cd7-b524-e127f66db790',
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fcarmen-arroyal%402x.png?alt=media&token=abbe50ba-9cad-49c7-ae37-a2fb5df0f171',
       name: 'Carmen Arroyal Antón',
       job: <>Head of Employee Experience en <strong>Grupo Santalucía</strong></>
     },
