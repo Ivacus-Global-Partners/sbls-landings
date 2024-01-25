@@ -11,7 +11,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import BigQuote from '../../components/BigQuote';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery, useTheme } from '@mui/material';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const ExperienciaEmpleado: React.FC = () => {
 
@@ -23,22 +24,22 @@ const ExperienciaEmpleado: React.FC = () => {
   const claustro = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FJos%C3%A9%20Luis%20Pascual%20Pedraza.png?alt=media&token=edddd9f2-93a1-4410-90c5-9ecd662e1b91',
-      name: 'José Luis Pascual Pedraza',
+      name: 'José Luis Pascual',
       job: <>Socio director de Experiencia de Empleado en <strong>Lukkap</strong> y Director académico de la Certificación en Experiencia Empleado</>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FCarmen%20Arroyal%20Ant%C3%B3n.png?alt=media&token=65c73271-aca4-4cd7-b524-e127f66db790',
-      name: 'Carmen Arroyal Antón',
+      name: 'Carmen Arroyal',
       job: <>Head of Employee Experience en <strong>Grupo Santalucía</strong></>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FDavid%20Hidalgo%20Gim%C3%A9nez%20(2).png?alt=media&token=6d61fed8-16e7-496f-895e-f242868b3cd4',
-      name: 'David Hidalgo Giménez',
+      name: 'David Hidalgo',
       job: <>Employee Experience & HCM Manager en <strong>COFARES</strong></>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FEsther%20Burges%20Plasencia.png?alt=media&token=a5744ff2-dff2-4071-a3bc-82816e473ad7',
-      name: 'Esther Burges Plasencia',
+      name: 'Esther Burges',
       job: <>Responsable de Cultura y Experiencia de Empleado en <strong>Ibercaja</strong></>
     },
     {
@@ -62,7 +63,7 @@ const ExperienciaEmpleado: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="certificación, experiencia de empleado, habilidades profesionales, desarrollo profesional" />
       </Helmet>
-      
+
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} />
       <InfoForm formId='0xba28a4' productId='0x598f38' href={href} download={download} title shadow submit={
         <>
@@ -74,7 +75,7 @@ const ExperienciaEmpleado: React.FC = () => {
         title={<p style={{ color: '#980628', margin: 0 }}>Hacia un modelo transformador</p>}
         body={texto}
       />
-      <div style={ isMobile ? {   marginTop: '-30%' } : {}}>
+      <div style={isMobile ? { marginTop: '-30%' } : {}}>
         <BodyInfo2
           logoAlt="Lukkap"
           logo="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Flukkap-logo.png?alt=media&token=e675185b-7232-4838-9daa-743e6611b2be"
@@ -84,7 +85,22 @@ const ExperienciaEmpleado: React.FC = () => {
             Director de la Certificación Experto en Experiencia de Empleado <br />
             Socio Director de Experiencia Empleado en <strong>Lukkap</strong>
           </>}
-          quote={"La gestión de personas está evolucionando hacía la gestión de la experiencia. El empleado ha adquirido un papel protagonista en la relación profesional y ahora se empiezan a tener en cuenta sus necesidades para construir soluciones de gestión que tengan más impacto en su compromiso y, con ello, un retorno mayor en su rendimiento."}
+          quote={
+            <p style={{ margin: 0, marginTop: isMobile ? '60px' : 0 }}>
+              <FontAwesomeIcon icon={faQuoteLeft} style={{
+                color: '#980628',
+                fontSize: '22px',
+                marginRight: '5px',
+                marginBottom: '1px',
+              }} />
+              La gestión de personas está evolucionando hacía la gestión de la experiencia. El empleado ha adquirido un papel protagonista en la relación profesional y ahora se empiezan a tener en cuenta sus necesidades para construir soluciones de gestión que tengan más impacto en su compromiso y, con ello, un retorno mayor en su rendimiento.
+              <FontAwesomeIcon icon={faQuoteRight} style={{
+                color: '#980628',
+                fontSize: '22px',
+                marginRight: '5px',
+                marginBottom: '1px',
+              }} />
+            </p>}
         />
       </div>
       <IconsInfo dates={['Del 21 febrero', 'al 26 junio']} duration={

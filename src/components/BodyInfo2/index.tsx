@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { img: string, quote: string, name: string, job: any, filled?: boolean, logo?: string, logoAlt?: string }) => {
+const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { img: string, quote: any, name: string, job: any, filled?: boolean, logo?: string, logoAlt?: string }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -114,10 +114,16 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { i
         )}
         <div className={classes.textContainer}>
           <p className={classes.p} style={{ color: filled ? 'white' : 'black', paddingRight: isLargeScreen ? '33vw' : '0' }}>
-            <>
-              <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
-              {quote} <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
-            </>
+            {typeof quote === 'string' ? (
+              <>
+                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+                {quote}
+                <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+              </>
+            ) : (
+              quote
+            )}
+
           </p>
           <div className={isMobile ? classes.imageTextContainer : ''}>
             {isMobile && (
