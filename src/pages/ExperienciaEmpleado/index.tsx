@@ -33,9 +33,9 @@ const ExperienciaEmpleado: React.FC = () => {
       job: <>Head of Employee Experience en <strong>Grupo Santalucía</strong></>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FDavid%20Hidalgo%20Gim%C3%A9nez%20(2).png?alt=media&token=6d61fed8-16e7-496f-895e-f242868b3cd4',
-      name: 'David Hidalgo',
-      job: <>Employee Experience & HCM Manager en <strong>COFARES</strong></>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FAlberto%20Serrano.png?alt=media&token=8c327502-4bb3-4a3f-901f-670bc11ce047',
+      name: 'Alberto Serrano',
+      job: <>Director de Organización y Personas en <strong>COFARES</strong></>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FEsther%20Burges%20Plasencia.png?alt=media&token=a5744ff2-dff2-4071-a3bc-82816e473ad7',
