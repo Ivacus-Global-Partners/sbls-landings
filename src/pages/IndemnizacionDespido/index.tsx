@@ -89,8 +89,8 @@ const IndemnizacionDespido = () => {
                 dates={['Del 19 febrero', 'al 01 marzo']}
                 duration={
                     <>
-                        4 jornadas de <br />
-                        9:00h a 12:00h
+                        5 jornadas de <br />
+                        9:30h a 12:30h
                     </>
                 }
                 language={'Español'}
