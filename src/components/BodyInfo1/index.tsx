@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme: Theme) => ({
       flexDirection: 'column',
       paddingLeft: '2',
       paddingRight: '2',
-      marginBottom: '-20%',
     },
   },
 
@@ -83,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
-      marginBottom: '18%',
+      marginBottom: '0',
     }
   },
 }));

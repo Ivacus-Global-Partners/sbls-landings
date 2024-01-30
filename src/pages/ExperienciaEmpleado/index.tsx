@@ -75,8 +75,8 @@ const ExperienciaEmpleado: React.FC = () => {
         title={<p style={{ color: '#980628', margin: 0 }}>Hacia un modelo transformador</p>}
         body={texto}
       />
-      <div style={isMobile ? { marginTop: '-30%',  backgroundColor: '#980628' } : {}}>
-        <BodyInfo2 
+      <div style={isMobile ? { backgroundColor: '#980628' } : {}}>
+        <BodyInfo2
           filled
           logoAlt="Lukkap"
           logo="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Flukkap-logo.png?alt=media&token=e675185b-7232-4838-9daa-743e6611b2be"
@@ -86,22 +86,7 @@ const ExperienciaEmpleado: React.FC = () => {
             Director de la Certificación Experto en Experiencia de Empleado <br />
             Socio Director de Experiencia Empleado en <strong>Lukkap</strong>
           </>}
-          quote={
-            <p style={{ margin: 0, marginTop: isMobile ? '60px' : 0 }}>
-              <FontAwesomeIcon icon={faQuoteLeft} style={{
-                color: 'white',
-                fontSize: '22px',
-                marginRight: '5px',
-                marginBottom: '1px',
-              }} />
-              La gestión de personas está evolucionando hacía la gestión de la experiencia. El empleado ha adquirido un papel protagonista en la relación profesional y ahora se empiezan a tener en cuenta sus necesidades para construir soluciones de gestión que tengan más impacto en su compromiso y, con ello, un retorno mayor en su rendimiento.
-              <FontAwesomeIcon icon={faQuoteRight} style={{
-                color: 'white',
-                fontSize: '22px',
-                marginRight: '5px',
-                marginBottom: '1px',
-              }} />
-            </p>}
+          quote={"La gestión de personas está evolucionando hacía la gestión de la experiencia. El empleado ha adquirido un papel protagonista en la relación profesional y ahora se empiezan a tener en cuenta sus necesidades para construir soluciones de gestión que tengan más impacto en su compromiso y, con ello, un retorno mayor en su rendimiento."}
         />
       </div>
       <IconsInfo dates={['Del 21 febrero', 'al 26 junio']} duration={
