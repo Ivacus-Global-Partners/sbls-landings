@@ -11,8 +11,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 import BigQuote from '../../components/BigQuote';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery, useTheme } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const ExperienciaEmpleado: React.FC = () => {
 
