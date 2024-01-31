@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   logo: {
-    width: '100%',
+    width: '35%',
   },
   container: {
     display: 'flex',

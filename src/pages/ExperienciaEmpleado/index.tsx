@@ -77,7 +77,7 @@ const ExperienciaEmpleado: React.FC = () => {
         <BodyInfo2
           filled
           logoAlt="Lukkap"
-          logo="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Flukkap-logo.png?alt=media&token=e675185b-7232-4838-9daa-743e6611b2be"
+          logo="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLogos%2Flukkap-blanco.png?alt=media&token=b4aabaaa-3c71-40ce-a972-bc5d75204235"
           img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FJose%20Luis%20Pascual.png?alt=media&token=118eae81-1787-4b69-8bb1-7be813834960"}
           name={"José Luis Pascual "}
           job={<>
