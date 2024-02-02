@@ -9,6 +9,7 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
+import { redirect } from 'react-router-dom';
 
 const ComunicacionHR: React.FC = () => {
 
@@ -47,6 +48,7 @@ const ComunicacionHR: React.FC = () => {
     <br /><br />
     Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong> Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
   </>;
+  const redirect = 'https://sagardoyschool.com/thank-you/hr-comunicacion-interna-del-negocio/';
 
   return (
     <div>
@@ -60,7 +62,7 @@ const ComunicacionHR: React.FC = () => {
   
     
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} />
-      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto

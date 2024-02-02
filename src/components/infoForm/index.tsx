@@ -166,6 +166,7 @@ const InfoForm = ({
   submit,
   title = false,
   href,
+  redirect,
   download,
   productId,
   formId
@@ -174,6 +175,7 @@ const InfoForm = ({
   submit: any;
   title?: boolean;
   href: string;
+  redirect?: string;
   download: string;
   productId: string;
   formId: string;
@@ -259,6 +261,11 @@ const InfoForm = ({
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
+    
+    if (!redirect) return 
+    const redirectLink = document.createElement("a");
+    redirectLink.href = redirect;
+    redirectLink.click();
 
   };
 

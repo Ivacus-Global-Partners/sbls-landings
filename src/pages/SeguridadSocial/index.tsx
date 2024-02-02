@@ -9,6 +9,7 @@ import CardsClaustro from '../../components/CardsClaustro';
 import DownloadIcon from '@mui/icons-material/Download';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
 import { Helmet } from 'react-helmet';
+import { redirect } from 'react-router-dom';
 
 
 const SeguridadSocial: React.FC = () => {
@@ -33,6 +34,7 @@ const SeguridadSocial: React.FC = () => {
     ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? <strong>Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).</strong><br /><br />
     Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la Seguridad Social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
   </>
+  const redirect = 'https://sagardoyschool.com/thank-you/actualizacion-de-normativa-de-cotizaci%C3%B3n-seguridad-social/';
 
   return (
     <div>
@@ -45,7 +47,7 @@ const SeguridadSocial: React.FC = () => {
       </Helmet>
 
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20seguridad%20social.png?alt=media&token=4ec2e4ea-95b3-487a-8d14-e9f723f650f6"} />
-      <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} title shadow submit={
+      <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} redirect={redirect} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto

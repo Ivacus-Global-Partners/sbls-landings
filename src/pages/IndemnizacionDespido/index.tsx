@@ -32,7 +32,7 @@ const IndemnizacionDespido = () => {
     const headerIndemnizacionDespido = 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20indemnizaci%C3%B3nPorDespido.png?alt=media&token=f5672768-f9b6-4225-af2c-3c054932ad3e'
     const href = 'https://sagardoyschool.com/archivos/actualizacion-juridica-la-indemnizacion-por-despido.pdf'
     const download = 'actualizacion-juridica-la-indemnizacion-por-despido.pdf'
-
+    const redirect = 'https://sagardoyschool.com/thank-you/actualizacion-juridica/'
     const claustro = [
         {
             img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Frosa_maria_viroles_pinol%402x.png?alt=media&token=f544288d-3f8a-48c6-b822-0482088633cf',
@@ -61,7 +61,7 @@ const IndemnizacionDespido = () => {
                 <meta name="keywords" content="actualización jurídica, indemnización por despido, leyes laborales, derechos laborales, novedades legales" />
             </Helmet>
             <Header image={headerIndemnizacionDespido} />
-            <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} title shadow submit={
+            <InfoForm productId='0xa7ebda' formId='0xba2898' href={href} download={download} redirect={redirect} title shadow submit={
                 <>
                     <DownloadIcon sx={{ fontSize: '1.2em' }} />
                     Descargar folleto

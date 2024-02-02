@@ -11,6 +11,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import BigQuote from '../../components/BigQuote';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery, useTheme } from '@mui/material';
+import { redirect } from 'react-router-dom';
 
 const ExperienciaEmpleado: React.FC = () => {
 
@@ -50,6 +51,8 @@ const ExperienciaEmpleado: React.FC = () => {
   const texto = <>
     ¿Sabías que el impacto emocional negativo en los trabajadores representa un aumento del 17% más de bajas laborales? trabajar en la <strong>#ExperienciadeEmpleado</strong> es imprescindible para revertir estos datos. Cambia tu modelo de relación con el empleado por uno basado en la experiencia con nuestra Certificación Experto en Experiencia de Empleado.
   </>;
+  
+  const redirect = 'https://sagardoyschool.com/thank-you/certificacion-experto-experiencia-de-empleado/';
 
   return (
     <div>
@@ -63,7 +66,7 @@ const ExperienciaEmpleado: React.FC = () => {
       </Helmet>
 
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20certificacion%20experto.png?alt=media&token=d3033539-45af-4645-a3e9-af4fa0ee588d"} />
-      <InfoForm formId='0xba28a4' productId='0x598f38' href={href} download={download} title shadow submit={
+      <InfoForm formId='0xba28a4' productId='0x598f38' href={href} download={download} redirect={redirect} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
