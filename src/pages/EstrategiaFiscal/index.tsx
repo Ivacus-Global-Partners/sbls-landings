@@ -63,7 +63,7 @@ const EstrategiaFiscal: React.FC = () => {
       </Helmet>
 
 
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ffiscalidad%2Fheaderfiscalidad.png?alt=media&token=27ef01e1-159c-4976-a10f-c77adb192dec"} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ffiscalidad%2Fheaderfiscalidad.png?alt=media&token=2c62c078-cd73-44ab-adeb-f4793c804d29"} />
       <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />

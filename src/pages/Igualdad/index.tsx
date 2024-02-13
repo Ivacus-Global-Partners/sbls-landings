@@ -11,6 +11,7 @@ import { Theme } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
+import { redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) => ({
   body: {
@@ -33,6 +34,7 @@ const Igualdad: React.FC = () => {
   const classes = useStyles();
   const href = 'https://sagardoyschool.com/archivos/la-igualdad-mas-alla-del-genero-obligaciones-de-las-empresas.pdf';
   const download = 'la-igualdad-mas-alla-del-genero-obligaciones-de-las-empresas.pdf';
+  const redirect = 'https://sagardoyschool.com/thank-you/actualizacion-igualdad-mas-alla-del-genero/';
   const claustro = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fgemma-fabregat%402x.png?alt=media&token=a412de0c-1ac3-4cfb-a601-fa385c0a0a71',
@@ -70,12 +72,13 @@ const Igualdad: React.FC = () => {
         <meta name="keywords" content="igualdad, género" />
       </Helmet>
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader_igualdad.png?alt=media&token=b555ef2b-661c-45ea-9439-714a357c4a27"} />
-      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
         </>
       } />
+      
       <BodyInfo title={
         <p style={{ color: 'black', margin: 0 }}>
           Actualízate con expertos en <span style={{ color: '#980628' }}>materia laboral</span>
