@@ -11,7 +11,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 import BigQuote from '../../components/BigQuote';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery, useTheme } from '@mui/material';
-import { redirect } from 'react-router-dom';
 
 const ExperienciaEmpleado: React.FC = () => {
 

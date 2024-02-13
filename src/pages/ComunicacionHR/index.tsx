@@ -9,7 +9,6 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
-import { redirect } from 'react-router-dom';
 
 const ComunicacionHR: React.FC = () => {
 
