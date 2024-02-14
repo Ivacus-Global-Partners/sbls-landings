@@ -96,7 +96,7 @@ const EstrategiaFiscal: React.FC = () => {
         <br />
         <br />
         <br />
-        <br />
+    
       </>}
       <IconsInfo dates={['Del 24 septiembre', ' al 28 noviembre']} duration={
         <>
