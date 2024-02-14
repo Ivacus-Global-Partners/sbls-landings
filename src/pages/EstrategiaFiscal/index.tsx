@@ -9,6 +9,7 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const EstrategiaFiscal: React.FC = () => {
 
@@ -25,13 +26,13 @@ const EstrategiaFiscal: React.FC = () => {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fey-pablo-sanz-vf%402x.png?alt=media&token=b578e640-461b-4c05-8a7e-61f268838c39',
       name: 'Pablo Sanz',
       job: <>
-      Codirector del programa Socio Responsable de la Zona Norte en <strong>EY España</strong></>
+        Codirector del programa Socio Responsable de la Zona Norte en <strong>EY España</strong></>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Flara%402x.png?alt=media&token=3822e7b2-14cd-4aca-9554-950275727568',
       name: 'Lara Vettorazzi',
       job: <>
-      Socia de Corporate M&A <strong>EY Abogados</strong></>
+        Socia de Corporate M&A <strong>EY Abogados</strong></>
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fey-nuria-redondo%402x.png?alt=media&token=6d9607d7-5fbf-4fe6-a67e-c48429086426',
@@ -51,6 +52,9 @@ const EstrategiaFiscal: React.FC = () => {
     Conoce los <strong>aspectos fiscales más relevantes con un enfoque práctico y atendiendo a las especificidades de los distintos sectores</strong> en la actividad empresarial. No pierdas la oportunidad de aprender a diseñar estrategias que te permitan planificar y <strong>optimizar los recursos financieros en las organizaciones.</strong>
   </>;
   const redirect = 'https://sagardoyschool.com/thank-you/hr-comunicacion-interna-del-negocio/';
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <div>
@@ -88,6 +92,12 @@ const EstrategiaFiscal: React.FC = () => {
           Socio Responsable de la Zona Norte en <strong>EY España</strong></>}
         quote={"Sin ninguna duda, uno de los mayores retos a los que nos enfrentamos las empresas, los profesionales y los ciudadanos en general, es dar cumplimiento al mandato del Código Civil de que el desconocimiento de las leyes no excusa de su cumplimiento."}
       />
+      {!isMobile && <>
+        <br />
+        <br />
+        <br />
+        <br />
+      </>}
       <IconsInfo dates={['Del 24 septiembre', ' al 28 noviembre']} duration={
         <>
           2 meses / Martes y Jueves<br />
