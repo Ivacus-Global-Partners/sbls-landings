@@ -75,11 +75,17 @@ const EstrategiaFiscal: React.FC = () => {
         body={texto}
       />
       <BodyInfo2
+        filled
         img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fey-javier-seijo%402x.png?alt=media&token=5e9ed93c-6882-4f6b-b0b8-30e7dfde293b"}
         name={"Javier Seijo"}
         job={<>
           Codirector del programa <br />
-          Socio Responsable de Tributación de Empresas, Private Tax y de la práctica de Real Estate en EY España</>}
+          Socio Responsable de Tributación de Empresas, Private Tax y de la práctica de Real Estate en <strong>EY España</strong></>}
+        img2={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fey-pablo-sanz-vf%402x.png?alt=media&token=b578e640-461b-4c05-8a7e-61f268838c39"}
+        name2={"Pablo Sanz"}
+        job2={<>
+          Codirector del programa <br />
+          Socio Responsable de la Zona Norte en <strong>EY España</strong></>}
         quote={"Sin ninguna duda, uno de los mayores retos a los que nos enfrentamos las empresas, los profesionales y los ciudadanos en general, es dar cumplimiento al mandato del Código Civil de que el desconocimiento de las leyes no excusa de su cumplimiento."}
       />
       <IconsInfo dates={['Del 24 septiembre', ' al 28 noviembre']} duration={
