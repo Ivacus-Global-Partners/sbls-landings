@@ -30,6 +30,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       top: "15vw",
     },
+    [theme.breakpoints.between(949,960)]: {
+      top: "5vw",
+    },
+    [theme.breakpoints.between(853,915)]: {
+      top: "11vw",
+    },
     [theme.breakpoints.down(850)]: {
       position: "relative",
       width: "85%",
@@ -160,6 +166,7 @@ const InfoForm = ({
   submit,
   title = false,
   href,
+  redirect,
   download,
   productId,
   formId
@@ -168,6 +175,7 @@ const InfoForm = ({
   submit: any;
   title?: boolean;
   href: string;
+  redirect?: string;
   download: string;
   productId: string;
   formId: string;
@@ -253,6 +261,11 @@ const InfoForm = ({
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
+    
+    if (!redirect) return 
+    const redirectLink = document.createElement("a");
+    redirectLink.href = redirect;
+    redirectLink.click();
 
   };
 

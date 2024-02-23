@@ -1,10 +1,8 @@
 import React from 'react';
-import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { makeStyles } from '@mui/styles';
-import { Container, Divider, Theme } from '@mui/material';
-import { Navigation } from 'swiper/modules';
+import { Container, Divider, Theme, useMediaQuery, useTheme } from '@mui/material';
 import './style.css'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -22,60 +20,62 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     name: {
         fontWeight: 'bold',
+        fontSize: '1.4em',
         margin: '20px 0 8px',
+        fontFamily: 'Nunito',
+        color: 'white',
         [theme.breakpoints.down('md')]: {
             fontSize: '1.2em',
         }
     },
     job: {
-        textAlign: 'center',
-        fontSize: '0.8em',
+        textAlign: 'left',
+        fontSize: '0.9em',
+        color: 'white',
+        fontWeight: 'normal',
+        fontFamily: 'Nunito',
         margin: '8px 0 25px 0',
+        marginBottom: '0px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.9em',
+        },
         [theme.breakpoints.down('md')]: {
             fontSize: '1em',
         }
     },
-    divider: {
-        border: 'none',
-        borderBottom: '1px solid black !important',
-        width: '90%',
-    },
     card: {
-        background: '#F0F0F0',
+        background: '#980628',
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        flexDirection: 'row',
+        alignItems: 'normal',
         height: '100%',
         borderRadius: '10px',
         padding: '15px 10px',
         boxSizing: 'border-box',
+        marginTop: '5%',
+        width: '90%',
+        paddingTop: '0px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            marginTop: '25%',
+            paddingTop: '10%',
+        },
+        [theme.breakpoints.down('md')]: {
+            width: '100%'
+        }
     },
-    swiper: {
+    cardContent: {
         height: 'auto',
         padding: '0 65px',
-    },
-    slide: {
-        cursor: 'pointer',
-        height: 'auto',
-    },
-    slidetext: {
-        zIndex: 1,
-        position: 'absolute',
-        top: "60px",
-        left: "30px",
-        fontFamily: 'times',
-        fontStyle: 'italic',
-        width: '50%',
-        fontSize: '1.5vw',
-        fontWeight: 'normal',
-
-        [theme.breakpoints.down('md')]: {
-            fontSize: '3vw',
-            width: '45%',
-        },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '4vw',
-            width: '50%',
+            padding: '0',
+        }
+    },
+    content: {
+        height: 'auto',
+        padding: '0 10%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0',
         }
     },
     slideimg: {
@@ -87,77 +87,18 @@ const useStyles = makeStyles((theme: Theme) => ({
         '&:hover': {
             transform: 'scale(1.05)'
         },
-        [theme.breakpoints.down('lg')]: {
-            height: '10vh',
-        },
         [theme.breakpoints.down('md')]: {
-            height: '15vh',
-        }
-    },
-    divclosed: {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        zIndex: 2,
-        backgroundColor: 'rgba(170, 25, 54, 0.8)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        transition: 'opacity 0.2s ease-in-out',
-        fontFamily: 'times',
-        fontStyle: 'italic',
-        fontSize: '1.7vw',
-        color: 'white',
-        opacity: 0,
-        '&:hover': {
-            opacity: 1,
-        },
-
-        [theme.breakpoints.down('md')]: {
-            fontSize: '3vw',
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '4vw',
+            position: 'absolute',
+            top: '35%',
+            left: '-5%',
+            right: '0%',
+            width: '20%',
+            height: '50%',
         }
     },
     icon: {
         color: 'white',
         marginRight: '10px',
-    },
-    span: {
-        zIndex: 1,
-        position: 'absolute',
-        display: 'flex',
-        padding: '7px',
-        color: 'white',
-        backgroundColor: '#aa1933',
-        marginTop: '20px',
-        '@media (max-width: 620px)': {
-            padding: '5px',
-            marginTop: '10px'
-        }
-    },
-    label: {
-        margin: 0,
-        marginRight: '10px',
-    },
-    customButton: {
-        color: 'red',
-    },
-    lastIcon: {
-        position: 'absolute',
-        zIndex: 1,
-        bottom: '20px',
-        left: '20px',
-        width: '30%',
-    },
-    navigationDisabled: {
-        opacity: 0,
-    },
-    navigation: {
-        top: '16px',
-        height: '100%',
-        transition: 'right 0.2s ease, opacity 0.6s, left 0.2s ease',
     },
     title: {
         fontFamily: 'times',
@@ -178,49 +119,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 }));
 
-const CardsClaustro = ({ claustro, title }: { claustro: { name: string, img: string, job: any }[], title: string }) => {
+const CardsClaustroHorizontal = ({ claustro, title }: { claustro: { name: string, img: string, job: any, job1: any, job2: any }[], title: string }) => {
     const classes = useStyles();
-    const [navigation, setNavigation] = React.useState(false);
-
-    const mySwiperProps: SwiperProps = {
-        slidesPerView: 1,
-        grabCursor: true,
-        spaceBetween: 20,
-        navigation: {
-            enabled: true,
-            disabledClass: classes.navigationDisabled,
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        modules: [Navigation],
-        breakpoints: {
-            400: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            480: {
-                slidesPerView: 1.4,
-                spaceBetween: 30,
-            },
-            600: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            960: {
-                slidesPerView: 4.2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 4.15,
-                spaceBetween: 30,
-            }
-        }
-    } as any;
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMediumSize = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <div className={classes.cardContainer}>
@@ -229,31 +132,78 @@ const CardsClaustro = ({ claustro, title }: { claustro: { name: string, img: str
                     <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fschool_FILL0_wght400_GRAD0_opsz48.svg?alt=media&token=d2edfee9-3ab6-4924-9450-feb9a18f7812"
                         className={classes.icono}
                         alt="Icono" /> {title}</h1>
-                <div onMouseEnter={() => setNavigation(true)}
-                    onMouseLeave={() => setNavigation(false)}>
-                    <Swiper {...mySwiperProps} className={classes.swiper} style={{ marginTop: '3%' }}>
-                        {
-                            claustro
-                                .map((member, index) => (
-                                    <SwiperSlide className={classes.slide} key={index}>
-                                        <div className={classes.card}>
-                                            <img className={classes.slideimg} src={member.img} alt="Foto" />
+                <div className={classes.cardContent}>
+                    {
+                        claustro.map((member, index) => (
+                            <div key={index} style={{ position: 'relative' }}>
+                                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', marginTop: '10px' }}>
+                                    <div className={classes.card}>
+                                        {isMobile && (
+                                            <img
+                                                className={classes.slideimg}
+                                                src={member.img}
+                                                alt="Foto"
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '-0%',
+                                                    left: '50%',
+                                                    transform: 'translateX(-50%)',
+                                                    width: '30%',
+                                                    height: '50%',
+                                                }}
+                                            />
+                                        )}
+                                        <div className={classes.content}>
                                             <p className={classes.name}>{member.name}</p>
-                                            <Divider orientation='horizontal' className={classes.divider} />
                                             <p className={classes.job}>{member.job}</p>
+                                            <p className={classes.job}>{member.job1}</p>
+                                            {!isMobile && (
+                                                <>
+                                                    <Divider style={{ backgroundColor: 'white', marginTop: '10px' }} orientation='horizontal' />
+                                                    <p className={classes.job}>{member.job2}</p>
+                                                </>
+                                            )}
                                         </div>
-                                    </SwiperSlide>
-                                ))
-                        }
-                        <div className={`swiper-button-next ${classes.navigation}`}
-                            style={{ right: `${navigation ? '0' : '-100px'}` }}></div>
-                        <div className={`swiper-button-prev ${classes.navigation}`}
-                            style={{ left: `${navigation ? '0' : '-100px'}` }}></div>
-                    </Swiper>
+                                    </div>
+                                    {!isMobile && !isMediumSize && (
+                                        <img
+                                            className={classes.slideimg}
+                                            src={member.img}
+                                            alt="Foto"
+                                            style={{
+                                                position: 'absolute',
+                                                top: '35%',
+                                                left: '-5%',
+                                                right: '0%',
+                                                width: '20%',
+                                                height: '50%',
+                                            }}
+                                        />
+                                    )}
+                                    { isMediumSize && !isMobile &&(
+                                        <img
+                                            className={classes.slideimg}
+                                            src={member.img}
+                                            alt="Foto"
+                                            style={{
+                                                position: 'absolute',
+                                                top: '35%',
+                                                left: '-11%',
+                                                right: '0%',
+                                                width: '20%',
+                                                height: '50%',
+                                            }}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
+
             </Container>
         </div>
     )
 }
 
-export default CardsClaustro;
+export default CardsClaustroHorizontal;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BodyInfo from '../../components/BodyInfo1';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
@@ -8,16 +8,13 @@ import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
-
-
-
-
-
+import { Helmet } from 'react-helmet';
+import { useSearchParams } from 'react-router-dom';
 
 const ComunicacionHR: React.FC = () => {
 
+  const [searchParams] = useSearchParams()
 
- 
   const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
   const download = 'hr-comunicacion-interna-sagardoy.pdf';
   const claustro = [
@@ -53,11 +50,24 @@ const ComunicacionHR: React.FC = () => {
     <br /><br />
     Conoce cómo <strong>aplicar herramientas de comunicación estratégica para mejorar la cultura corporativa y los resultados del negocio.</strong> Y consigue que las Políticas de Recursos Humanos sean mejor comprendidas, valoradas y, por tanto, aplicadas por todos los profesionales de la organización.
   </>;
+  const redirect = 'https://sagardoyschool.com/thank-you/hr-comunicacion-interna-del-negocio/';
+
+  const utmOriginParam = searchParams.get('utm_origin');
+  const formId = utmOriginParam === 'estudio-de-comunicacion' ? '0xe91cd0' : '0xba2874';
 
   return (
     <div>
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} href={href} download={download} />
-      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <Helmet>
+        <title>HR: Comunicación Interna al servicio del Negocio</title>
+        <meta name="title" content="HR: Comunicación Interna al servicio del Negocio"/>
+        <meta name="description" content="Descubre cómo la comunicación interna puede potenciar tu negocio. En Sagardoy, ofrecemos soluciones de comunicación interna para mejorar la eficiencia y el rendimiento de tu empresa. ¡Conoce nuestras propuestas hoy!"/>
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="comunicación interna, negocios, eficiencia empresarial, soluciones de comunicación" />
+      </Helmet>
+  
+    
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} />
+      <InfoForm productId='0xa7cd6c' formId={formId} href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
@@ -76,7 +86,7 @@ const ComunicacionHR: React.FC = () => {
           Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio</>}
         quote={"En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz."}
       />
-      <IconsInfo dates={['8 abril, 2024', '27 mayo, 2024']} duration={
+      <IconsInfo dates={['Del 8 abril', ' al 27 mayo']} duration={
         <>
           8 semanas 1 sesión por<br />
           semana 17:00h a 20:00h
@@ -102,7 +112,7 @@ const ComunicacionHR: React.FC = () => {
         "Desarrollar": "casos prácticos en colaboración con profesionales de destacadas organizaciones para encontrar soluciones desde distintas perspectivas."
       }} />
       <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

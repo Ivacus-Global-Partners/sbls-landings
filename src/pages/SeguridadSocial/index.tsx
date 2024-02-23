@@ -8,6 +8,9 @@ import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import DownloadIcon from '@mui/icons-material/Download';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
+import { Helmet } from 'react-helmet';
+import { redirect } from 'react-router-dom';
+
 
 const SeguridadSocial: React.FC = () => {
   const href = 'https://sagardoyschool.com/archivos/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social.pdf'
@@ -16,12 +19,12 @@ const SeguridadSocial: React.FC = () => {
   const claustro = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FMaria%20Foret%20Pastor2.png?alt=media&token=52aa71ec-6a2a-43ef-88dd-e4d8a193422e',
-      name: 'Maria Foret Pastor',
+      name: 'Maria Foret',
       job: 'Inspectora de Trabajo y Seguridad Social'
     },
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FJorge%20Travesedo%20Das%C3%AD.png?alt=media&token=21e6201f-7595-4aba-9c09-5fb8b02d40cb',
-      name: 'Jorge Travesedo Dasí',
+      name: 'Jorge Travesedo',
       job: 'Socio en Sagardoy Abogados. Miembro del Cuerpo Superior de Inspectores de Trabajo y Seguridad Social.'
     },
   ]
@@ -31,11 +34,20 @@ const SeguridadSocial: React.FC = () => {
     ¿Lideras al equipo de relaciones laborales o Recursos Humanos de tu empresa? ¿Eres un profesional experto en relaciones laborales o asesor jurídico? <strong>Mantente actualizado en las normativas de cotización a la Seguridad Social y conoce al detalle las facultades de la Inspección de Trabajo y Seguridad Social (ITSS).</strong><br /><br />
     Aplica la teoría en casos prácticos desarrollando y discutiendo con otros participantes, alegaciones o recurso de alzada a un acta de liquidación de cuotas a la Seguridad Social. Además, conoce cómo redactar e interponer un recurso contencioso administrativo o demanda ante la jurisdicción social impugnando una sanción o liquidación de la ITSS.
   </>
+  const redirect = 'https://sagardoyschool.com/thank-you/actualizacion-de-normativa-de-cotizaci%C3%B3n-seguridad-social/';
 
   return (
     <div>
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20seguridad%20social.png?alt=media&token=4ec2e4ea-95b3-487a-8d14-e9f723f650f6"} href={href} download={download} />
-      <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} title shadow submit={
+      <Helmet>
+        <title>Actualización de la Normativa de Cotización a la Seguridad Social</title>
+        <meta name="title" content="Actualización de la Normativa de Cotización a la Seguridad Social" />
+        <meta name="description" content="Explora la última actualización de la normativa de cotización a la seguridad social. Mantente informado sobre los cambios en las tasas de cotización y otros aspectos relevantes. ¡Comprende las novedades para cumplir con las regulaciones vigentes!" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="normativa, cotización, seguridad social, tasas de cotización, actualización legal" />
+      </Helmet>
+
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Fheader%20seguridad%20social.png?alt=media&token=4ec2e4ea-95b3-487a-8d14-e9f723f650f6"} />
+      <InfoForm formId='0xba2890' productId='0xa7ebd6' href={href} download={download} redirect={redirect} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
@@ -43,7 +55,7 @@ const SeguridadSocial: React.FC = () => {
       } />
       <BodyInfo title={
         <p style={{ color: 'black', margin: 0 }}>
-          Actualízate con expertos en <span style={{ color: '#980628' }}>material laboral</span>
+          Actualízate con expertos en <span style={{ color: '#980628' }}>materia laboral</span>
         </p>
       }
 
@@ -51,10 +63,10 @@ const SeguridadSocial: React.FC = () => {
 
       />
       <PorqueSagardoy />
-      <IconsInfo dates={['15 febrero, 2024', '21 marzo, 2024']} duration={
+      <IconsInfo dates={['Del 13 marzo',' al 14 marzo']} duration={
         <>
-          6 sesiones 1 sesión por<br />
-          semana de 9:00 a 12:00h
+          10 sesiones 5 sesiónes por<br />
+          dia de 9:00 a 18:00h
         </>
       }
         language={"Español"}
@@ -77,7 +89,7 @@ const SeguridadSocial: React.FC = () => {
         "Conocer": "las actualizaciones en las facultades de la Inspección de Trabajo y Seguridad Social y detectar y gestionar los riesgos del incumplimiento normativo aplicados a diversos casos prácticos."
       }} />
       <CardsClaustro claustro={claustro} title="Conoce a nuestro claustro" />
-      <Footer href={href} download={download} />
+      <Footer />
     </div>
   )
 }

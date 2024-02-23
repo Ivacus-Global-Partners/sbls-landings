@@ -4,6 +4,8 @@ import ComunicaciónHR from '../pages/ComunicacionHR';
 import SeguridadSocial from '../pages/SeguridadSocial';
 import IndemnizacionDespido from '../pages/IndemnizacionDespido';
 import ExperienciaEmpleado from '../pages/ExperienciaEmpleado';
+import Igualdad from '../pages/Igualdad';
+import EstrategiaFiscal from '../pages/EstrategiaFiscal';
 
 
 const RouterComponent: React.FC = () => {
@@ -19,6 +21,8 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/actualizacion-de-la-normativa-de-cotizacion-a-la-seguridad-social" element={<SeguridadSocial />} />
                 <Route path="/landings/actualizacion-juridica-la-indemnizacion-por-despido" element={<IndemnizacionDespido />} />
                 <Route path="/landings/certificacion-experto-experiencia-de-empleado" element={<ExperienciaEmpleado />} />
+                <Route path="/landings/actualizacion-igualdad-mas-alla-del-genero" element={<Igualdad />} />
+                <Route path="/landings/programa-ejecutivo-en-estrategia-fiscal-y-sectorial" element={<EstrategiaFiscal />} />
             </Routes>
         </Router>
     );

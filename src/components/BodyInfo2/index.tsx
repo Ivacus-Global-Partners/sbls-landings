@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   logo: {
-    width: '100%',
+    width: '35%',
   },
   container: {
     display: 'flex',
@@ -87,9 +87,76 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
+  fullAuthorInfo: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '45px',
+    '& p': {
+      fontSize: '16px'
+    },
+    '& img': {
+      width: '80px',
+      height: '80px',
+    },
+    [theme.breakpoints.down('md')]: {
+      gap: '15px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      gap: '20px',
+      '& img': {
+        width: '120px',
+        height: '120px',
+      },
+    },
+  },
+  twoAuthors: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '50px',
+    marginBottom: '30px',
+    gap: '70px',
+    padding: '0 66px',
+    boxSizing: 'border-box',
+    '& div': {
+      flex: 1,
+    },
+    '& p': {
+      margin: 0
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: 0,
+      gap: '50px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      padding: 0,
+      gap: '20px',
+    }
+  },
+  fullQuote: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '95%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    }
+  }
 }));
 
-const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { img: string, quote: string, name: string, job: any, filled?: boolean, logo?: string, logoAlt?: string }) => {
+const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt, img2, name2, job2, }:
+  {
+    img: string,
+    quote: any,
+    name: string,
+    job: any,
+    filled?: boolean,
+    logo?: string,
+    logoAlt?: string,
+    img2?: string,
+    name2?: string,
+    job2?: any,
+  }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -98,7 +165,7 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { i
   return (
     <div className={classes.container} style={{ background: filled ? '#980628' : 'inherit' }}>
       <div className={classes.content}>
-        {!isMobile && (
+        {!isMobile && !img2 && (
           <div className={classes.imgContainer}>
             <img
               src={img}
@@ -113,31 +180,55 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt }: { i
           </div>
         )}
         <div className={classes.textContainer}>
-          <p className={classes.p} style={{ color: filled ? 'white' : 'black', paddingRight: isLargeScreen ? '33vw' : '0' }}>
-            <>
-              <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
-              {quote} <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
-            </>
-          </p>
-          <div className={isMobile ? classes.imageTextContainer : ''}>
-            {isMobile && (
-              <div className={classes.imgContainer}>
-                <img
-                  src={img}
-                  alt={name}
-                  className={classes.image}
-                />
-                {logo && <img
-                  src={logo}
-                  alt={logoAlt ?? "logo"}
-                  className={classes.logo}
-                />}
-              </div>
+          <p className={`${classes.p} ${name2 ? classes.fullQuote : ''}`} style={{ color: filled ? 'white' : 'black', paddingRight: name2 ? 0 : isLargeScreen ? '33vw' : '0' }}>
+            {typeof quote === 'string' ? (
+              <>
+                <FontAwesomeIcon icon={faQuoteLeft} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+                {quote}
+                <FontAwesomeIcon icon={faQuoteRight} className={classes.icon} style={{ color: filled ? 'inherit' : '#980628' }} />
+              </>
+            ) : (
+              quote
             )}
-            <p className={classes.name} style={{ color: filled ? 'white' : 'black' }}>
-              <span><b>{name}</b></span>
-              <br />{job}
-            </p>
+
+          </p>
+          <div className={name2 ? classes.twoAuthors : ''}>
+            <div className={name2 ? classes.fullAuthorInfo : isMobile ? classes.imageTextContainer : ''}>
+              {isMobile && !img2 && (
+                <div className={classes.imgContainer}>
+                  <img
+                    src={img}
+                    alt={name}
+                    className={classes.image}
+                  />
+                  {logo && <img
+                    src={logo}
+                    alt={logoAlt ?? "logo"}
+                    className={classes.logo}
+                  />}
+                </div>
+              )}
+              {img2 && <img
+                src={img}
+                alt={name}
+                className={classes.image}
+              />}
+              <p className={classes.name} style={{ color: filled ? 'white' : 'black' }}>
+                <span><b>{name}</b></span>
+                <br />{job}
+              </p>
+            </div>
+            {name2 && <div className={name2 ? classes.fullAuthorInfo : isMobile ? classes.imageTextContainer : ''}>
+              <img
+                src={img2}
+                alt={name2}
+                className={classes.image}
+              />
+              <p className={classes.name} style={{ color: filled ? 'white' : 'black' }}>
+                <span><b>{name2}</b></span>
+                <br />{job2}
+              </p>
+            </div>}
           </div>
         </div>
       </div>

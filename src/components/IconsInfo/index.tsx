@@ -55,284 +55,159 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const IconsInfo = ({ dates, duration, language, place, format }: { dates: string[], duration: any, language: string, place: any, format: any }) => {
+const IconsInfo = ({ dates, duration, language, place, format }: { dates: string[], duration: any, language: string, place?: any, format: any }) => {
 
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const tableWidth = '100%';
 
   return (
-    <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%', paddingTop: '20px' }} className={classes.container}>
+    <div style={{ margin: '0px auto', backgroundColor: '#F7F7F7', maxWidth: '100%', paddingTop: '15px' }} className={classes.container}>
       <div className={classes.tableContainer}>
-        <table align="center" border={0} cellPadding={0} cellSpacing={0} role="presentation" style={{ width: tableWidth }}>
-          <tbody>
 
-            {isMobile ? (
-              <>
-                <tr style={{ verticalAlign: "top" }}>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                className={classes.icon}
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
-                                alt='fechas'
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Fechas</strong><br />
-                              {dates.map((d, i) => (
-                                <React.Fragment key={i}>
-                                  {d} < br />
-                                </React.Fragment>
-                              ))}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                className={classes.icon}
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
-                                alt='Duración'
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Duración</strong><br />
-                              {duration}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                className={classes.icon}
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
-                                alt='Idioma'
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Idioma</strong><br />
-                              {language}<br />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-                <tr style={{ verticalAlign: "top" }}>
-                  <td colSpan={3} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                className={classes.icon}
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
-                                alt='Lugar'
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Lugar</strong><br />
-                              {place}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={3} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                className={classes.icon}
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
-                                alt='Formato'
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Formato</strong><br />
-                              {format}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-              </>
-            ) : (
-              <>
-                <tr style={{ verticalAlign: "top" }}>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
-                                alt='fechas'
-                                className={classes.icon}
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Fechas</strong><br />
-                              {dates.map((d, i) => (
-                                <React.Fragment key={i}>
-                                  {d} < br />
-                                </React.Fragment>
-                              ))}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
-                                alt='Duración'
-                                className={classes.icon}
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Duración</strong><br />
-                              {duration}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
-                                alt='Idioma'
-                                className={classes.icon}
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Idioma</strong><br />
-                              {language}<br />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
-                                alt='Lugar'
-                                className={classes.icon}
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Lugar</strong><br />
-                              {place}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                  <td colSpan={2} className={classes.iconsTd}>
-                    <div className={classes.iconsDiv}>
-                      <table border={0} cellPadding="0" cellSpacing="0" role="presentation" style={{ verticalAlign: 'middle' }}
-                        width="100%">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
-                                alt='Formato'
-                                className={classes.icon}
-                              />
-                            </td>
-                          </tr>
-                          <tr style={{ fontSize: '14px' }}>
-                            <td style={{ paddingTop: '10px' }}>
-                              <strong>Formato</strong><br />
-                              {format}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-              </>
-            )}
-          </tbody>
-        </table>
-      </div>
-    </div>
+        {isMobile ? (
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%', rowGap: '15px', padding: '10px 0 15px' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start', columnGap: '3px' }}>
+              <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
+                  alt='fechas'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Fechas</strong><br />
+                  {dates.map((d, i) => (
+                    <React.Fragment key={i}>
+                      {d} < br />
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+              <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
+                  alt='Duración'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Duración</strong><br />
+                  {duration}
+                </div>
+              </div>
+              {place && <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
+                  alt='Idioma'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Idioma</strong><br />
+                  {language}
+                </div>
+              </div>}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start' }}>
+              {place && <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
+                  alt='Lugar'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Lugar</strong><br />
+                  {place}
+                </div>
+              </div>}
+              {!place && <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
+                  alt='Idioma'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Idioma</strong><br />
+                  {language}
+                </div>
+              </div>}
+              <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: `${!place ? '33%' : '50%'}`, justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
+                  alt='Formato'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong> Formato</strong><br />
+                  {format}
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ paddingBottom: '20px', display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start' }}>
+            <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+              <img
+                className={classes.icon}
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
+                alt='fechas'
+              />
+              <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                <strong>Fechas</strong><br />
+                {dates.map((d, i) => (
+                  <React.Fragment key={i}>
+                    {d} < br />
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+            <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+              <img
+                className={classes.icon}
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
+                alt='Duración'
+              />
+              <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                <strong>Duración</strong><br />
+                {duration}
+              </div>
+            </div>
+            <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+              <img
+                className={classes.icon}
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fidioma.png?alt=media&token=4e54d49c-7f7e-45aa-9b42-4325b96a2561"
+                alt='Idioma'
+              />
+              <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                <strong>Idioma</strong><br />
+                {language}
+              </div>
+            </div>
+            {place && <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+              <img
+                className={classes.icon}
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fubicacion.png?alt=media&token=f337f820-575e-46ad-9846-52c8a46d528b"
+                alt='Lugar'
+              />
+              <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                <strong>Lugar</strong><br />
+                {place}
+              </div>
+            </div>}
+            <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100&' }}>
+              <img
+                className={classes.icon}
+                src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fformato.png?alt=media&token=7d1e192c-23ea-4162-a14f-e1242fef288c"
+                alt='Formato'
+              />
+              <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                <strong>Formato</strong><br />
+                {format}
+              </div>
+            </div>
+          </div>
+        )
+        }
+      </div >
+    </div >
   )
 }
 

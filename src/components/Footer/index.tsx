@@ -142,11 +142,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   downLoadBtn: {
     display: 'flex',
     alignItems: 'center',
-    columnGap: '5px',
+    columnGap: '3px',
     border: 'none',
+    textAlign: 'center',
+    height: '40px',
+    width: '268px',
     borderRadius: '20px',
     background: '#980628',
-    padding: '8px 25px',
+    padding: '8px 62px',
+    fontSize: 'medium',
     color: 'white',
     margin: '25px',
     cursor: 'pointer',
@@ -156,7 +160,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Footer = ({ href, download }: { href: string, download: string }) => {
+const Footer = () => {
   const classes = useStyles();
 
   const handleDownload = () => {
@@ -177,13 +181,13 @@ const Footer = ({ href, download }: { href: string, download: string }) => {
         </Grid>
         <Grid item xs={12} sm={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <button className={classes.downLoadBtn} onClick={handleDownload}>
-            <DownloadIcon sx={{ fontSize: '1.3em' }} />
+            <DownloadIcon sx={{ fontSize: '1.2em' }} />
             Descargar folleto
           </button>
         </Grid>
         <Grid item xs={12} sm={4} className={classes.logos}>
           <address className={classes.iconsItem}>
-            <h3>
+            <h3 style={{ fontSize: '18px'}}>
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FGrupo%2010.svg?alt=media&token=b4b96451-548f-41a9-9517-e18d9cd9e119"
                 alt="Location"

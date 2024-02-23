@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Header = ({ image, href, download }: { image: string, href: string, download: string }) => {
+const Header = ({ image}: { image: string }) => {
   const classes = useStyles();
 
   const handleDownload = () => {
