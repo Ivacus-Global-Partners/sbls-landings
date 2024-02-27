@@ -27,6 +27,11 @@ const SeguridadSocial: React.FC = () => {
       name: 'Jorge Travesedo',
       job: 'Socio en Sagardoy Abogados. Miembro del Cuerpo Superior de Inspectores de Trabajo y Seguridad Social.'
     },
+    {
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fana%20de%20la%20cruz.png?alt=media&token=4547791f-be65-4e0b-8644-08a3fedfb6c5',
+      name: 'Ana Ercoreca de la Cruz',
+      job: 'Presidenta del Sindicato de Inspectores de Trabajo y Seguridad Social. Inspectora de Trabajo y Seguridad Social.'
+    },
   ]
 
 
@@ -65,7 +70,7 @@ const SeguridadSocial: React.FC = () => {
       <PorqueSagardoy />
       <IconsInfo dates={['Del 13 marzo',' al 14 marzo']} duration={
         <>
-          10 sesiones 5 sesiónes por<br />
+          10 sesiones 5 sesiones por<br />
           dia de 9:00 a 18:00h
         </>
       }

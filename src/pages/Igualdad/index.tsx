@@ -98,7 +98,7 @@ const Igualdad: React.FC = () => {
       />
       <PorqueSagardoy />
       <IconsInfo
-        dates={['Del 01 marzo', 'al 26 abril']}
+        dates={['Del 05 abril', 'al 31 mayo']}
         duration={
           <>
             8 sesiones de <br />
