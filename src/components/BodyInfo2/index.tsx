@@ -149,7 +149,7 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt, img2,
     img: string,
     quote: any,
     name: string,
-    job: any,
+    job?: any,
     filled?: boolean,
     logo?: string,
     logoAlt?: string,
@@ -193,7 +193,7 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt, img2,
 
           </p>
           <div className={name2 ? classes.twoAuthors : ''}>
-            <div className={name2 ? classes.fullAuthorInfo : isMobile ? classes.imageTextContainer : ''}>
+            {job && <div className={name2 ? classes.fullAuthorInfo : isMobile ? classes.imageTextContainer : ''}>
               {isMobile && !img2 && (
                 <div className={classes.imgContainer}>
                   <img
@@ -217,7 +217,7 @@ const BodyInfo2 = ({ img, quote, name, job, filled = false, logo, logoAlt, img2,
                 <span><b>{name}</b></span>
                 <br />{job}
               </p>
-            </div>
+            </div>}
             {name2 && <div className={name2 ? classes.fullAuthorInfo : isMobile ? classes.imageTextContainer : ''}>
               <img
                 src={img2}

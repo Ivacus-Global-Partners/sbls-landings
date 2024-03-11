@@ -6,6 +6,7 @@ import IndemnizacionDespido from '../pages/IndemnizacionDespido';
 import ExperienciaEmpleado from '../pages/ExperienciaEmpleado';
 import Igualdad from '../pages/Igualdad';
 import EstrategiaFiscal from '../pages/EstrategiaFiscal';
+import SostenibilidadCorporativa from '../pages/SostenibilidadCorporativa';
 
 
 const RouterComponent: React.FC = () => {
@@ -23,6 +24,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/certificacion-experto-experiencia-de-empleado" element={<ExperienciaEmpleado />} />
                 <Route path="/landings/actualizacion-igualdad-mas-alla-del-genero" element={<Igualdad />} />
                 <Route path="/landings/programa-ejecutivo-en-estrategia-fiscal-y-sectorial" element={<EstrategiaFiscal />} />
+                <Route path="/landings/executive-program-sostenibilidad-corporativa-claves-para-el-futuro" element={<SostenibilidadCorporativa />} />
             </Routes>
         </Router>
     );

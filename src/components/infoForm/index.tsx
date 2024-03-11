@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { MenuItem, TextField, Theme } from "@mui/material";
+import { MenuItem, TextField, Theme, useMediaQuery, useTheme } from "@mui/material";
 import countries from "../../resources/data/countries";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { hasFlag } from 'country-flag-icons'
@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       top: "15vw",
     },
-    [theme.breakpoints.between(949,960)]: {
+    [theme.breakpoints.between(949, 960)]: {
       top: "5vw",
     },
-    [theme.breakpoints.between(853,915)]: {
+    [theme.breakpoints.between(853, 915)]: {
       top: "11vw",
     },
     [theme.breakpoints.down(850)]: {
@@ -169,7 +169,8 @@ const InfoForm = ({
   redirect,
   download,
   productId,
-  formId
+  formId,
+  style
 }: {
   shadow?: boolean;
   submit: any;
@@ -179,9 +180,12 @@ const InfoForm = ({
   download: string;
   productId: string;
   formId: string;
+  style?: React.CSSProperties;
 }) => {
   const classes = useStyles();
   const [enabledSubmit, setEnabledSubmit] = React.useState(false);
+  const theme = useTheme();
+  const upMd = useMediaQuery(theme.breakpoints.up("md"));
   const [values, setValues] = React.useState({
     name: '',
     lastName: '',
@@ -241,19 +245,19 @@ const InfoForm = ({
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
 
-      setValues({
-        name: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        prefix: '0',
-      })
-      setErrors({
-        name: '',
-        lastName: '',
-        email: '',
-        phone: '',
-      })
+    setValues({
+      name: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      prefix: '0',
+    })
+    setErrors({
+      name: '',
+      lastName: '',
+      email: '',
+      phone: '',
+    })
 
     const downloadLink = document.createElement("a");
     downloadLink.href = href;
@@ -261,8 +265,8 @@ const InfoForm = ({
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
-    
-    if (!redirect) return 
+
+    if (!redirect) return
     const redirectLink = document.createElement("a");
     redirectLink.href = redirect;
     redirectLink.click();
@@ -274,7 +278,10 @@ const InfoForm = ({
       id="download-pdf"
       className={classes.form}
       onSubmit={handleSubmit}
-      style={{
+      style={upMd ? {
+        boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
+        ...style
+      } : {
         boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
       }}
     >
@@ -348,7 +355,7 @@ const InfoForm = ({
             País
           </MenuItem>
           {countries.map((country, index) => (
-            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px', fontFamily:'Nunito' }}>
+            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px', fontFamily: 'Nunito' }}>
               {country.name} ({country.code} {country.prefix} {hasFlag(country.code) ? <img
                 height="10"
                 alt={country.name}
@@ -397,8 +404,8 @@ const InfoForm = ({
           .
         </div>
       </label>
-      <button 
-       
+      <button
+
         type="submit"
         className={classes.button}
         style={{
