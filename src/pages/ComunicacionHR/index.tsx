@@ -9,8 +9,11 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
+import { useSearchParams } from 'react-router-dom';
 
 const ComunicacionHR: React.FC = () => {
+
+  const [searchParams] = useSearchParams()
 
   const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
   const download = 'hr-comunicacion-interna-sagardoy.pdf';
@@ -49,6 +52,9 @@ const ComunicacionHR: React.FC = () => {
   </>;
   const redirect = 'https://sagardoyschool.com/thank-you/hr-comunicacion-interna-del-negocio/';
 
+  const utmOriginParam = searchParams.get('utm_origin');
+  const formId = utmOriginParam === 'estudio-de-comunicacion' ? '0xe91cd0' : '0xba2874';
+
   return (
     <div>
       <Helmet>
@@ -61,7 +67,7 @@ const ComunicacionHR: React.FC = () => {
   
     
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FHeader-comunicacion-hr.png?alt=media&token=120463d2-c37a-43c6-a328-ac1c792ba6ae"} />
-      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <InfoForm productId='0xa7cd6c' formId={formId} href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto

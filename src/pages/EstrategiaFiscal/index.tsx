@@ -96,12 +96,12 @@ const EstrategiaFiscal: React.FC = () => {
         <br />
         <br />
         <br />
-        <br />
+    
       </>}
       <IconsInfo dates={['Del 24 septiembre', ' al 28 noviembre']} duration={
         <>
           2 meses / Martes y Jueves<br />
-          de 9:00h a 12:00h
+          de 16:30h a 19:30h
         </>
       }
         language={"Español"}
