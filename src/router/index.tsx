@@ -7,6 +7,7 @@ import ExperienciaEmpleado from '../pages/ExperienciaEmpleado';
 import Igualdad from '../pages/Igualdad';
 import EstrategiaFiscal from '../pages/EstrategiaFiscal';
 import SostenibilidadCorporativa from '../pages/SostenibilidadCorporativa';
+import MarcaPersonal from '../pages/MarcaPersonal';
 
 
 const RouterComponent: React.FC = () => {
@@ -25,6 +26,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/actualizacion-igualdad-mas-alla-del-genero" element={<Igualdad />} />
                 <Route path="/landings/programa-ejecutivo-en-estrategia-fiscal-y-sectorial" element={<EstrategiaFiscal />} />
                 <Route path="/landings/executive-program-sostenibilidad-corporativa-claves-para-el-futuro" element={<SostenibilidadCorporativa />} />
+                <Route path="/landings/programa-ejecutivo-marca-personal-y-comunicacion" element={<MarcaPersonal />} />
             </Routes>
         </Router>
     );
