@@ -26,7 +26,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/actualizacion-igualdad-mas-alla-del-genero" element={<Igualdad />} />
                 <Route path="/landings/programa-ejecutivo-en-estrategia-fiscal-y-sectorial" element={<EstrategiaFiscal />} />
                 <Route path="/landings/executive-program-sostenibilidad-corporativa-claves-para-el-futuro" element={<SostenibilidadCorporativa />} />
-                <Route path="/landings/programa-ejecutivo-marca-personal-y-comunicacion" element={<MarcaPersonal />} />
+                <Route path="/landings/programa-ejecutivo-marca-personal" element={<MarcaPersonal />} />
             </Routes>
         </Router>
     );
