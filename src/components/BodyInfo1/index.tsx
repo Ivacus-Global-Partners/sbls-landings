@@ -87,18 +87,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const BodyInfo = ({ title, body }: { title: any, body: any },) => {
+const BodyInfo = ({ title, body }: { title?: any, body: any },) => {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
       <div className={classes.titleContainer}>
-        <h1 className={classes.title}>
+        {title && <h1 className={classes.title}>
           <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Frocket_launch_FILL0_wght400_GRAD0_opsz24.svg?alt=media&token=159632c3-2c82-4a71-b3ca-87591fb8f925"
             className={classes.icono}
             alt="Icono" />
           {title}
-        </h1>
+        </h1>}
       </div>
       <div className={classes.paragraphContainer}>
         <p className={classes.paragraph}>
