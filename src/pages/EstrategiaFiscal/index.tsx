@@ -13,8 +13,8 @@ import { useMediaQuery, useTheme } from '@mui/material';
 
 const EstrategiaFiscal: React.FC = () => {
 
-  const href = 'https://sagardoyschool.com/archivos/hr-comunicacion-interna-al-servicio-del-negocio.pdf';
-  const download = 'hr-comunicacion-interna-sagardoy.pdf';
+  const href = 'https://sagardoyschool.com/archivos/executive-program-estrategia-fiscal-y-sectorial.pdf';
+  const download = 'executive-program-estrategia-fiscal-y-sectorial.pdf';
   const claustro = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2Fey-javier-seijo%402x.png?alt=media&token=5e9ed93c-6882-4f6b-b0b8-30e7dfde293b',
@@ -51,7 +51,7 @@ const EstrategiaFiscal: React.FC = () => {
     <br /><br />
     Conoce los <strong>aspectos fiscales más relevantes con un enfoque práctico y atendiendo a las especificidades de los distintos sectores</strong> en la actividad empresarial. No pierdas la oportunidad de aprender a diseñar estrategias que te permitan planificar y <strong>optimizar los recursos financieros en las organizaciones.</strong>
   </>;
-  const redirect = 'https://sagardoyschool.com/thank-you/hr-comunicacion-interna-del-negocio/';
+  const redirect = 'https://sagardoyschool.com/thank-you/executive-program-estrategia-fiscal-y-sectorial/';
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -68,7 +68,7 @@ const EstrategiaFiscal: React.FC = () => {
 
 
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ffiscalidad%2Fheaderfiscalidad.png?alt=media&token=2c62c078-cd73-44ab-adeb-f4793c804d29"} />
-      <InfoForm productId='0xa7cd6c' formId='0xba2874' href={href} download={download} redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
+      <InfoForm productId='0xe8a0b3' formId='0x10aa03d' href={href} download={download} redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
