@@ -28,6 +28,11 @@ const MarcaPersonal: React.FC = () => {
       name: 'Víctor Sánchez del Real',
       job: <>Fundador de <strong>Elocuent,</strong> consultora de comunicación. Periodista, Consultor, Profesor de comunicación. Ha sido diputado en el Congreso Español.</>
     },
+    {
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FMarca%20personal%2FCarlos_Ongallo%404x.png?alt=media&token=711a5134-c92a-4f69-ae70-3a5def7db1ed',
+      name: 'Carlos Ongallo',
+      job: <>Director de la <strong>Fundación EBS,</strong> Premio AEDIPE de la Asociación Española de Dirección de Personas 2001, Premio Dintel 2009, Premio Nacional de Innovación Educativa 2011 y Global Award 2013 en Estados Unidos.</>
+    },
 ]
    
 
@@ -52,7 +57,7 @@ const MarcaPersonal: React.FC = () => {
       </Helmet>
   
     
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMarcaPersonal%2Fheaderlanding.png?alt=media&token=93a47500-67a2-4851-8422-0a61f44c41c0"} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FMarca%20personal%2FHeaderLanding.png?alt=media&token=e412c7b7-c501-4e95-ba87-f16d117750d6"} />
       <InfoForm productId='0xff1653' formId='0x10a1d3b' href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
