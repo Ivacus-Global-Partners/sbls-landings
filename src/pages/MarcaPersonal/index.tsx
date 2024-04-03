@@ -42,22 +42,26 @@ const MarcaPersonal: React.FC = () => {
     En un entorno donde <strong>la reputación personal es un activo invaluable,</strong> los profesionales y directivos deben construir una <strong>marca personal sólida.</strong>  En este camino, dominar las <strong>técnicas de comunicación efectiva,</strong> en el día a día, ayuda a lograr que los mensajes causen el impacto deseado.
     <br /><br />
     Aprende a <strong>gestionar tu marca personal y domina las metodologías de comunicación efectiva</strong> y alcanza tus objetivos personales y profesionales.
+    <br /><br />
+    <span style={{fontSize: '16px'}}>*Título extraído de la conferencia en comunicación, marca personal y liderazgo de Fran Carrillo.</span>
   </>;
-  const redirect = 'https://sagardoyschool.com/thank-you/marca-personal-y-comunicacion/';
+
+
+  const redirect = 'https://sagardoyschool.com/thank-you/marca-personal/';
 
 
   return (
     <div>
       <Helmet>
-        <title>Marca personal y Comuniación</title>
-        <meta name="title" content="Marca personal y Comunicación"/>
+        <title>Marca personal</title>
+        <meta name="title" content="Marca personal"/>
         <meta name="description" content="Descubre cómo potenciar tu marca personal y mejorar tu comunicación con estrategias efectivas y consejos prácticos. Aprende a destacar tus habilidades, valores y experiencia para construir una presencia auténtica y profesional en cualquier entorno."/>
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="Marca personal,Estrategias de comunicación,Desarrollo profesional,Autenticidad en la marca,Networking efectivo,Presencia digital,Personal branding,Comunicación efectiva,Gestión de la reputación online,Construcción de identidad personal" />
       </Helmet>
   
     
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FMarca%20personal%2FHeaderLanding.png?alt=media&token=e412c7b7-c501-4e95-ba87-f16d117750d6"} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMarcaPersonal%2Fheaderlandingmarcapersonal.png?alt=media&token=9e9aa6af-9ca2-4ad8-915a-23d18abcb321"} />
       <InfoForm productId='0xff1653' formId='0x10a1d3b' href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
@@ -77,7 +81,7 @@ const MarcaPersonal: React.FC = () => {
         img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMarcaPersonal%2Ffran-carrillo%402x.png?alt=media&token=9b28a6c0-e359-45bd-8d41-d26d9adb5091"}
         name={"Fran Carrillo Guerrero"}
         job={<>
-         Director del programa ejecutivo Marca Personal y Comunicación <br />
+         Director del programa ejecutivo Marca Personal <br />
          Director General de La Fábrica de Discursos, consultora de comunicación y asuntos públicos.</>}
         quote={"El discurso es el principio y fin de toda estrategia personal y corporativa. Comunicar qué eres, qué representas y por qué estás ahí define a toda organización, compañía o marca. La diferencia entre el éxito y el fracaso en el mundo profesional reside en una máxima cada vez más presente en las organizaciones: si no te vendes, estás vendido."}
       />
