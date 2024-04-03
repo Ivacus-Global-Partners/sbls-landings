@@ -61,7 +61,7 @@ const MarcaPersonal: React.FC = () => {
       </Helmet>
   
     
-      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMarcaPersonal%2Fheaderlandingmarcapersonal.png?alt=media&token=9e9aa6af-9ca2-4ad8-915a-23d18abcb321"} />
+      <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FMarcaPersonal%2Flandingheadermarcapersonal.png?alt=media&token=e26b6eb1-514f-4a86-a231-54bf1b580cc5"} />
       <InfoForm productId='0xff1653' formId='0x10a1d3b' href={href} download={download}  redirect={redirect} title shadow submit={ //Cambiar el productId y formId. Ya que son de indemnizacion por despido
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
