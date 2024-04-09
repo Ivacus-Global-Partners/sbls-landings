@@ -8,6 +8,8 @@ import Igualdad from '../pages/Igualdad';
 import EstrategiaFiscal from '../pages/EstrategiaFiscal';
 import SostenibilidadCorporativa from '../pages/SostenibilidadCorporativa';
 import MarcaPersonal from '../pages/MarcaPersonal';
+import IAprogram from '../pages/IAprogram';
+import Diversidad from '../pages/Diversidad';
 
 
 const RouterComponent: React.FC = () => {
@@ -27,6 +29,9 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/programa-ejecutivo-en-estrategia-fiscal-y-sectorial" element={<EstrategiaFiscal />} />
                 <Route path="/landings/executive-program-sostenibilidad-corporativa-claves-para-el-futuro" element={<SostenibilidadCorporativa />} />
                 <Route path="/landings/programa-ejecutivo-marca-personal" element={<MarcaPersonal />} />
+                <Route path="/landings/executive-program-ia" element={<IAprogram />} />
+                <Route path="/landings/executive-program-el-poder-de-la-diversidad" element={<Diversidad />} />
+
             </Routes>
         </Router>
     );
