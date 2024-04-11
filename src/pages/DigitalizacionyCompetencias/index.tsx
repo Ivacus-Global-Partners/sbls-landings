@@ -7,10 +7,10 @@ import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
 import Footer2 from '../../components/Footer2';
 
-const DigitalizaciónyCompetencias: React.FC = () => {
+const DigitalizacionyCompetencias: React.FC = () => {
 
-  const href = 'https://sagardoyschool.com/archivos/AGENDA_JORNADAS_DE EMPLEO_18_04_2024.pdf';
-  const download = 'AGENDA_JORNADAS_DE EMPLEO_18_04_2024.pdf';
+  const href = 'https://sagardoyschool.com/archivos/Agenda_jornadas_de_empleo_18_04_2024.pdf';
+  const download = 'Agenda_jornadas_de_empleo_18_04_2024.pdf';
  
 
   const texto = <>
@@ -20,7 +20,7 @@ const DigitalizaciónyCompetencias: React.FC = () => {
     <br /><br />
     Este encuentro será una oportunidad para conectar con profesionales y expertos que debatirán y expondrán sus puntos de vista sobre uno de los grandes retos actuales del mercado laboral, centrado en identificar las oportunidades y estrategias para integrar con éxito la tecnología e impulsar la adaptación y el desarrollo del talento, en busca de iniciativas innovadoras y desarrollo de proyectos en este ámbito.
   </>;
-  const redirect = 'https://sagardoyschool.com/thank-you/digitalizaci%C3%B3n-y-competencias/';
+  const redirect = 'https://sagardoyschool.com/thank-you/digitalizacion-y-competencias/';
 
   return (
     <div>
@@ -71,4 +71,4 @@ const DigitalizaciónyCompetencias: React.FC = () => {
   )
 }
 
-export default DigitalizaciónyCompetencias;
+export default DigitalizacionyCompetencias;
