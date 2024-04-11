@@ -10,6 +10,7 @@ import SostenibilidadCorporativa from '../pages/SostenibilidadCorporativa';
 import MarcaPersonal from '../pages/MarcaPersonal';
 import IAprogram from '../pages/IAprogram';
 import Diversidad from '../pages/Diversidad';
+import DigitalizaciónyCompetencias from '../pages/DigitalizaciónyCompetencias';
 
 
 const RouterComponent: React.FC = () => {
@@ -31,6 +32,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/programa-ejecutivo-marca-personal" element={<MarcaPersonal />} />
                 <Route path="/landings/executive-program-ia" element={<IAprogram />} />
                 <Route path="/landings/executive-program-el-poder-de-la-diversidad" element={<Diversidad />} />
+                <Route path="/landings/digitalización-y-competencias-clave-en-el-nuevo-mercado-de-trabajo" element={<DigitalizaciónyCompetencias />} />
 
             </Routes>
         </Router>
