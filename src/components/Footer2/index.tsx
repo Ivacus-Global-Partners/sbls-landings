@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       flexDirection: 'row',
     },
   },
+
   logo: {
     maxWidth: '25%', // Cada logo puede tomar hasta el 25% del contenedor
     height: 'auto',
@@ -40,7 +41,7 @@ const Footer2 = () => {
           <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2Flogomadrid03%402x.png?alt=media&token=201db2e3-f201-40a8-aba2-927325e261fd" alt="Comisiones obreras de Madrid" className={classes.logo} />
           <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2FCEIM%402x.png?alt=media&token=10737447-4603-4566-bad5-a18e30def9a7" alt="Empresarios de Madrid" className={classes.logo} />
           <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2Flogomadrid02%402x.png?alt=media&token=38b4d50a-ad1a-4fd4-97a9-0d48845855d5" alt="UGT" className={classes.logo} />
-          <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2Flogo_madrid300%402x.png?alt=media&token=54168c26-8e49-4051-a3d9-6769280ab059" alt="Logo 4" className={classes.logo} />
+          <img src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2Fcomunidad%20de%20madrid.jpg?alt=media&token=aea46254-db3e-4b1e-8152-4c01a3d5b45d" alt="Comunidad de Madrid" className={classes.logo} style={{ maxWidth: '15%' }} /> {/* Modificar directamente el estilo del último logo */}
         </Box>
       </Grid>
     </Grid>

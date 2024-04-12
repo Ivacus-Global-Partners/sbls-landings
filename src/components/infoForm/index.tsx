@@ -242,35 +242,38 @@ const InfoForm = ({
 
     fetch("https://api.ivacus.com/x/deliverForm", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) => {
+        setValues({
+          name: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          prefix: '0',
+        })
+        setErrors({
+          name: '',
+          lastName: '',
+          email: '',
+          phone: '',
+        })
+    
+        const downloadLink = document.createElement("a");
+        downloadLink.href = href;
+        downloadLink.download = download;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    
+        if (!redirect) return
+        const redirectLink = document.createElement("a");
+        redirectLink.href = redirect;
+        redirectLink.click();
+    
+
+      })
       .catch((error) => console.log("error", error));
 
-    setValues({
-      name: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      prefix: '0',
-    })
-    setErrors({
-      name: '',
-      lastName: '',
-      email: '',
-      phone: '',
-    })
-
-    const downloadLink = document.createElement("a");
-    downloadLink.href = href;
-    downloadLink.download = download;
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-
-    if (!redirect) return
-    const redirectLink = document.createElement("a");
-    redirectLink.href = redirect;
-    redirectLink.click();
-
+    
   };
 
   return (

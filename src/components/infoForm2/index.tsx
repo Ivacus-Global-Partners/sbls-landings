@@ -224,8 +224,9 @@ const InfoForm2 = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const fx = values.format==='Presencial' ? '0x110a367' : '0x110c247'
     var myHeaders = new Headers();
-    myHeaders.append("fx", formId); // formId
+    myHeaders.append("fx", fx); // formId
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
@@ -236,7 +237,7 @@ const InfoForm2 = ({
       prefix: values.prefix,
       "privacy-police": true,
       productId: productId, // productId
-      formId: formId,
+      formId: fx,
       format: values.format
     });
 
@@ -246,39 +247,41 @@ const InfoForm2 = ({
       body: raw,
       
     };
-
+   
     fetch("https://api.ivacus.com/x/deliverForm", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) => { setValues({
+        name: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        prefix: '0',
+        format: 'Presencial'
+      })
+      setErrors({
+        name: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        format: ''
+      })
+      
+      const downloadLink = document.createElement("a");
+      downloadLink.href = href;
+      downloadLink.download = download;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+  
+      if (!redirect) return
+      const redirectLink = document.createElement("a");
+      redirectLink.href = redirect;
+      redirectLink.click();
+
+      })
       .catch((error) => console.log("error", error));
 
-    setValues({
-      name: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      prefix: '0',
-      format: 'Presencial'
-    })
-    setErrors({
-      name: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      format: ''
-    })
-
-    const downloadLink = document.createElement("a");
-    downloadLink.href = href;
-    downloadLink.download = download;
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-
-    if (!redirect) return
-    const redirectLink = document.createElement("a");
-    redirectLink.href = redirect;
-    redirectLink.click();
+   
 
   };
 
