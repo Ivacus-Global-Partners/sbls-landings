@@ -11,6 +11,7 @@ import MarcaPersonal from '../pages/MarcaPersonal';
 import IAprogram from '../pages/IAprogram';
 import Diversidad from '../pages/Diversidad';
 import DigitalizaciónyCompetencias from '../pages/DigitalizacionyCompetencias';
+import BecaAon from '../pages/BecaAon';
 
 
 const RouterComponent: React.FC = () => {
@@ -33,6 +34,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/executive-program-ia" element={<IAprogram />} />
                 <Route path="/landings/executive-program-el-poder-de-la-diversidad" element={<Diversidad />} />
                 <Route path="/landings/digitalizacion-y-competencias-clave-en-el-nuevo-mercado-de-trabajo" element={<DigitalizaciónyCompetencias />} />
+                <Route path="/landings/beca-aon-impulsando-la-innovación-en-recursos-humanos" element={<BecaAon />} />
 
             </Routes>
         </Router>
