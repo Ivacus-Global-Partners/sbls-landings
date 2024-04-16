@@ -6,9 +6,9 @@ import InfoFormBecaAon from '../../components/infoFormBecaAon';
 import FooterBecaAon from '../../components/FooterBecaAon';
 import HeaderBeca from '../../components/HeaderBeca';
 import CardsClaustroBecaAon from '../../components/CardsClaustroBecaAon';
-import BodyInfo2 from '../../components/BodyInfo2';
 import { Helmet } from 'react-helmet';
 import { useSearchParams } from 'react-router-dom';
+import ComoParticipar from '../../components/ComoParticipar';
 
 const BecaAon: React.FC = () => {
 
@@ -46,18 +46,26 @@ const BecaAon: React.FC = () => {
   const texto1 = <>
   Si eres directivo o futuro directivo de RRHH que busca impulsar cambios significativos, esta beca es para ti. 
   </>;
+  const texto2 = <>
+     <strong>1er Premio:</strong> Admisión al Máster Executive en Dirección de Recursos Humanos para el año académico 2024, con una beca que cubre el 100% de las tasas del programa.
+     <br /><br />
+     <strong>2do Premio:</strong> Admisión al Máster Executive en Dirección de Recursos Humanos para el año académico 2024, con una beca que cubre el 50% de las tasas del programa.
+    </>;
+  const texto3 = <>
+      El Jurado examinará las postulaciones y seleccionará a los ganadores el día 7 de junio de 2024. En esa misma fecha, daremos a conocer la decisión sobre los ganadores a las becas para el <strong>Máster Executive en Dirección de Recursos Humanos de Sagardoy Business & Law School 2024.</strong>
+      </>;
   const redirect = '';
 
 
   return (
     <div>
-      <Helmet>
-        <title>Beca Aon: Impulsando la innovación en Recursos Humanos</title>
-        <meta name="title" content="HR: Comunicación Interna al servicio del Negocio"/>
-        <meta name="description" content="Descubre cómo la comunicación interna puede potenciar tu negocio. En Sagardoy, ofrecemos soluciones de comunicación interna para mejorar la eficiencia y el rendimiento de tu empresa. ¡Conoce nuestras propuestas hoy!"/>
-        <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="comunicación interna, negocios, eficiencia empresarial, soluciones de comunicación" />
-      </Helmet>
+       <Helmet>
+      <title>Beca Aon: Impulsando la innovación en Recursos Humanos</title>
+      <meta name="title" content="Beca Aon: Impulsando la innovación en Recursos Humanos" />
+      <meta name="description" content="Descripción de la beca Aon aquí." />
+      <meta name="robots" content="index, follow" />
+      <meta name="keywords" content="beca, Aon, innovación, recursos humanos" />
+    </Helmet>
   
     
       <HeaderBeca image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2FHeaderBecaAon.png?alt=media&token=db0fc995-373d-4342-92e9-5804de347328"} />
@@ -70,42 +78,20 @@ const BecaAon: React.FC = () => {
         title={<p style={{ color: '#980628', margin: 0 }}>¿Qúe es la beca AON?</p>}
         body={texto}
       />
-      <IconsInfoBecaAon  profile={
-        <>
-          Presencial<br />
-          & Remoto<br />
-        </>
-      }
-      duration={
-        <>
-          8 semanas 1 sesión por<br />
-          semana 17:00h a 20:00h
-        </>
-      }
-      dates={['Del 8 abril', ' al 27 mayo']} 
-       
-        prize={
-          <>
-            C\Velázquez 86D<br />
-            28006 | Madrid<br />
-          </>
-        }
-       
-      />
+    
         <BodyBecaAon
         title={<p style={{ color: '#980628', margin: 0 }}>¿Quién debería participar? </p>}
         body={texto1}
       />
-      <BodyInfo2
-        filled
-        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FPersonas%2FPablo%20Gonzalo.png?alt=media&token=63fd84d8-e349-41e4-b117-310ac961df63"}
-        name={"Pablo Gonzalo Molina"}
-        job={<>
-          Socio de Estudio de Comunicación <br />
-          Director de programa ejecutivo HR: Comunicación Interna al servicio del Negocio</>}
-        quote={"En estos tiempos en los que se extienden fenómenos como el de la “renuncia silenciosa” (“quiet quitting”), una certeza se consolida: para ser diferencialmente competitivas, las organizaciones precisan de profesionales comprometidos. Y el compromiso se construye, entre otros pilares, sobre una comunicación eficaz."}
+      <ComoParticipar />
+      <BodyBecaAon
+        title={<p style={{ color: '#980628', margin: 0 }}>¿A qué premios optarás? </p>}
+        body={texto2}
       />
-   
+       <BodyBecaAon
+        title={<p style={{ color: '#980628', margin: 0 }}>¿Cuándo anunciaremos a los ganadores? </p>}
+        body={texto3}
+      />
       <CardsClaustroBecaAon claustro={claustro} title="Jurado" />
       <FooterBecaAon/>
     </div>

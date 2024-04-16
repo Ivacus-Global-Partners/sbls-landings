@@ -48,13 +48,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   h3: {
     fontStyle: "italic",
     margin: 0,
-    padding: "10px 0",
-    fontFamily: "Playfair Display",
-    color: "#980628",
+    padding: 0,
+    fontFamily: "times",
+    color: "#AA1936",
     fontSize: "1.8em",
     letterSpacing: "-0.8px",
     fontWeight: "100",
-    textAlign: "center",
+    textAlign: "start",
     marginBottom: "10px",
     display: "flex",
     alignItems: "center",
@@ -192,18 +192,12 @@ const InfoForm = ({
     email: '',
     phone: '',
     prefix: '0',
-    experience: '',
-    company: '',
-    position: ''
   })
   const [errors, setErrors] = React.useState({
     name: '',
     lastName: '',
     email: '',
     phone: '',
-    experience: '',
-    company: '',
-    position: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -237,10 +231,7 @@ const InfoForm = ({
       prefix: values.prefix,
       "privacy-police": true,
       productId: productId, // productId
-      formId: formId,
-      experience: values.experience,
-      company: values.company,
-      position: values.position
+      formId: formId
     });
 
     var requestOptions = {
@@ -258,18 +249,12 @@ const InfoForm = ({
           email: '',
           phone: '',
           prefix: '0',
-          experience: '',
-          company: '',
-          position: ''
         })
         setErrors({
           name: '',
           lastName: '',
           email: '',
           phone: '',
-          experience: '',
-          company: '',
-          position: ''
         })
     
         const downloadLink = document.createElement("a");
@@ -305,7 +290,8 @@ const InfoForm = ({
     >
       {title && (
         <h3 className={classes.h3}>
-          ¿Quieres Participar?
+          <InfoOutlinedIcon />
+          Solicita información
         </h3>
       )}
       <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', alignItems: 'center' }}>
@@ -398,56 +384,6 @@ const InfoForm = ({
           }}
           style={{ marginTop: '3px' }}
         />
-         <TextField
-          className={classes.input}
-          variant="filled"
-          placeholder="Años de experiencia"
-          sx={{ width: "95%" }}
-          name="experience"
-          onChange={handleChange}
-          value={values.experience}
-          error={!!errors.experience}
-          helperText={errors.experience}
-          required
-          style={{ marginTop: '3px' }}
-          inputProps={{
-            maxLength: 255,
-            inputMode: 'numeric'
-          }}
-          type="number"
-        />
-        <TextField
-          className={classes.input}
-          variant="filled"
-          placeholder="Empresa"
-          sx={{ width: "95%" }}
-          name="company"
-          onChange={handleChange}
-          value={values.company}
-          error={!!errors.company}
-          helperText={errors.company}
-          required
-          inputProps={{
-            maxLength: 255
-          }}
-        />
-        
-        <TextField
-          className={classes.input}
-          variant="filled"
-          placeholder="Cargo"
-          sx={{ width: "95%" }}
-          name="position"
-          onChange={handleChange}
-          value={values.position}
-          error={!!errors.position}
-          helperText={errors.position}
-          required
-          inputProps={{
-            maxLength: 255
-          }}
-        />
-
       </div>
       <label className={classes.checkbox}>
         <input

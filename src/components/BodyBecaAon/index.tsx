@@ -20,16 +20,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   container: {
-    justifyContent: 'center',
-    padding: '25px 35vw 25px 25%',
-    alignItems: 'center',
-    [theme.breakpoints.down(850)]: {
-      paddingRight: '5%',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center', // Centrado horizontal
+    justifyContent: 'center', // Centrado vertical
+    textAlign: 'center', // Alineación del texto
+    padding: '25px', // Ajusta el relleno según sea necesario
     [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
-      paddingLeft: '2',
-      paddingRight: '2',
+      padding: '30px', // Ajusta el relleno para dispositivos móviles
     },
   },
 
@@ -61,9 +59,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'left',
     fontWeight: '300',
     color: '#AA1936',
-    marginBottom: '2%',
+    marginBottom: '4%',
     [theme.breakpoints.down('md')]: {
-      textAlign: 'left',
+      textAlign: 'center',
       fontWeight: '200',
       fontSize: '2.6em',
     },
@@ -75,11 +73,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   paragraph: {
     textAlign: 'left',
-    width: '100%',
+    width: '80%',
+    margin: '0 auto',
     fontFamily: "'Nunito', sans- serif",
     fontStyle: 'regular',
     fontSize: '18px',
-    marginBottom: '15%',
+    marginBottom: '8%',
     [theme.breakpoints.down('md')]: {
       marginBottom: '0',
     },
