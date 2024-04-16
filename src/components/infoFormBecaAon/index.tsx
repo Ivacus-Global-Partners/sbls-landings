@@ -5,7 +5,6 @@ import countries from "../../resources/data/countries";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { hasFlag } from 'country-flag-icons'
 import "./style.css";
-import { format } from "path";
 
 const useStyles = makeStyles((theme: Theme) => ({
   form: {
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "30vw",
     position: "absolute",
     right: "2em",
-    top: "18vw",
+    top: "22vw",
     [theme.breakpoints.down(1100)]: {
       top: "17vw",
     },
@@ -49,13 +48,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   h3: {
     fontStyle: "italic",
     margin: 0,
-    padding: 0,
-    fontFamily: "times",
-    color: "#C70B1F",
+    padding: "10px 0",
+    fontFamily: "Playfair Display",
+    color: "#980628",
     fontSize: "1.8em",
     letterSpacing: "-0.8px",
     fontWeight: "100",
-    textAlign: "start",
+    textAlign: "center",
     marginBottom: "10px",
     display: "flex",
     alignItems: "center",
@@ -153,9 +152,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   checkboxText: {
     display: "inline",
     lineHeight: "1.3em",
-    fontSize: "14px",
   },
- 
   option: {
     color: "gray",
     "&:hover": {
@@ -164,7 +161,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const InfoForm2 = ({
+const InfoForm = ({
   shadow = false,
   submit,
   title = false,
@@ -195,14 +192,18 @@ const InfoForm2 = ({
     email: '',
     phone: '',
     prefix: '0',
-    format: 'Presencial'
+    experience: '',
+    company: '',
+    position: ''
   })
   const [errors, setErrors] = React.useState({
     name: '',
     lastName: '',
     email: '',
     phone: '',
-    format: ''
+    experience: '',
+    company: '',
+    position: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -220,13 +221,12 @@ const InfoForm2 = ({
       handleChange(e);
     }
   };
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const fx = values.format==='Presencial' ? '0x110a367' : '0x110c247'
     var myHeaders = new Headers();
-    myHeaders.append("fx", fx); // formId
+    myHeaders.append("fx", formId); // formId
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
@@ -237,52 +237,58 @@ const InfoForm2 = ({
       prefix: values.prefix,
       "privacy-police": true,
       productId: productId, // productId
-      formId: fx,
-      format: values.format
+      formId: formId,
+      experience: values.experience,
+      company: values.company,
+      position: values.position
     });
 
     var requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
-      
     };
-   
+
     fetch("https://api.ivacus.com/x/deliverForm", requestOptions)
       .then((response) => response.text())
-      .then((result) => { setValues({
-        name: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        prefix: '0',
-        format: 'Presencial'
-      })
-      setErrors({
-        name: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        format: ''
-      })
-      
-      const downloadLink = document.createElement("a");
-      downloadLink.href = href;
-      downloadLink.download = download;
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-  
-      if (!redirect) return
-      const redirectLink = document.createElement("a");
-      redirectLink.href = redirect;
-      redirectLink.click();
+      .then((result) => {
+        setValues({
+          name: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          prefix: '0',
+          experience: '',
+          company: '',
+          position: ''
+        })
+        setErrors({
+          name: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          experience: '',
+          company: '',
+          position: ''
+        })
+    
+        const downloadLink = document.createElement("a");
+        downloadLink.href = href;
+        downloadLink.download = download;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    
+        if (!redirect) return
+        const redirectLink = document.createElement("a");
+        redirectLink.href = redirect;
+        redirectLink.click();
+    
 
       })
       .catch((error) => console.log("error", error));
 
-   
-
+    
   };
 
   return (
@@ -299,8 +305,7 @@ const InfoForm2 = ({
     >
       {title && (
         <h3 className={classes.h3}>
-          <InfoOutlinedIcon />
-          Inscríbete aquí
+          ¿Quieres Participar?
         </h3>
       )}
       <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', alignItems: 'center' }}>
@@ -396,40 +401,58 @@ const InfoForm2 = ({
          <TextField
           className={classes.input}
           variant="filled"
-          placeholder="Formato"
+          placeholder="Años de experiencia"
           sx={{ width: "95%" }}
-          name="format"
+          name="experience"
           onChange={handleChange}
-          value={values.format}
-          error={!!errors.format}
-          helperText={errors.format}
+          value={values.experience}
+          error={!!errors.experience}
+          helperText={errors.experience}
           required
+          style={{ marginTop: '3px' }}
           inputProps={{
+            maxLength: 255,
             inputMode: 'numeric'
           }}
-          style={{ marginTop: '3px' }}
-          select
-        >
-          
-          <MenuItem value="Presencial">
-            Formato Presencial
-          </MenuItem>
-          <MenuItem value="Remoto">
-            Formato Virtual
-          </MenuItem>
-        </TextField>
+          type="number"
+        />
+        <TextField
+          className={classes.input}
+          variant="filled"
+          placeholder="Empresa"
+          sx={{ width: "95%" }}
+          name="company"
+          onChange={handleChange}
+          value={values.company}
+          error={!!errors.company}
+          helperText={errors.company}
+          required
+          inputProps={{
+            maxLength: 255
+          }}
+        />
+        
+        <TextField
+          className={classes.input}
+          variant="filled"
+          placeholder="Cargo"
+          sx={{ width: "95%" }}
+          name="position"
+          onChange={handleChange}
+          value={values.position}
+          error={!!errors.position}
+          helperText={errors.position}
+          required
+          inputProps={{
+            maxLength: 255
+          }}
+        />
 
       </div>
       <label className={classes.checkbox}>
         <input
           type="checkbox"
-          onClick={(e) => {
-            const target = e.target as HTMLInputElement;
-            const isChecked = target.checked;
-            const otherCheckbox = document.querySelector(`input[type="checkbox"]:not(#${target.id})`) as HTMLInputElement;
-            setEnabledSubmit(isChecked && (otherCheckbox ? otherCheckbox.checked : false));
-          }}
-          id="checkbox1"
+          onClick={() => setEnabledSubmit((old) => !old)}
         />
         <div className={classes.checkboxText}>
           Consiento el tratamiento de mis datos por Sagardoy Business & Law
@@ -447,33 +470,13 @@ const InfoForm2 = ({
           </a>
           .
         </div>
-        
-      </label>
-      <label className={classes.checkbox}>
-        <input
-          type="checkbox"
-          onClick={(e) => {
-            const target = e.target as HTMLInputElement;
-            const isChecked = target.checked;
-            const otherCheckbox = document.querySelector(`input[type="checkbox"]:not(#${target.id})`) as HTMLInputElement;
-            setEnabledSubmit(isChecked && (otherCheckbox ? otherCheckbox.checked : false));
-          }}
-          id="checkbox2"
-        
-        />
-        <div className={classes.checkboxText}>
-        Autorizo a Sagardoy Business & Law School, a retransmitir, hacer <strong>fotografías y grabaciones</strong> –incluidas imágenes y/o voz- (en lo sucesivo “Datos”) para su posterior edición y difusión tanto interna como externamente en los canales determinados por la Comunidad de Madrid. Los Datos podrán ser utilizados en todos los formatos de medios impresos y digitales, entre otros, publicaciones impresas, sitios web, e-marketing, carteles, banners, publicidad, videos y redes sociales, con fines docentes, de investigación y promocionales. Entiendo que los Datos en sitios webs pueden verse en todo el mundo y no solo en España, y que algunos países en el extranjero pueden no brindar el mismo nivel de protección a los derechos de los individuos que la legislación de la UE.
-       
-          .
-        </div>
-        
       </label>
       <button
 
         type="submit"
         className={classes.button}
         style={{
-          background: `${enabledSubmit ? "#C70B1F" : "#B3B3B3"}`,
+          background: `${enabledSubmit ? "#AA1935" : "#B3B3B3"}`,
         }}
         disabled={!enabledSubmit}
       >
@@ -484,4 +487,4 @@ const InfoForm2 = ({
   );
 };
 
-export default InfoForm2;
+export default InfoForm;

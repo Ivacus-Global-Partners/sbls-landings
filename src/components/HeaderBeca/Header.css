@@ -1,0 +1,55 @@
+/* Header.css */
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ajusta según tu diseño para escritorio */
+    background-color: #f0f0f0;
+    /* Ajusta según tu diseño */
+    overflow-x: hidden;
+  }
+  
+  .header-image {
+    width: 100%;
+    /* Usa 'width' en lugar de 'max-width' */
+    height: auto;
+    /* Usa 'height: auto' para mantener la proporción */
+    object-fit: contain;
+    /* Ajusta el método de ajuste según tus necesidades */
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 600px) {
+    .header-container {
+      height: 100%;
+      /* Ocupar toda la altura de la pantalla */
+      margin-top: 0;
+      /* Eliminar margen superior */
+      margin-bottom: 0;
+      /* Eliminar margen inferior */
+      height: 25vh;
+    }
+  
+    .header-image {
+      width: auto;
+      /* Usa 'width' en lugar de 'max-width' */
+      height: 100%;
+      /* Usa 'height: auto' para mantener la proporción */
+      object-fit: cover;
+      /* Ajusta el método de ajuste según tus necesidades */
+      position: absolute;
+      left: 0;
+    }
+  }
+  
+  @media (min-width: 540px) {
+    .header-image {
+      width: 100%;
+      /* Usa 'width' en lugar de 'max-width' */
+      height: auto;
+      /* Usa 'height: auto' para mantener la proporción */
+      object-fit: contain;
+    }
+  }
