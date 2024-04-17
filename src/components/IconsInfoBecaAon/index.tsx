@@ -72,11 +72,11 @@ const IconsInfoBecaAon = ({ profile, deadlineDate, winnersAnnouncement, prizes }
       <div className={classes.tableContainer}>
 
         {isMobile ? (
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%', gap: '15px', padding: '10px 0 15px' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start', gap: '3px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%', rowGap: '15px', padding: '10px 0 15px' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start', columnGap: '3px' }}>
               {/* Sección para perfil del participante */}
               {profile && (
-                <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
                   <img
                     className={classes.icon}
                     src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fperfil.png?alt=media&token=ae0fb9c2-ad3d-4f7f-8eca-68b239049f9e"
@@ -85,34 +85,6 @@ const IconsInfoBecaAon = ({ profile, deadlineDate, winnersAnnouncement, prizes }
                   <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
                     <strong>Perfil del participante</strong><br />
                     {profile}
-                  </div>
-                </div>
-              )}
-              {/* Sección para fecha límite */}
-              {deadlineDate && (
-                <div style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-                  <img
-                    className={classes.icon}
-                    src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
-                    alt='Fecha límite para participar'
-                  />
-                  <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-                    <strong>Fecha límite</strong><br />
-                    {deadlineDate}
-                  </div>
-                </div>
-              )}
-              {/* Sección para anuncio de los ganadores */}
-              {winnersAnnouncement && (
-                <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '33%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-                  <img
-                    className={classes.icon}
-                    src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
-                    alt='Anuncio de los ganadores'
-                  />
-                  <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-                    <strong>Anuncio de los ganadores</strong><br />
-                    {winnersAnnouncement}
                   </div>
                 </div>
               )}
@@ -131,66 +103,96 @@ const IconsInfoBecaAon = ({ profile, deadlineDate, winnersAnnouncement, prizes }
                 </div>
               )}
             </div>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start' }}>
+              {/* Sección para anuncio de los ganadores */}
+              {winnersAnnouncement && (
+                <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                  <img
+                    className={classes.icon}
+                    src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
+                    alt='Anuncio de los ganadores'
+                  />
+                  <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                    <strong>Anuncio de los ganadores</strong><br />
+                    {winnersAnnouncement}
+                  </div>
+                </div>
+              )}
+              {/* Sección para fecha límite */}
+              {deadlineDate && (
+                <div style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '50%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                  <img
+                    className={classes.icon}
+                    src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
+                    alt='Fecha límite para participar'
+                  />
+                  <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                    <strong>Fecha límite</strong><br />
+                    {deadlineDate}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         ) : (
           <div style={{ paddingBottom: '20px', display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'start' }}>
             {/* Componentes de la vista de escritorio */}
             {/* Sección para perfil del participante */}
-  {profile && (
-    <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-      <img
-        className={classes.icon}
-        src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fperfil.png?alt=media&token=ae0fb9c2-ad3d-4f7f-8eca-68b239049f9e"
-        alt='Perfil del participante'
-      />
-      <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-        <strong>Perfil del participante</strong><br />
-        {profile}
-      </div>
-    </div>
-  )}
-  {/* Sección para fecha límite */}
-  {deadlineDate && (
-    <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-      <img
-        className={classes.icon}
-        src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
-        alt='Fecha límite para participar'
-      />
-      <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-        <strong>Fecha límite</strong><br />
-        {deadlineDate}
-      </div>
-    </div>
-  )}
-  {/* Sección para anuncio de los ganadores */}
-  {winnersAnnouncement && (
-    <div style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-      <img
-        className={classes.icon}
-        src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
-        alt='Anuncio de los ganadores'
-      />
-      <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-        <strong>Anuncio de los ganadores</strong><br />
-        {winnersAnnouncement}
-      </div>
-    </div>
-  )}
-  {/* Sección para premios */}
-  {prizes && (
-    <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
-      <img
-        className={classes.icon}
-        src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fpremio.png?alt=media&token=889eea31-30ab-417a-b1f7-b2499646277b"
-        alt='Premios'
-      />
-      <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
-        <strong>Premios</strong><br />
-        {prizes}
-      </div>
-    </div>
-  )}
+            {profile && (
+              <div style={{ rowGap: '10px', display: 'flex', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fperfil.png?alt=media&token=ae0fb9c2-ad3d-4f7f-8eca-68b239049f9e"
+                  alt='Perfil del participante'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Perfil del participante</strong><br />
+                  {profile}
+                </div>
+              </div>
+            )}
+            {/* Sección para fecha límite */}
+            {deadlineDate && (
+              <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fhorario.png?alt=media&token=c2fc5731-bd2d-47e3-8af3-c05dc21cfe5c"
+                  alt='Fecha límite para participar'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Fecha límite</strong><br />
+                  {deadlineDate}
+                </div>
+              </div>
+            )}
+            {/* Sección para anuncio de los ganadores */}
+            {winnersAnnouncement && (
+              <div style={{ display: 'flex', gap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2Ficonos%2Fcalendario.png?alt=media&token=8180ed33-4cc8-474c-b547-3c44e01471f5"
+                  alt='Anuncio de los ganadores'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Anuncio de los ganadores</strong><br />
+                  {winnersAnnouncement}
+                </div>
+              </div>
+            )}
+            {/* Sección para premios */}
+            {prizes && (
+              <div style={{ display: 'flex', rowGap: '10px', flexDirection: 'column', width: '25%', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+                <img
+                  className={classes.icon}
+                  src="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fpremio.png?alt=media&token=889eea31-30ab-417a-b1f7-b2499646277b"
+                  alt='Premios'
+                />
+                <div style={{ fontSize: '14px', fontFamily: 'Arial' }}>
+                  <strong>Premios</strong><br />
+                  {prizes}
+                </div>
+              </div>
+            )}
 
           </div>
         )}
