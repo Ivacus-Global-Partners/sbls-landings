@@ -124,10 +124,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         },
     },
     imageWidth: {
-        width: '70%',
-        maxWidth: '70%',
+        width: '100%',
+        maxWidth: '100%',
         height: '100%',
-        marginLeft: '30%',
+        
         [theme.breakpoints.down('lg')]: {
             width: '100%',
             maxWidth: '100%',

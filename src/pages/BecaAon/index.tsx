@@ -90,7 +90,7 @@ const BecaAon: React.FC = () => {
       <strong>2do Premio:</strong> 1 beca del 50% para el Máster Executive en Dirección de RRHH, edición 2024
     </>
   );
-  const redirect = "";
+  const redirect = "https://sagardoyschool.com/thank-you/beca-aon-impulsando-la-innovaci%C3%B3n-en-recursos-humanos/";
 
   return (
     <div>
