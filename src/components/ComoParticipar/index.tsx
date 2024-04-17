@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         paddingLeft: '20px',
         marginLeft: '140px',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '0px',
+            marginLeft: '20px',
+            paddingLeft: '0px',
         }
     },
     container: {
@@ -21,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        // padding: '8px 8px 0',
         boxSizing: 'border-box',
         marginBottom: '20px',
         [theme.breakpoints.down('sm')]: {
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             textAlign: 'center',
         },
         [theme.breakpoints.down('sm')]: {
+            paddingLeft: '0px',
             marginRight: '0%',
             fontSize: '35px',
         }
@@ -76,7 +77,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         [theme.breakpoints.down('sm')]: {
             // fontSize: '15px',
         },
-
     },
     listItem: {
         fontSize: '22px',
@@ -127,7 +127,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '100%',
         maxWidth: '100%',
         height: '100%',
-        
         [theme.breakpoints.down('lg')]: {
             width: '100%',
             maxWidth: '100%',
@@ -139,7 +138,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderRadius: '50%',
         width: '40px',
         height: '40px',
-        padding: '8px',
+        padding: '4px',
         background: 'white',
         color: '#980628',
         textAlign: 'center',
@@ -147,14 +146,36 @@ const useStyles = makeStyles((theme: Theme) => ({
         lineHeight: '24px',
         marginRight: '15px',
         display: 'inline-block !important',
+        [theme.breakpoints.down('sm')]: {
+            width: '30px',
+            height: '30px',
+        }
     },
     sectionTitle: {
         fontSize: '24px',
+        width: '100%',
         color: 'white',
         paddingTop: '5px !important',
         display: 'inline',
         verticalAlign: 'super',
     },
+    subsectionContainer: {
+        marginLeft: '60px',
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '0px',
+        }
+    },
+    tacContainer: {
+        marginLeft: '110px',
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '30px',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '0px',
+        }
+    },
+
 }));
 
 const ComoParticipar = () => {
@@ -174,8 +195,8 @@ const ComoParticipar = () => {
                                     <h1 className={classes.title}>
                                         ¿Cómo participar?
                                     </h1>
-                                    <div style={{ marginLeft: '60px' }}>
-                                        <span className={classes.numberCircle}>1</span>
+                                    <div className={classes.subsectionContainer}>
+                                        {isMobile && <span className={classes.numberCircle}>1</span>}
                                         <span className={classes.sectionTitle}>Reflexiona y comparte tus respuestas a las siguientes preguntas*:</span>
                                     </div>
                                     <ul className={classes.list}>
@@ -183,13 +204,11 @@ const ComoParticipar = () => {
                                         <li className={classes.listItem}>¿Cómo consideras que la IA puede generar un impacto significativo en tu organización o en el campo de los Recursos Humanos en general?</li>
                                         <li className={classes.listItem}>Comparte tu visión sobre el futuro de los Recursos Humanos, ¿hacia dónde crees que evolucionarán las prácticas actuales de wellbeing?</li>
                                     </ul>
-                                    <div style={{ marginLeft: '60px', display: 'flex' }}>
-                                        <span className={classes.numberCircle}>2</span>
-                                        <div>
-                                            <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca AON 2024” hasta el viernes, 31 de mayo de 2024.</span>
-                                        </div>
+                                    <div className={classes.subsectionContainer}>
+                                        {isMobile && <span className={classes.numberCircle}>2</span>}
+                                        <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca AON 2024” hasta el viernes, 31 de mayo de 2024.</span>
                                     </div>
-                                    <div style={{ marginLeft: '110px', display: 'flex', flexDirection: 'column', marginTop: '30px' }}>
+                                    <div className={classes.tacContainer}>
                                         <span className={classes.listItem}>* Todos los textos deben estar en español. </span>
                                         <span className={classes.listItem}>*  Envíanos las respuestas a las preguntas planteadas en un (1) documento DIN A4 en formato PDF, de 300-500 palabras (obligatorio) o en formato video.</span>
                                     </div>
