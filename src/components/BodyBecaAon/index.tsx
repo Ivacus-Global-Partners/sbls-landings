@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: 'center', // Alineación del texto
     padding: '25px', // Ajusta el relleno según sea necesario
     [theme.breakpoints.down('sm')]: {
-      padding: '30px', // Ajusta el relleno para dispositivos móviles
+      padding: '20px', // Ajusta el relleno para dispositivos móviles
     },
   },
 
@@ -73,20 +73,24 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   paragraph: {
     textAlign: 'left',
-    width: '80%',
-    margin: '0 auto',
-    fontFamily: "'Nunito', sans- serif",
-    fontStyle: 'regular',
-    fontSize: '18px',
+    width: '60%', // Reducido del 80% para hacer el texto más compacto
+    margin: '0 auto', // Centra el párrafo horizontalmente
+    fontFamily: "'Nunito', sans-serif", // Asegúrate de que el tipo de letra sea consistente
+    fontSize: '18px', // Tamaño del texto
+    padding: '0 20px', // Agrega padding a los lados para evitar que el texto toque los bordes del contenedor
     marginBottom: '8%',
     [theme.breakpoints.down('md')]: {
-      marginBottom: '0',
+      textAlign: 'center', // Alineación central en dispositivos medianos
+      width: '75%', // Ligeramente más ancho en dispositivos medianos
+      marginBottom: '5%', // Menos margen en la parte inferior
     },
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
-      marginBottom: '0',
+      width: '90%', // Más ancho en dispositivos pequeños para mejorar la legibilidad
+      marginBottom: '5%',
     }
   },
+
 }));
 
 const BodyBecaAon = ({ title, body }: { title?: any, body: any },) => {
