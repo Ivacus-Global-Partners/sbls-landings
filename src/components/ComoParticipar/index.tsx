@@ -196,7 +196,7 @@ const ComoParticipar = () => {
                                         ¿Cómo participar?
                                     </h1>
                                     <div className={classes.subsectionContainer}>
-                                        {isMobile && <span className={classes.numberCircle}>1</span>}
+                                        <span className={classes.numberCircle}>1</span>
                                         <span className={classes.sectionTitle}>Reflexiona y comparte tus respuestas a las siguientes preguntas*:</span>
                                     </div>
                                     <ul className={classes.list}>
@@ -205,7 +205,7 @@ const ComoParticipar = () => {
                                         <li className={classes.listItem}>Comparte tu visión sobre el futuro de los Recursos Humanos, ¿hacia dónde crees que evolucionarán las prácticas actuales de wellbeing?</li>
                                     </ul>
                                     <div className={classes.subsectionContainer}>
-                                        {isMobile && <span className={classes.numberCircle}>2</span>}
+                                        <span className={classes.numberCircle}>2</span>
                                         <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca AON 2024” hasta el viernes, 31 de mayo de 2024.</span>
                                     </div>
                                     <div className={classes.tacContainer}>
