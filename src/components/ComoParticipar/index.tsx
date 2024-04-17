@@ -185,7 +185,7 @@ const ComoParticipar = () => {
                                     <CardMedia
                                         className={classes.imageWidth}
                                         component="img"
-                                        image="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fistockphoto-107430165-1024x1024-transformed%402x.png?alt=media&token=4647a3d2-3c14-45f9-a59e-61733f00da18"
+                                        image="https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fbodyphot.png?alt=media&token=be110c65-7872-4b5e-8c54-b1510d8a1d88"
                                         alt=""
                                     />
                                 </Grid>
