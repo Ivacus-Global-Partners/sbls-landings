@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     list: {
         color: 'white',
         paddingLeft: '20px',
-        marginLeft: '85px',
+        marginLeft: '140px',
         [theme.breakpoints.down('sm')]: {
             marginLeft: '0px',
         }
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        padding: '8px 8px 0',
+        // padding: '8px 8px 0',
         boxSizing: 'border-box',
         marginBottom: '20px',
         [theme.breakpoints.down('sm')]: {
@@ -51,15 +51,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     title: {
         margin: 0,
         fontFamily: 'Playfair Display',
-        fontSize: '40px',
+        fontSize: '60px',
         fontStyle: 'italic',
         color: '#ffffff',
         fontWeight: 'lighter',
         textAlign: 'center',
-        marginRight: '45%',
+        paddingLeft: '100px',
+        paddingBottom: '20px',
         [theme.breakpoints.up('sm')]: {
             marginRight: '10%',
-            textAlign: 'left',
+            textAlign: 'center',
         },
         [theme.breakpoints.down('sm')]: {
             marginRight: '0%',
@@ -78,9 +79,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 
     },
     listItem: {
-        fontSize: '25px',
-        // height: '60px',
-        // position: 'relative',
+        fontSize: '22px',
+        color: 'white',
+        marginBottom: '10px',
     },
     body: {
         margin: 0,
@@ -105,10 +106,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '90%',
+        width: '100%',
         [theme.breakpoints.up(850)]: {
             width: '100%',
-            marginLeft: '20px',
+            // marginLeft: '20px',
         },
         [theme.breakpoints.down(850)]: {
             textAlign: 'left',
@@ -124,16 +125,36 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     imageWidth: {
         width: '70%',
-        maxWidth: '70%', 
-        height: '100%', 
+        maxWidth: '70%',
+        height: '100%',
         marginLeft: '30%',
         [theme.breakpoints.down('lg')]: {
             width: '100%',
-            maxWidth: '100%', 
-            height: '100%', 
+            maxWidth: '100%',
+            height: '100%',
             marginLeft: '22%',
         },
-    }
+    },
+    numberCircle: {
+        borderRadius: '50%',
+        width: '40px',
+        height: '40px',
+        padding: '8px',
+        background: 'white',
+        color: '#980628',
+        textAlign: 'center',
+        fontSize: '30px',
+        lineHeight: '24px',
+        marginRight: '15px',
+        display: 'inline-block !important',
+    },
+    sectionTitle: {
+        fontSize: '24px',
+        color: 'white',
+        paddingTop: '5px !important',
+        display: 'inline',
+        verticalAlign: 'super',
+    },
 }));
 
 const ComoParticipar = () => {
@@ -146,40 +167,34 @@ const ComoParticipar = () => {
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.cardContainer} style={{ backgroundColor: '#980628' }}>
-                    <Card style={isSmall ? {  backgroundColor: '#980628', width: '100%' } : { backgroundColor: '#980628', width: '100%' }} >
+                    <Card style={isSmall ? { backgroundColor: '#980628', width: '100%' } : { backgroundColor: '#980628', width: '100%' }}>
                         <Grid container sx={{ alignItems: 'center' }}>
                             <Grid item xs={12} sm={isMobile ? 12 : 4} md={7.5} className={classes.gridItem}>
                                 <CardContent sx={{ height: 'fit-content' }}>
                                     <h1 className={classes.title}>
                                         ¿Cómo participar?
                                     </h1>
-                                    <ul className={classes.list} >
-                                        <li className={classes.listItem} style={{ lineHeight: '100%' }}>
-                                            <h2 className={classes.subtitle}>Especialización & Experiencia</h2>
-                                            <p className={classes.body}>
-                                                Equipo docente con amplia trayectoria en materia de derecho laboral y empresarial.
-                                            </p>
-                                        </li>
-                                        <li className={classes.listItem}><h2 className={classes.subtitle}>Enfoque práctico</h2>
-                                            <p className={classes.body}>
-                                                Metodología que aúna la base teórica con la aplicación práctica, gracias al análisis de casos reales.
-                                            </p>
-                                        </li>
-                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '0%' } : {}}>Formato flexible</h2>
-                                            <p className={classes.body}>
-                                                Sesiones presenciales y virtuales.
-                                            </p>
-                                        </li>
-                                        <li className={classes.listItem}><h2 className={classes.subtitle} style={isSmall ? { marginTop: '0%' } : {}} >Networking de alto valor</h2>
-                                            <p className={classes.body}>
-                                                Networking con profesionales de destacadas organizaciones, quienes aportarán sus
-                                                puntos de vista desde distintas perspectivas.
-                                            </p>
-                                        </li>
+                                    <div style={{ marginLeft: '60px' }}>
+                                        <span className={classes.numberCircle}>1</span>
+                                        <span className={classes.sectionTitle}>Reflexiona y comparte tus respuestas a las siguientes preguntas*:</span>
+                                    </div>
+                                    <ul className={classes.list}>
+                                        <li className={classes.listItem}>¿Cuáles son los mayores retos a los que se enfrenta tu organización al integrar prácticas innovadoras de RRHH?</li>
+                                        <li className={classes.listItem}>¿Cómo consideras que la IA puede generar un impacto significativo en tu organización o en el campo de los Recursos Humanos en general?</li>
+                                        <li className={classes.listItem}>Comparte tu visión sobre el futuro de los Recursos Humanos, ¿hacia dónde crees que evolucionarán las prácticas actuales de wellbeing?</li>
                                     </ul>
+                                    <div style={{ marginLeft: '60px', display: 'flex' }}>
+                                        <span className={classes.numberCircle}>2</span>
+                                        <div>
+                                            <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca AON 2024” hasta el viernes, 31 de mayo de 2024.</span>
+                                        </div>
+                                    </div>
+                                    <div style={{ marginLeft: '110px', display: 'flex', flexDirection: 'column', marginTop: '30px' }}>
+                                        <span className={classes.listItem}>* Todos los textos deben estar en español. </span>
+                                        <span className={classes.listItem}>*  Envíanos las respuestas a las preguntas planteadas en un (1) documento DIN A4 en formato PDF, de 300-500 palabras (obligatorio) o en formato video.</span>
+                                    </div>
                                 </CardContent>
                             </Grid>
-
                             {!isMobile && (
                                 <Grid item xs={12} sm={4} md={4.5} >
                                     <CardMedia
