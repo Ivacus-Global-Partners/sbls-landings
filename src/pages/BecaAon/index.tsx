@@ -12,10 +12,9 @@ import ComoParticipar from '../../components/ComoParticipar';
 
 const BecaAon: React.FC = () => {
 
-  const [searchParams] = useSearchParams()
 
-  const href = '';
-  const download = '';
+  const href = 'https://sagardoyschool.com/archivos/master-executive-en-direccion-de-rrhh.pdf';
+  const download = 'master-executive-en-direccion-de-rrhh.pdf';
   const claustro = [
     {
       img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2FCarmen-Burgos-Casas%402x.png?alt=media&token=11917d00-fa73-42fe-8af4-03589c5f5671',

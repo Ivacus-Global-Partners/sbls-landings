@@ -1,98 +1,87 @@
 import React from 'react';
-import BodyInfo from '../../components/BodyInfo1';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
 import ProgramObjetives from '../../components/ProgramObjetives';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
-import BodyInfo2 from '../../components/BodyInfo2';
+import BodyInfoDiversidad2 from '../../components/BodyInfoDiversidad2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
+import BodyInfoDiversidad from '../../components/BodyInfoDiversidad';
 
 const Diversidad: React.FC = () => {
 
-  const href = 'https://sagardoyschool.com/archivos/sostenibilidad-corporativa-claves-para-el-futuro.pdf';
-  const download = 'sostenibilidad-corporativa-claves-para-el-futuro.pdf';
+  const href = 'https://sagardoyschool.com/thank-you/programa-el-poder-de-la-diversidad';
+  const download = 'el-poder-de-la-diversidad.pdf';
   const claustro = [
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Farbeo%402x.png?alt=media&token=c4775784-1d11-4b31-aa21-ae3db220d44c',
-      name: 'Jose Luis Arbeo',
-      job: <>Advisor de Desarrollo de negocio Ex-Director de Marketing y Contenidos de BBVA</>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2FMarina-Tirado_OK%402x.png?alt=media&token=0134da0c-92e2-4c96-af3f-688338657bf1',
+      name: 'Marina Tirado',
+      job: <>Consultora de Learning & Development (L&D) Consultora de Estrategia Educativa en la UFV. Associate professor en IE University</>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Fdavid-alayon%402x.png?alt=media&token=9bfbb949-01cb-46b2-833a-fd34b77fd894',
-      name: 'David Alayón',
-      job: 'Cofundador y CEO de Innuba Ex-Director de Innovación de Inditex'
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2FHelmar%20V2%402x.png?alt=media&token=0e1eeffe-2222-4c62-876c-261fb2a6c993',
+      name: 'Helmar Rodríguez',
+      job: <>Consultor en desarrollo del potencial organizacional - sistémico y humano. Fundador de Marpas Hills, The Innate Human School , Clearness y Innate CQ</>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Fgema-nunez%402x.png?alt=media&token=c8cfcbe4-edc5-41a6-bb5b-cd727581bd14',
-      name: 'Gema Núñez',
-      job: <>Head of Industry Relations Google</>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2Fpabloors.png?alt=media&token=ff194a45-a5b2-4985-a00a-6b7d9c1cc274',
+      name: 'Pablo Dórs',
+      job: <>Sacerdote, escritor y conferencista internacional. Fundador de la red de meditadores Amigos del Desierto.</>
     },
     {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Fmaria-borbones%402x.png?alt=media&token=d4ce3f51-2e1f-442d-989e-878ff9751491',
-      name: 'María Borbonés',
-      job: <>Client Engineering Manager & IA Architect IBM</>
+      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2Fgonzalo-rodriguez.png?alt=media&token=35ae0ca3-ccbd-4252-a887-8e4b1084d2c9',
+      name: 'Gonzalo Rodríguez-Fraile',
+      job: <>Mentor, facilitador y presidente de la Fundación Desarrollo de la Consciencia. MBA por Harvard Business School</>
     },
-    {
-      img: 'https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Fjuanjo-carmena%402x.png?alt=media&token=71ac2a7f-7027-445b-924f-5c91887c80a4',
-      name: 'Juanjo Carmena',
-      job: <>Enterprise Solutions Manager EMEA GitHub Microsoft</>
-    },
+   
   ]
 
   const texto = <>
-    Las organizaciones que no aplican la IA están <strong>perdiendo una ventaja competitiva</strong> y, en el medio plazo, incluso pueden perder relevancia y perder su posición en el mercado. 
+    En un entorno social y empresarial en constante evolución, es fundamental que como líderes <strong>evaluemos nuestro enfoque hacia la Diversidad, Equidad, Inclusión y Accesibilidad (DEI&A).</strong>
     <br /><br />
-    <strong>La IA generativa es una tecnología diferente a cualquier otra</strong> que haya surgido anteriormente. Esta disrupción tecnológica presenta tanto oportunidades únicas como desafíos significativos, lo que <strong>requiere un enfoque innovador y adaptativo en el liderazgo y la gestión estratégica</strong> de todas las áreas de negocio. 
+    La DEI&A no solo enriquece nuestro <strong>ambiente laboral,</strong> sino que también permite fortalecer las marcas en el mercado global. En lugar de un enfoque de diversidad basado en números, es crucial asegurar la coherencia entre los objetivos y las estructuras. 
     <br /><br />
-    Descubre, de la mano de un claustro excelente, el <strong>impacto de la IA en las distintas áreas de negocio</strong> a través de casos reales y con un enfoque práctico.
+    Conoce las herramientas para diseñar una hoja de ruta que te permita liderar este cambio en tu organización.
   </>;
-  const redirect = '';
+  const redirect = 'https://sagardoyschool.com/thank-you/programa-el-poder-de-la-diversidad/';
 
   return (
     <div>
-      <Helmet>
-        <title>Executive Program: IA transformando negocios e industrias</title>
-        <meta name="title" content="Executive Program: IA transformando negocios e industrias" />
-        <meta name="description" content="La sostenibilidad ha salido de las direcciones de sostenibilidad para escalar a los consejos de administración e introducirse en todas las áreas de la empresa, siendo indispensables en la toma de decisiones empresariales a alto nivel." />
-        <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="Sostenibilidad corporativa, sostenibilidad, inversiones" />
-      </Helmet>
+   <Helmet>
+    <title>Executive Program: El poder de la diversidad</title>
+    <meta name="title" content="Executive Program: El poder de la diversidad" />
+    <meta name="description" content="Descubre cómo la diversidad enriquece el entorno corporativo, impulsa la innovación y crea una ventaja competitiva sostenible en nuestro Executive Program." />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="diversidad, inclusión, liderazgo inclusivo, innovación, ventaja competitiva, transformación empresarial" />
+</Helmet>
 
 
       <Header image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2FDiversidadHeader.png?alt=media&token=33f0409d-b5be-44c3-bb38-d4fe46016500"} />
-      <InfoForm productId='0xe88cac' formId='0xf1bef0' href={href} download={download} redirect={redirect} title shadow submit={
+      <InfoForm productId='0xe88cb8' formId='0x111275e' href={href} download={download} redirect={redirect} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Descargar folleto
         </>
       } />
-     <BodyInfo
-        title={<p style={{ color: '#980628', margin: 0 }}>¿Cuál debe ser mi propuesta de valor para continuar siendo un jugador relevante?</p>}
+     <BodyInfoDiversidad
+        title={<p style={{ color: '#980628', margin: 0 }}>¿Quieres ser parte del cambio en tu organización?</p>}
         body={texto}
       />
-      <BodyInfo2
-        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Fdavid-alayon%402x.png?alt=media&token=9bfbb949-01cb-46b2-833a-fd34b77fd894"}
-        name={"David Alayón"}
+      <BodyInfoDiversidad2 
+        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingDiversidad%2FMarina-Tirado_OK%402x.png?alt=media&token=0134da0c-92e2-4c96-af3f-688338657bf1"}
+        name={"Marina Tirado"}
         job={<>
-            Cofundador y director de Innovación de Innuba <br />
-            Codirector del programa IA: Transformando negocios e industrias</>}
-        quote={"Es el momento para entender qué es lo que está ocurriendo, analizar y entender los casos de uso y las buenas prácticas que las compañías están abordando y luego pensar en el futuro y en cómo poder abordarlo."}
+           Consultora de Learning & Development (L&D) y <br />
+           Directora del programa ejecutivo El poder de la Diversidad</>}
+        quote={"“Promover y mantener una cultura corporativa de bienestar, diversidad e inclusión es crítico para mantener la sostenibilidad, crecimiento y la viabilidad de la compañía a corto y largo plazo”"}
       />
-      <BodyInfo2
-        img={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLandingIA%2Farbeo%402x.png?alt=media&token=c4775784-1d11-4b31-aa21-ae3db220d44c"}
-        name={"Jose Luis Arbeo"}
-        job={<>
-            Consultor de Marketing, Desarrollo y Transformación de negocio  <br />
-            Codirector del programa IA: Transformando negocios e industrias</>}
-        quote={"El programa de Inteligencia Artificial intenta pensar en la IA como una palanca de transformación de negocios, de industrias y de empresas en general."}
-      />
-      <IconsInfo dates={['Del 1 al 17', 'de octubre']} duration={
+    
+      <IconsInfo dates={['Del 8 al 31', 'de octubre']} duration={
         <>
           Martes y Jueves, de<br />
-          16:30h a 19:30h
+          9:00h a 12:30h
         </>
       }
         language={"Español"}
@@ -110,9 +99,9 @@ const Diversidad: React.FC = () => {
         }
       />
       <ProgramObjetives objetives={{
-        "Comprender": "el 360 de la IA. Desde aspectos técnicos relevantes para el negocio hasta implicaciones organizativas y estratégicas.",
-        "Aprender": "a implementar proyectos de IA para obtener ventaja estratégica.",
-        "Evaluar": "los sesgos y las implicaciones éticas en el aprendizaje automático."
+        "Construir": "la hoja de ruta para diseñar una cultura que atrae y retiene el talento.",
+        "Aprender": "a facilitar un entorno de trabajo inclusivo en el que se valoran y adoptan diversas culturas, talentos y formas de pensar y aumenta el nivel de motivación y compromiso.",
+        "Comprender": "los procesos perceptivos, institucionales y psicológicos que afectan a la forma en que las personas colaboran e interactúan entre sí."
       }} />
       <CardsClaustro claustro={claustro} title="Descubre a parte del claustro" />
       <Footer />

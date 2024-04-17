@@ -164,7 +164,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const InfoForm2 = ({
+const DiversidadForm = ({
   shadow = false,
   submit,
   title = false,
@@ -484,4 +484,4 @@ const InfoForm2 = ({
   );
 };
 
-export default InfoForm2;
+export default DiversidadForm;

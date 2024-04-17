@@ -1,7 +1,7 @@
 import React from 'react';
 import BodyInfo from '../../components/BodyInfo1';
 import IconsInfo2 from '../../components/Iconsinfo2';
-import InfoForm2 from '../../components/infoForm2';
+import DiversidadForm from '../../components/DiversidadForm';
 import Header2 from '../../components/Header2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
@@ -33,7 +33,7 @@ const DigitalizacionyCompetencias: React.FC = () => {
   </Helmet>
 
       <Header2 image={"https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Fmailings%2FComunidadDeMadrid%2FLandingHeadermadrid.png?alt=media&token=35a7f934-1ea1-43fa-ae8a-fd1c40d23165"} />
-      <InfoForm2 productId=' 0x110a4d1' formId='0x110a367' href={href} download={download} redirect={redirect} title shadow submit={
+      <DiversidadForm productId=' 0x110a4d1' formId='0x110a367' href={href} download={download} redirect={redirect} title shadow submit={
         <>
           <DownloadIcon sx={{ fontSize: '1.2em' }} />
           Aceptar
