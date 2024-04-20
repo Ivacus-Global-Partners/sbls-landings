@@ -202,7 +202,7 @@ const ComoParticipar = () => {
                                     <ul className={classes.list}>
                                         <li className={classes.listItem}>¿Cuáles son los mayores retos a los que se enfrenta tu organización al integrar prácticas innovadoras de RRHH?</li>
                                         <li className={classes.listItem}>¿Cómo consideras que la IA puede generar un impacto significativo en tu organización o en el campo de los Recursos Humanos en general?</li>
-                                        <li className={classes.listItem}>Comparte tu visión sobre el futuro de los Recursos Humanos, ¿hacia dónde crees que evolucionarán las prácticas actuales de wellbeing?</li>
+                                        <li className={classes.listItem}>¿Cuál es tu perspectiva acerca del futuro de la gestión de Recursos Humanos y cómo crees que evolucionarán las prácticas de bienestar laboral?</li>
                                     </ul>
                                     <div className={classes.subsectionContainer}>
                                         <span className={classes.numberCircle}>2</span>

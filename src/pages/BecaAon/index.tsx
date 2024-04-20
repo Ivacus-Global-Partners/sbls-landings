@@ -48,9 +48,9 @@ const BecaAon: React.FC = () => {
       organizaciones.
       <br />
       <br />
-      <strong>
-        Participa en el desafío y únete a nuestra comunidad de expertos. Gana
-        una beca para nuestro Máster Executive en Dirección de Recursos Humanos
+      
+        Participa en el desafío y únete a nuestra comunidad de expertos.<strong> Gana
+        una beca del 100% para nuestro Máster Executive en Dirección de Recursos Humanos.
       </strong>
     </>
   );
@@ -130,15 +130,15 @@ const BecaAon: React.FC = () => {
         body={texto}
       />
       <IconsInfoBecaAon
-        profile="Perfil del participante Directivos o futuros directivos de RRHH que buscan impulsar cambios significativos en las organizaciones."
-        deadlineDate=" Viernes, 31 de mayo de 2024"
+        profile="Directivos o futuros directivos de RRHH que buscan impulsar cambios significativos en las organizaciones."
+        deadlineDate="Viernes, 31 de mayo de 2024 "
         winnersAnnouncement="Viernes, 7 de junio de 2024"
         prizes={textoPremios}
       />
       <BodyBecaAon
         title={
           <p style={{ color: "#980628", margin: 0 }}>
-            ¿Quién debería participar? 
+            ¿Quién puede participar? 
           </p>
         }
         body={texto1}
