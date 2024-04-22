@@ -206,7 +206,7 @@ const ComoParticipar = () => {
                                     </ul>
                                     <div className={classes.subsectionContainer}>
                                         <span className={classes.numberCircle}>2</span>
-                                        <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca AON 2024” hasta el viernes, 31 de mayo de 2024.</span>
+                                        <span className={classes.sectionTitle}>Envíanos tus respuestas, junto con tu currículum vitae al correo electrónico all@sagardoy.com con el asunto “Beca Aon 2024” hasta el viernes, 31 de mayo de 2024.</span>
                                     </div>
                                     <div className={classes.tacContainer}>
                                         <span className={classes.listItem}>* Todos los textos deben estar en español. </span>

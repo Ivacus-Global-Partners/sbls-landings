@@ -17,7 +17,7 @@ const BecaAon: React.FC = () => {
     {
       img: "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2FCarmen-Burgos-Casas%402x.png?alt=media&token=11917d00-fa73-42fe-8af4-03589c5f5671",
       name: "Carmen Burgos Casas",
-      job: "Executive Director Health Solutions at AON",
+      job: "Executive Director Health Solutions at Aon",
     },
     {
       img: "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fvanessa-izquierdo%402x.png?alt=media&token=4969e609-dc86-4069-bd15-d03699373ef4",
@@ -39,7 +39,7 @@ const BecaAon: React.FC = () => {
       <br />
       <br />
       Por ello, desde <strong>Sagardoy School,</strong> junto con{" "}
-      <strong>AON,</strong> lanzamos una convocatoria de beca para el{" "}
+      <strong>Aon,</strong> lanzamos una convocatoria de beca para el{" "}
       <strong>
         Máster Executive en Dirección de Recursos Humanos de Sagardoy Business &
         Law School,
@@ -125,7 +125,7 @@ const BecaAon: React.FC = () => {
       />
       <BodyInfoBecaAon
         title={
-          <p style={{ color: "#980628", margin: 0 }}>¿Qúe es la beca AON?</p>
+          <p style={{ color: "#980628", margin: 0 }}>¿Qúe es la beca Aon?</p>
         }
         body={texto}
       />
