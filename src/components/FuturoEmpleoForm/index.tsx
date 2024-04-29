@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   checkboxText: {
     display: "inline",
     lineHeight: "1.3em",
-    fontSize: "14px",
+    fontSize: "12px",
   },
  
   option: {
@@ -224,7 +224,7 @@ const DiversidadForm = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const fx = values.format==='Presencial' ? '0x110a367' : '0x110c247'
+    const fx = values.format==='Presencial' ? '0x112f27d' : '0x112f27e'
     var myHeaders = new Headers();
     myHeaders.append("fx", fx); // formId
     myHeaders.append("content-type", "application/json");

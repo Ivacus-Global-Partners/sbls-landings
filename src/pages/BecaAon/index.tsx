@@ -20,7 +20,7 @@ const BecaAon: React.FC = () => {
       job: "Executive Director Health Solutions at Aon",
     },
     {
-      img: "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2Fvanessa-izquierdo%402x.png?alt=media&token=4969e609-dc86-4069-bd15-d03699373ef4",
+      img: "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20Beca%20Aon%2FIMG_1645%402x.png?alt=media&token=78625c5f-ab47-43cb-955f-7f37a14262fb",
       name: "Vanessa Izquierdo",
       job: "Directora Académica del Máster Executive en Dirección de Recursos Humanos. Directora Ejecutiva Sagardoy Business & Law School.  ",
     },
