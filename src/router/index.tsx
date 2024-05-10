@@ -13,7 +13,8 @@ import Diversidad from '../pages/Diversidad';
 import DigitalizaciónyCompetencias from '../pages/DigitalizacionyCompetencias';
 import BecaAon from '../pages/BecaAon';
 import FuturoDelEmpleo from '../pages/FuturoDelEmpleo';
-import ImpactoEnElMercado from '../pages/ImpactoEnElMercado'
+import ImpactoEnElMercado from '../pages/ImpactoEnElMercado';
+import IAevento from '../pages/IAevento';
 
 
 const RouterComponent: React.FC = () => {
@@ -39,6 +40,7 @@ const RouterComponent: React.FC = () => {
                 <Route path="/landings/beca-aon-impulsando-la-innovación-en-recursos-humanos" element={<BecaAon />} />
                 <Route path="/landings/el-futuro-del-empleo-y-profesiones-emergentes-en-el-mercado-de-trabajo-madrileño" element={<FuturoDelEmpleo />} />
                 <Route path="/landings/reequilibrio-territorial-madrileño-e-impacto-en-el-mercado-de-trabajo" element={<ImpactoEnElMercado />} />
+                <Route path="/landings/la-ia-como-aliada-de-la-gestion-de-personas " element={<IAevento />} />
 
             </Routes>
         </Router>
