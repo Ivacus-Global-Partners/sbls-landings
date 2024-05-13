@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   checkboxText: {
     display: "inline",
     lineHeight: "1.3em",
-    fontSize: "12px",
+    fontSize: "15px",
   },
  
   option: {
@@ -193,6 +193,8 @@ const FormIA = ({
     name: '',
     lastName: '',
     email: '',
+    cargo: '',
+    empresa: '',
     phone: '',
     prefix: '0',
     format: 'Presencial'
@@ -201,6 +203,8 @@ const FormIA = ({
     name: '',
     lastName: '',
     email: '',
+    cargo: '',
+    empresa: '',
     phone: '',
     format: ''
   })
@@ -254,6 +258,8 @@ const FormIA = ({
         name: '',
         lastName: '',
         email: '',
+        cargo: '',
+        empresa: '',
         phone: '',
         prefix: '0',
         format: 'Presencial'
@@ -262,6 +268,8 @@ const FormIA = ({
         name: '',
         lastName: '',
         email: '',
+        cargo: '',
+        empresa: '',
         phone: '',
         format: ''
       })
@@ -351,6 +359,40 @@ const FormIA = ({
             maxLength: 255
           }}
           type="email"
+        />
+           <TextField
+          className={classes.input}
+          variant="filled"
+          placeholder="Cargo"
+          sx={{ width: "95%" }}
+          name="cargo"
+          onChange={handleChange}
+          value={values.cargo}
+          error={!!errors.cargo}
+          helperText={errors.cargo}
+          required
+          style={{ marginTop: '3px' }}
+          inputProps={{
+            maxLength: 255
+          }}
+          type="cargo"
+        />
+           <TextField
+          className={classes.input}
+          variant="filled"
+          placeholder="Empresa"
+          sx={{ width: "95%" }}
+          name="empresa"
+          onChange={handleChange}
+          value={values.empresa}
+          error={!!errors.empresa}
+          helperText={errors.empresa}
+          required
+          style={{ marginTop: '3px' }}
+          inputProps={{
+            maxLength: 255
+          }}
+          type="empresa"
         />
         <TextField
           className={classes.input}

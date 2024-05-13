@@ -1,34 +1,31 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Grid, Theme } from '@mui/material';
-import './style.css';
-import DownloadIcon from '@mui/icons-material/Download';
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
-    backgroundColor: '#F7F7F7',
-    padding: '40px 3vw',
+    padding: '40px 3vw',  // Mantiene el relleno en todos los lados
     [theme.breakpoints.down('sm')]: {
-      padding: '20px 0',
+      padding: '20px 0',  // Ajusta para dispositivos más pequeños
     }
   },
   downLoadBtn: {
     display: 'flex',
     alignItems: 'center',
-    columnGap: '3px',
+    justifyContent: 'center',  // Centra el texto dentro del botón
     border: 'none',
     textAlign: 'center',
     height: '40px',
     width: '268px',
     borderRadius: '20px',
     background: '#980628',
-    padding: '8px 62px',
+    padding: '8px 60px',
     fontSize: 'medium',
     color: 'white',
-    margin: '25px auto', // Centrado automático
+    margin: '0 auto',  // Centrado automático en el eje horizontal
     cursor: 'pointer',
     [theme.breakpoints.down('md')]: {
-      width: '90%',
+      width: '90%',  // Ajusta el ancho en dispositivos medianos
     }
   }
 }));
@@ -40,7 +37,6 @@ const BotonIA = () => {
     const link = document.getElementById('download-pdf');
     if (link) {
       link.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
     }
   };
 
@@ -49,8 +45,7 @@ const BotonIA = () => {
       <Grid container justifyContent="center">
         <Grid item>
           <button className={classes.downLoadBtn} onClick={handleDownload}>
-            <DownloadIcon sx={{ fontSize: '1.2em' }} />
-            Inscríbete
+            Inscríbete 
           </button>
         </Grid>
       </Grid>
