@@ -37,15 +37,15 @@ const IAEvento: React.FC = () => {
       <br />
       <br />
       <ul>
-        <li>Miguel de la Osa – IA Managing Partner Sagardoy Business & Law School</li>
-        <li>Sonia Silva - Artificial Intelligence and Data Strategy, Head of Digital & Technology, Deloitte.</li>
-        <li>Gonzalo Jiménez – Experto en Transformación Digital</li>
-        <li>Rosa Esteban – Head of Talent & Culture, Grupo Sesé</li>
-        <li>Enrique Robles del Cerro - HR Transformation & Executive Development Manager, Iberdrola</li>
+        <li><strong>Miguel de la Osa – IA Managing Partner Sagardoy Business & Law School</strong></li>
+        <li><strong>Sonia Silva - Artificial Intelligence and Data Strategy, Head of Digital & Technology, Deloitte.</strong></li>
+        <li><strong>Gonzalo Jiménez – Experto en Transformación Digital</strong></li>
+        <li><strong>Rosa Esteban – Head of Talent & Culture, Grupo Sesé</strong></li>
+        <li><strong>Enrique Robles del Cerro - HR Transformation & Executive Development Manager, Iberdrola</strong></li>
       </ul>
     </>
   );
-  const redirect = "https://sagardoyschool.com/thank-you/futuro-del-empleo";
+  const redirect = "https://sagardoyschool.com/thank-you/la-ia-como-aliada-de-la-gestion-de-personas";
 
   return (
     <div>
@@ -103,7 +103,7 @@ const IAEvento: React.FC = () => {
         format={
           <>
             Presencial &<br />
-            remoto
+            Virtual
           </>
         }
       />

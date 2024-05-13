@@ -37,8 +37,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     rowGap: '15px',
+    marginTop: '20px', // Añadimos un margen superior para separar del título
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '10px', // Reducimos el margen en dispositivos móviles
+    },
   },
-
   titleContainer: {
     textAlign: 'left',
     marginLeft: '-10px',

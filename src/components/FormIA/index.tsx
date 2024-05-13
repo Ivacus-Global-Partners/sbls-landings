@@ -237,6 +237,8 @@ const FormIA = ({
       name: values.name,
       lastName: values.lastName,
       email: values.email,
+      cargo: values.cargo,
+      empresa: values.empresa,
       phone: `${values.prefix} ${values.phone}`,
       prefix: values.prefix,
       "privacy-police": true,
