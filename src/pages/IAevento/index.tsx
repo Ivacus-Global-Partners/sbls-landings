@@ -1,75 +1,80 @@
 import React from "react";
-import BodyInfo from "../../components/BodyInfo1";
+import BodyIA from "../../components/BodyIA";
 import IconsInfo2 from "../../components/Iconsinfo2";
-import FuturoDelEmpleoForm from "../../components/FuturoEmpleoForm";
+import FormIA from "../../components/FormIA";
 import Header2 from "../../components/Header2";
 import DownloadIcon from "@mui/icons-material/Download";
 import { Helmet } from "react-helmet";
-import Footer2 from "../../components/Footer2";
+import FooterIA from "../../components/FooterIA";
+import BotonIA from "../../components/BotonIA";
 
 const IAEvento: React.FC = () => {
   const href =
-    "https://sagardoyschool.com/archivos/0424_AGENDA_JORNADAS_DE_EMPLEO_23_05_2024.pdf";
-  const download = "0424_AGENDA_JORNADAS_DE_EMPLEO_23_05_2024.pdf";
+    "https://sagardoyschool.com/archivos/AGENDA_EVENTO_IA_06_06_2024.pdf";
+  const download = "AGENDA_EVENTO_IA_06_06_2024.pdf";
 
   const texto = (
     <>
-      En el marco de trabajo de la nueva Estrategia Madrid por el empleo, con el
-      objetivo de conocer de mano de profesionales y expertos, la realidad
-      actual del mercado laboral organizamos estas jornadas sobre Empleo y
-      Mercado de Trabajo en las que reflexionaremos sobre los temas de máxima
-      actualidad.
-      <br />
-      <br />
-      La segunda jornada tendrá lugar el próximo 23 de mayo,
       <strong>
-        {" "}
-        “El Futuro Del Empleo Y Profesiones Emergentes En El Mercado De Trabajo
-        Madrileño”,
-      </strong>{" "}
-      en horario de 9:30 a 12:00.
+        En la próxima década se crearán en España 1,6 millones nuevos puestos
+        relacionados con la IA y desaparecerán 2 millones de los actuales
+        puestos tal y como los conocemos actualmente.
+      </strong>
       <br />
       <br />
-      Este encuentro será una oportunidad para conectar con profesionales y
-      expertos que debatirán y expondrán sus puntos de vista sobre el futuro del
-      mercado laboral, centrado en identificar las oportunidades y estrategias
-      para favorecer la adaptación y el desarrollo del talento, en busca de
-      iniciativas innovadoras e impulso de proyectos en este ámbito.
+      <strong>
+        ¿Qué retos supone esta transformación para los profesionales del área de
+        gestión de Personas, Cultura y Talento?
+      </strong>
+      <br />
+      <br />
+      En la mesa redonda <strong>“La IA como alidada de la gestión de personas”</strong> veremos
+      cómo la Inteligencia Artificial y la Cultura Data Driven, pueden aportar
+      soluciones a dichos retos.
+      <br />
+      <br />
+      <strong>Ponentes:</strong>
+      <br />
+      <br />
+      <ul>
+        <li>Miguel de la Osa – IA Managing Partner Sagardoy Business & Law School</li>
+        <li>Sonia Silva - Artificial Intelligence and Data Strategy, Head of Digital & Technology, Deloitte.</li>
+        <li>Gonzalo Jiménez – Experto en Transformación Digital</li>
+        <li>Rosa Esteban – Head of Talent & Culture, Grupo Sesé</li>
+        <li>Enrique Robles del Cerro - HR Transformation & Executive Development Manager, Iberdrola</li>
+      </ul>
     </>
   );
-  const redirect =
-    "https://sagardoyschool.com/thank-you/futuro-del-empleo";
+  const redirect = "https://sagardoyschool.com/thank-you/futuro-del-empleo";
 
   return (
     <div>
       <Helmet>
         <title>
-          El Futuro Del Empleo Y Profesiones Emergentes En El Mercado De Trabajo
-          Madrileño
+          La IA Como Aliada de la Gestión de Personas en las Organizaciones
         </title>
         <meta
           name="title"
-          content="El Futuro Del Empleo Y Profesiones Emergentes En El Mercado De Trabajo Madrileño"
+          content="La IA Como Aliada de la Gestión de Personas en las Organizaciones"
         />
         <meta
           name="description"
-          content="Explora el futuro del empleo y las profesiones emergentes en el mercado de trabajo madrileño, donde la digitalización y nuevas tecnologías están transformando el panorama laboral. Descubre las tendencias, desafíos y oportunidades para adaptarte y prosperar en este entorno en constante evolución."
+          content="Descubre cómo la inteligencia artificial está revolucionando la gestión de personas en las organizaciones. Explora las herramientas y estrategias de IA que facilitan la toma de decisiones, optimización de recursos humanos y mejora de la productividad laboral."
         />
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="empleo, profesiones emergentes, mercado de trabajo, digitalización, tecnologías, Madrid"
+          content="IA, gestión de personas, inteligencia artificial, recursos humanos, tecnologías, organizaciones"
         />
       </Helmet>
-
       <Header2
         image={
-          "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FLanding%20El%20Futuro%20del%20Empleo%2FHeaderFuturoEmpleo.png?alt=media&token=9d4a3184-7437-4769-bd95-802ccbd3f5af"
+          "https://firebasestorage.googleapis.com/v0/b/sagardoy-lms.appspot.com/o/website%2Flandings%2FEventoIA%2FIA%20EVENTO.png?alt=media&token=9fb2e242-d1eb-40b5-99a9-b56673c6f947"
         }
       />
-      <FuturoDelEmpleoForm
-        productId="0x112f23b"
-        formId="0x112f27d"
+      <FormIA
+        productId=" 0x11e8740"
+        formId="0x11e88b7"
         href={href}
         download={download}
         redirect={redirect}
@@ -82,11 +87,11 @@ const IAEvento: React.FC = () => {
           </>
         }
       />
-      <BodyInfo body={texto} />
-
+      <BodyIA body={texto} />
+      <BotonIA />
       <IconsInfo2
-        dates={["Jueves 23 de mayo"]}
-        duration={<>9:30h - 12:00h</>}
+        dates={["Jueves 6 de junio"]}
+        duration={<>9:30h - 11:30h</>}
         place={
           <>
             C\Velázquez 86D
@@ -103,7 +108,7 @@ const IAEvento: React.FC = () => {
         }
       />
 
-      <Footer2 />
+      <FooterIA />
     </div>
   );
 };
