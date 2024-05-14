@@ -1,11 +1,16 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { MenuItem, TextField, Theme, useMediaQuery, useTheme } from "@mui/material";
+import {
+  MenuItem,
+  TextField,
+  Theme,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import countries from "../../resources/data/countries";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import { hasFlag } from 'country-flag-icons'
+import { hasFlag } from "country-flag-icons";
 import "./style.css";
-
 
 const useStyles = makeStyles((theme: Theme) => ({
   form: {
@@ -66,45 +71,45 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   input: {
     fontFamily: "Nunito",
-    '& .MuiFilledInput-root': {
+    "& .MuiFilledInput-root": {
       borderRadius: "10px",
-      backgroundColor: 'white',
-      textAlign: 'left',
-      '&:before': {
-        borderBottom: 'none', // Elimina la línea antes del input
-        content: 'unset',
+      backgroundColor: "white",
+      textAlign: "left",
+      "&:before": {
+        borderBottom: "none", // Elimina la línea antes del input
+        content: "unset",
       },
-      '&:hover:before': {
-        borderBottom: 'none', // Elimina la línea antes del input en hover
+      "&:hover:before": {
+        borderBottom: "none", // Elimina la línea antes del input en hover
       },
-      '&:hover fieldset': {
-        borderBottom: 'none', // Elimina la línea después del input en hover
+      "&:hover fieldset": {
+        borderBottom: "none", // Elimina la línea después del input en hover
       },
-      '& input::placeholder': {
-        color: 'black',
+      "& input::placeholder": {
+        color: "black",
         opacity: 1,
-        textAlign: 'left',
+        textAlign: "left",
       },
     },
-    '& .MuiFilledInput-input': {
+    "& .MuiFilledInput-input": {
       fontFamily: "Nunito",
-      color: 'black',
-      paddingTop: '8px !important',
+      color: "black",
+      paddingTop: "8px !important",
     },
-    '& .MuiInputLabel-root': {
+    "& .MuiInputLabel-root": {
       fontFamily: "Nunito",
-      color: 'black',
-      display: 'none',
+      color: "black",
+      display: "none",
     },
-    '& .MuiInputBase-input::placeholder': {
+    "& .MuiInputBase-input::placeholder": {
       fontFamily: "Nunito",
-      color: 'black',
+      color: "black",
     },
-    '& .MuiFilledInput-underline:after': {
-      borderBottom: 'none', // Elimina la línea después del input
+    "& .MuiFilledInput-underline:after": {
+      borderBottom: "none", // Elimina la línea después del input
     },
-    '&:hover .MuiFilledInput-underline:after': {
-      borderBottom: 'none', // Elimina la línea después del input en hover
+    "&:hover .MuiFilledInput-underline:after": {
+      borderBottom: "none", // Elimina la línea después del input en hover
     },
   },
   checkbox: {
@@ -155,7 +160,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     lineHeight: "1.3em",
     fontSize: "15px",
   },
- 
+
   option: {
     color: "gray",
     "&:hover": {
@@ -173,7 +178,7 @@ const FormIA = ({
   download,
   productId,
   formId,
-  style
+  style,
 }: {
   shadow?: boolean;
   submit: any;
@@ -190,45 +195,51 @@ const FormIA = ({
   const theme = useTheme();
   const upMd = useMediaQuery(theme.breakpoints.up("md"));
   const [values, setValues] = React.useState({
-    name: '',
-    lastName: '',
-    email: '',
-    cargo: '',
-    empresa: '',
-    phone: '',
-    prefix: '0',
-    format: 'Presencial'
-  })
+    name: "",
+    lastName: "",
+    email: "",
+    cargo: "",
+    empresa: "",
+    phone: "",
+    prefix: "0",
+    format: "Presencial",
+  });
   const [errors, setErrors] = React.useState({
-    name: '',
-    lastName: '',
-    email: '',
-    cargo: '',
-    empresa: '',
-    phone: '',
-    format: ''
-  })
+    name: "",
+    lastName: "",
+    email: "",
+    cargo: "",
+    empresa: "",
+    phone: "",
+    format: "",
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setValues((current) => ({
       ...current,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const re = /^[0-9\b]+$/; // Expresión regular para aceptar solo números
 
-    if (e.target.value === '' || re.test(e.target.value)) {
+    if (e.target.value === "" || re.test(e.target.value)) {
       handleChange(e);
     }
   };
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const fx = values.format==='Presencial' ? ' 0x11e88b7' : '0x11e88e4'
+    const utm_source = new URLSearchParams(window.location.search).get(
+      "utm_source"
+    );
+
+    const externalSourceFormId = "0x11f5359"
+
+    const fx = utm_source === "externo" ? externalSourceFormId :  values.format === "Presencial" ? " 0x11e88b7" : "0x11e88e4";
     var myHeaders = new Headers();
     myHeaders.append("fx", fx); // formId
     myHeaders.append("content-type", "application/json");
@@ -244,55 +255,51 @@ const FormIA = ({
       "privacy-police": true,
       productId: productId, // productId
       formId: fx,
-      format: values.format
+      format: values.format,
     });
 
     var requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
-      
     };
-   
+
     fetch("https://api.ivacus.com/x/deliverForm", requestOptions)
       .then((response) => response.text())
-      .then((result) => { setValues({
-        name: '',
-        lastName: '',
-        email: '',
-        cargo: '',
-        empresa: '',
-        phone: '',
-        prefix: '0',
-        format: 'Presencial'
-      })
-      setErrors({
-        name: '',
-        lastName: '',
-        email: '',
-        cargo: '',
-        empresa: '',
-        phone: '',
-        format: ''
-      })
-      
-      const downloadLink = document.createElement("a");
-      downloadLink.href = href;
-      downloadLink.download = download;
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-  
-      if (!redirect) return
-      const redirectLink = document.createElement("a");
-      redirectLink.href = redirect;
-      redirectLink.click();
+      .then((result) => {
+        setValues({
+          name: "",
+          lastName: "",
+          email: "",
+          cargo: "",
+          empresa: "",
+          phone: "",
+          prefix: "0",
+          format: "Presencial",
+        });
+        setErrors({
+          name: "",
+          lastName: "",
+          email: "",
+          cargo: "",
+          empresa: "",
+          phone: "",
+          format: "",
+        });
 
+        const downloadLink = document.createElement("a");
+        downloadLink.href = href;
+        downloadLink.download = download;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        if (!redirect) return;
+        const redirectLink = document.createElement("a");
+        redirectLink.href = redirect;
+        redirectLink.click();
       })
       .catch((error) => console.log("error", error));
-
-   
-
   };
 
   return (
@@ -300,12 +307,16 @@ const FormIA = ({
       id="download-pdf"
       className={classes.form}
       onSubmit={handleSubmit}
-      style={upMd ? {
-        boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
-        ...style
-      } : {
-        boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
-      }}
+      style={
+        upMd
+          ? {
+              boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
+              ...style,
+            }
+          : {
+              boxShadow: `${shadow ? "0px 4px 8px #7e7777" : undefined}`,
+            }
+      }
     >
       {title && (
         <h3 className={classes.h3}>
@@ -313,7 +324,14 @@ const FormIA = ({
           Inscríbete aquí
         </h3>
       )}
-      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', alignItems: 'center' }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "10px",
+          alignItems: "center",
+        }}
+      >
         <TextField
           className={classes.input}
           variant="filled"
@@ -326,7 +344,7 @@ const FormIA = ({
           helperText={errors.name}
           required
           inputProps={{
-            maxLength: 255
+            maxLength: 255,
           }}
         />
         <TextField
@@ -340,9 +358,9 @@ const FormIA = ({
           error={!!errors.lastName}
           helperText={errors.lastName}
           required
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           inputProps={{
-            maxLength: 255
+            maxLength: 255,
           }}
         />
         <TextField
@@ -356,13 +374,13 @@ const FormIA = ({
           error={!!errors.email}
           helperText={errors.email}
           required
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           inputProps={{
-            maxLength: 255
+            maxLength: 255,
           }}
           type="email"
         />
-           <TextField
+        <TextField
           className={classes.input}
           variant="filled"
           placeholder="Cargo"
@@ -373,13 +391,13 @@ const FormIA = ({
           error={!!errors.cargo}
           helperText={errors.cargo}
           required
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           inputProps={{
-            maxLength: 255
+            maxLength: 255,
           }}
           type="cargo"
         />
-           <TextField
+        <TextField
           className={classes.input}
           variant="filled"
           placeholder="Empresa"
@@ -390,9 +408,9 @@ const FormIA = ({
           error={!!errors.empresa}
           helperText={errors.empresa}
           required
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           inputProps={{
-            maxLength: 255
+            maxLength: 255,
           }}
           type="empresa"
         />
@@ -404,19 +422,34 @@ const FormIA = ({
           value={values.prefix}
           placeholder="País"
           select
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           onChange={handleChange}
         >
-          <MenuItem value="0" sx={{ display: 'none' }}>
+          <MenuItem value="0" sx={{ display: "none" }}>
             País
           </MenuItem>
           {countries.map((country, index) => (
-            <MenuItem key={index} value={country.prefix} sx={{ display: 'flex', alignItems: 'center', lineHeight: '1em', columnGap: '5px', fontFamily: 'Nunito' }}>
-              {country.name} ({country.code} {country.prefix} {hasFlag(country.code) ? <img
-                height="10"
-                alt={country.name}
-                src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${country.code}.svg`}
-              /> : country.flag}
+            <MenuItem
+              key={index}
+              value={country.prefix}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                lineHeight: "1em",
+                columnGap: "5px",
+                fontFamily: "Nunito",
+              }}
+            >
+              {country.name} ({country.code} {country.prefix}{" "}
+              {hasFlag(country.code) ? (
+                <img
+                  height="10"
+                  alt={country.name}
+                  src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${country.code}.svg`}
+                />
+              ) : (
+                country.flag
+              )}
               )
             </MenuItem>
           ))}
@@ -433,11 +466,11 @@ const FormIA = ({
           helperText={errors.phone}
           required
           inputProps={{
-            inputMode: 'numeric'
+            inputMode: "numeric",
           }}
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
         />
-         <TextField
+        <TextField
           className={classes.input}
           variant="filled"
           placeholder="Formato"
@@ -449,20 +482,14 @@ const FormIA = ({
           helperText={errors.format}
           required
           inputProps={{
-            inputMode: 'numeric'
+            inputMode: "numeric",
           }}
-          style={{ marginTop: '3px' }}
+          style={{ marginTop: "3px" }}
           select
         >
-          
-          <MenuItem value="Presencial">
-            Formato Presencial
-          </MenuItem>
-          <MenuItem value="Remoto">
-            Formato Virtual
-          </MenuItem>
+          <MenuItem value="Presencial">Formato Presencial</MenuItem>
+          <MenuItem value="Remoto">Formato Virtual</MenuItem>
         </TextField>
-
       </div>
       <label className={classes.checkbox}>
         <input
@@ -470,8 +497,12 @@ const FormIA = ({
           onClick={(e) => {
             const target = e.target as HTMLInputElement;
             const isChecked = target.checked;
-            const otherCheckbox = document.querySelector(`input[type="checkbox"]:not(#${target.id})`) as HTMLInputElement;
-            setEnabledSubmit(isChecked && (otherCheckbox ? otherCheckbox.checked : false));
+            const otherCheckbox = document.querySelector(
+              `input[type="checkbox"]:not(#${target.id})`
+            ) as HTMLInputElement;
+            setEnabledSubmit(
+              isChecked && (otherCheckbox ? otherCheckbox.checked : false)
+            );
           }}
           id="checkbox1"
         />
@@ -491,7 +522,6 @@ const FormIA = ({
           </a>
           .
         </div>
-        
       </label>
       <label className={classes.checkbox}>
         <input
@@ -499,21 +529,30 @@ const FormIA = ({
           onClick={(e) => {
             const target = e.target as HTMLInputElement;
             const isChecked = target.checked;
-            const otherCheckbox = document.querySelector(`input[type="checkbox"]:not(#${target.id})`) as HTMLInputElement;
-            setEnabledSubmit(isChecked && (otherCheckbox ? otherCheckbox.checked : false));
+            const otherCheckbox = document.querySelector(
+              `input[type="checkbox"]:not(#${target.id})`
+            ) as HTMLInputElement;
+            setEnabledSubmit(
+              isChecked && (otherCheckbox ? otherCheckbox.checked : false)
+            );
           }}
           id="checkbox2"
-        
         />
         <div className={classes.checkboxText}>
-        Autorizo a Sagardoy Business & Law School, a retransmitir, hacer <strong>fotografías y grabaciones</strong> –incluidas imágenes y/o voz- (en lo sucesivo “Datos”) para su posterior edición y difusión tanto interna como externamente. Los Datos podrán ser utilizados en todos los formatos de medios impresos y digitales, entre otros, publicaciones impresas, sitios web, e-marketing, carteles, banners, publicidad, videos y redes sociales, con fines docentes, de investigación y promocionales. Entiendo que los Datos en sitios webs pueden verse en todo el mundo y no solo en España, y que algunos países en el extranjero pueden no brindar el mismo nivel de protección a los derechos de los individuos que la legislación de la UE.
-       
-          .
+          Autorizo a Sagardoy Business & Law School, a retransmitir, hacer{" "}
+          <strong>fotografías y grabaciones</strong> –incluidas imágenes y/o
+          voz- (en lo sucesivo “Datos”) para su posterior edición y difusión
+          tanto interna como externamente. Los Datos podrán ser utilizados en
+          todos los formatos de medios impresos y digitales, entre otros,
+          publicaciones impresas, sitios web, e-marketing, carteles, banners,
+          publicidad, videos y redes sociales, con fines docentes, de
+          investigación y promocionales. Entiendo que los Datos en sitios webs
+          pueden verse en todo el mundo y no solo en España, y que algunos
+          países en el extranjero pueden no brindar el mismo nivel de protección
+          a los derechos de los individuos que la legislación de la UE. .
         </div>
-        
       </label>
       <button
-
         type="submit"
         className={classes.button}
         style={{
@@ -522,7 +561,6 @@ const FormIA = ({
         disabled={!enabledSubmit}
       >
         {submit}
-
       </button>
     </form>
   );
