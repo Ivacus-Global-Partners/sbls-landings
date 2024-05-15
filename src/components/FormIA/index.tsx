@@ -239,7 +239,7 @@ const FormIA = ({
 
     const externalSourceFormId = "0x11f5359"
 
-    const fx = utm_source === "externo" ? externalSourceFormId :  values.format === "Presencial" ? " 0x11e88b7" : "0x11e88e4";
+    const fx = utm_source === "adqualis" ? externalSourceFormId :  values.format === "Presencial" ? " 0x11e88b7" : "0x11e88e4";
     var myHeaders = new Headers();
     myHeaders.append("fx", fx); // formId
     myHeaders.append("content-type", "application/json");
