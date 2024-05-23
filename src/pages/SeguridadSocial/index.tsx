@@ -9,7 +9,7 @@ import CardsClaustro from '../../components/CardsClaustro';
 import DownloadIcon from '@mui/icons-material/Download';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
 import { Helmet } from 'react-helmet';
-import { redirect } from 'react-router-dom';
+
 
 
 const SeguridadSocial: React.FC = () => {
@@ -68,7 +68,7 @@ const SeguridadSocial: React.FC = () => {
 
       />
       <PorqueSagardoy />
-      <IconsInfo dates={['Del 4 junio',' al 19 junio']} duration={
+      <IconsInfo dates={['Del 4 junio',' al 14 junio']} duration={
         <>
           3 semanas
         </>
