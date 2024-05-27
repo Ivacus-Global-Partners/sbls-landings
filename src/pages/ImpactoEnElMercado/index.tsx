@@ -1,5 +1,5 @@
 import React from "react";
-import BodyInfo from "../../components/BodyInfo1";
+import BodyInfo from "../../components/BodyInfo";
 import IconsInfo2 from "../../components/Iconsinfo2";
 import ImpactoEnElMercadoForm from "../../components/ImpactoEnElMercadoForm";
 import Header2 from "../../components/Header2";

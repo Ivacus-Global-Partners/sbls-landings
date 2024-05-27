@@ -6,7 +6,7 @@ import IconsInfo from '../../components/IconsInfo';
 import ProgramObjetives from '../../components/ProgramObjetives';
 import Footer from '../../components/Footer';
 import PorqueSagardoy from '../../components/PorqueSagardoy';
-import BodyInfo from '../../components/BodyInfo1';
+import BodyInfo from '../../components/BodyInfo';
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
 import { Helmet } from 'react-helmet';

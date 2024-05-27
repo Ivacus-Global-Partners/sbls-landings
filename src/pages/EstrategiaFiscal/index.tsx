@@ -1,15 +1,15 @@
 import React from 'react';
-import BodyInfo from '../../components/BodyInfo1';
+import BodyInfo from '../../components/BodyInfo';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
 import ProgramObjetives from '../../components/ProgramObjetives';
-import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery, useTheme } from '@mui/material';
+import Footer from '../../components/Footer';
 
 const EstrategiaFiscal: React.FC = () => {
 

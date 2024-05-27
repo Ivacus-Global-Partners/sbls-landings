@@ -1,5 +1,5 @@
 import React from 'react'
-import BodyInfo from '../../components/BodyInfo1';
+import BodyInfo from '../../components/BodyInfo';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
 import ProgramObjetives from '../../components/ProgramObjetives';

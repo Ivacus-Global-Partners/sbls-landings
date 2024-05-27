@@ -1,5 +1,5 @@
 import React from 'react';
-import BodyInfo from '../../components/BodyInfo1';
+import BodyInfo from '../../components/BodyInfo';
 import IconsInfo from '../../components/IconsInfo';
 import InfoForm from '../../components/infoForm';
 import ProgramObjetives from '../../components/ProgramObjetives';
@@ -9,11 +9,11 @@ import CardsClaustro from '../../components/CardsClaustro';
 import BodyInfo2 from '../../components/BodyInfo2';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Helmet } from 'react-helmet';
-import { useSearchParams } from 'react-router-dom';
+
 
 const MarcaPersonal: React.FC = () => {
 
-  const [searchParams] = useSearchParams()
+  
 
   const href = 'https://sagardoyschool.com/archivos/marca-personal-y-comunicacion.pdf';
   const download = 'marca-personal-y-comunicacion.pdf';
